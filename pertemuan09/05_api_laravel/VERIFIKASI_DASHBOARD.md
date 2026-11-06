@@ -55,3 +55,9 @@ Audit tampilan ini memeriksa kondisi dan ukuran layar yang disebutkan, bukan ser
 Catatan uji awal sensor tetap disimpan pada `VERIFIKASI.md`, `bukti/live_result.json`, `bukti/laravel_tests.json`, dan `bukti/firmware_builds.json`. Gunakan berkas bernama `dashboard` untuk hasil dashboard. Edisi 7 November memasukkan tutorial ini ke dalam PDF pertemuan 9, tahap 3 sampai 8, beserta tautan kode GitHub. Halaman `/latihan/nilai` ditambahkan di antara tabel Blade dan dashboard lengkap untuk mengajarkan satu pembacaan JSON. Bukti kendali simulator di atas tetap merujuk sesi 6 November; pembacaan ulang bukti tidak dianggap sebagai sesi kendali baru.
 
 `tests/package_lab.py` adalah alat pengemasan pengajar di repositori akreditasi, bukan langkah instalasi mahasiswa dari repo praktikum. Untuk menjalankan aplikasi, ikuti `README.md` dan `backend/README.md`.
+
+Uji salinan bersih juga memeriksa berkas yang tidak terwakili oleh folder
+kerja pengajar. `.env.example` kini wajib disertakan dalam paket. Referensi
+suite Unit yang kosong dihapus dari `phpunit.xml`; seluruh 12 pengujian
+berada pada suite Feature. Hasil pemasangan dan tahapan HTTP dicatat
+terpisah pada `PEMASANGAN_API_BERSIH.json` di paket seri.

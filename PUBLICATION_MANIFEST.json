@@ -156,7 +156,7 @@
     "source": "modul_mk38/api_sensor/VERIFIKASI.md"
   },
   "pertemuan09/05_api_laravel/VERIFIKASI_DASHBOARD.md": {
-    "sha256": "ca062f0736f1e33da961d56b965d4a7753ebbbaea1ad2e090a8ffe4cfc025abc",
+    "sha256": "1e1156e7d680d9a8b6002c80e61774fdca21f5b0d5084b275474ad1485443f5a",
     "source": "modul_mk38/api_sensor/VERIFIKASI_DASHBOARD.md"
   },
   "pertemuan09/05_api_laravel/backend/.editorconfig": {
@@ -304,7 +304,7 @@
     "source": "modul_mk38/api_sensor/backend/package.json"
   },
   "pertemuan09/05_api_laravel/backend/phpunit.xml": {
-    "sha256": "8aea5d40234dae4a2ab455e3f59e41a566d2bbd77725c5df1043c731ebf2b805",
+    "sha256": "4d81ab455371bd5d7dffacf701fbad3cbfe0d45efd253cf67e7f434bb15de4b5",
     "source": "modul_mk38/api_sensor/backend/phpunit.xml"
   },
   "pertemuan09/05_api_laravel/backend/public/dashboard.css": {
@@ -484,7 +484,7 @@
     "source": "modul_mk38/api_sensor/bukti/firmware_dashboard_builds.json"
   },
   "pertemuan09/05_api_laravel/bukti/laravel_dashboard_tests.json": {
-    "sha256": "9666d6304e135a891364b9a2dff1b15238828e1e680e9a9a1c7b094cdb37fc06",
+    "sha256": "ff64cf590e3c5a5a8e276a23542bcf0b0e53ecc774484f3c259bd358aa7c0f6d",
     "source": "modul_mk38/api_sensor/bukti/laravel_dashboard_tests.json"
   },
   "pertemuan09/05_api_laravel/bukti/laravel_tests.json": {
