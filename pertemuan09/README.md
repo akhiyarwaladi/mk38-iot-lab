@@ -1,14 +1,21 @@
-# Praktik pertemuan 9: Wi-Fi, REST API, dan web server ESP32
+# Praktik pertemuan 9: Wi-Fi, Laravel, MySQL, dan dashboard
 
-Buka satu folder tahap sebagai root workspace di Visual Studio Code:
+Buka satu proyek pada satu waktu. Urutan jalur utama mengikuti PDF:
 
 1. `01_wifi`: ESP32 bergabung ke Wokwi-GUEST dan menampilkan IP.
 2. `02_sensor`: baca DHT22 setiap dua detik; ubah nilainya di simulator.
-3. `03_cloud`: kirim suhu dan kelembapan ke channel ThingSpeak sendiri.
-4. `04_server`: baca JSON sensor dan kendalikan LED dari browser.
+3. [`05_api_laravel`](05_api_laravel/README.md): buat API health, terima JSON,
+   simpan MySQL, kirim ESP32, lalu tampilkan tabel, satu nilai JSON, dan
+   dashboard dengan grafik/CSV serta konfirmasi kendali LED.
 
-Semua folder memakai rangkaian yang sama. Tiap tahap berdiri sendiri;
-tahap 4 tidak mengirim ke ThingSpeak karena fokusnya berpindah ke peran server.
+Nomor folder lama dipertahankan. `03_cloud` menjadi pengayaan ThingSpeak;
+`04_server` dipakai untuk membandingkan layanan HTTP pada ESP32.
+
+Semua firmware memakai rangkaian yang sama. Untuk Laravel, jalankan PHP
+dari `05_api_laravel/backend` dan buka `05_api_laravel/esp32` sebagai
+workspace PlatformIO. Siapkan PHP, Composer, MySQL, dan dependency
+sebelum kelas. Setiap proyek berdiri sendiri; server ESP32 tidak mengirim
+ke ThingSpeak.
 
 ## Persiapan
 
