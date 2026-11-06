@@ -1,0 +1,1622 @@
+{
+  ".gitignore": {
+    "sha256": "65262ed98ce17982e1726ed0dd8aab043897c3fc860516bca5f0c813ff6c9d11",
+    "source": "generated course navigation"
+  },
+  "README.md": {
+    "sha256": "fc7334e2650839ded54077f05a0a15c89d5f306ec73063fd347a18adf3a45615",
+    "source": "generated course navigation"
+  },
+  "pertemuan09/01_wifi/.gitignore": {
+    "sha256": "6c2b8c25f9d027265c3391184826d42e8cd79a6ea07c87e342d7cab0cf0e4e8a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/01_wifi/.gitignore"
+  },
+  "pertemuan09/01_wifi/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/01_wifi/diagram.json"
+  },
+  "pertemuan09/01_wifi/platformio.ini": {
+    "sha256": "6fe239a93bbf261fedf5f0c23da4e9945dfc61fd452f46ed3323b7ee607709f4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/01_wifi/platformio.ini"
+  },
+  "pertemuan09/01_wifi/src/main.cpp": {
+    "sha256": "816d61e868a341b99c80c89dbd06e95f32b564b0866262cbdf17da35eb8b7d49",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/01_wifi/src/main.cpp"
+  },
+  "pertemuan09/01_wifi/wokwi.toml": {
+    "sha256": "002204c1a137b3bb4cac685be2b399551044ee969b70195ad69b4660f6d14d74",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/01_wifi/wokwi.toml"
+  },
+  "pertemuan09/02_sensor/.gitignore": {
+    "sha256": "6c2b8c25f9d027265c3391184826d42e8cd79a6ea07c87e342d7cab0cf0e4e8a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/02_sensor/.gitignore"
+  },
+  "pertemuan09/02_sensor/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/02_sensor/diagram.json"
+  },
+  "pertemuan09/02_sensor/platformio.ini": {
+    "sha256": "6fe239a93bbf261fedf5f0c23da4e9945dfc61fd452f46ed3323b7ee607709f4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/02_sensor/platformio.ini"
+  },
+  "pertemuan09/02_sensor/src/main.cpp": {
+    "sha256": "43e32b4c581008c7ea5293233acca561bfdd3fc98b24ceb38f48efdd1149abb2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/02_sensor/src/main.cpp"
+  },
+  "pertemuan09/02_sensor/wokwi.toml": {
+    "sha256": "002204c1a137b3bb4cac685be2b399551044ee969b70195ad69b4660f6d14d74",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/02_sensor/wokwi.toml"
+  },
+  "pertemuan09/03_cloud/.gitignore": {
+    "sha256": "6c2b8c25f9d027265c3391184826d42e8cd79a6ea07c87e342d7cab0cf0e4e8a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/.gitignore"
+  },
+  "pertemuan09/03_cloud/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/diagram.json"
+  },
+  "pertemuan09/03_cloud/include/root_ca.h": {
+    "sha256": "6ac2c347fc7904ca2c72ecac7a1d98a6748bad09e13f9c6bf5639d6a83656dbc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/include/root_ca.h"
+  },
+  "pertemuan09/03_cloud/include/secrets.demo.h": {
+    "sha256": "ec002e503d8d11e100adc859e475523c3854b9cc2d748545a896e7793255a167",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/include/secrets.demo.h"
+  },
+  "pertemuan09/03_cloud/include/secrets.example.h": {
+    "sha256": "c1cf4d6e7fedc64bd2baf78f60fac232d068e77d32081bf7a8fa6f0658a253cf",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/include/secrets.example.h"
+  },
+  "pertemuan09/03_cloud/platformio.ini": {
+    "sha256": "6fe239a93bbf261fedf5f0c23da4e9945dfc61fd452f46ed3323b7ee607709f4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/platformio.ini"
+  },
+  "pertemuan09/03_cloud/src/main.cpp": {
+    "sha256": "601dc74c259e22ba5bcfac34d6b902ad0be549292f3aa21b156c0688392dff64",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/src/main.cpp"
+  },
+  "pertemuan09/03_cloud/versi/01_https.cpp": {
+    "sha256": "1842430b74de0c953410241cea7c36fe76b29d356c7acb500ca6527247490ec4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/versi/01_https.cpp"
+  },
+  "pertemuan09/03_cloud/versi/02_payload.cpp": {
+    "sha256": "e06a6b956be261d416b6d50815945f4f4b910104b481f466eedd2e1d8650b008",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/versi/02_payload.cpp"
+  },
+  "pertemuan09/03_cloud/versi/99_lengkap.cpp": {
+    "sha256": "601dc74c259e22ba5bcfac34d6b902ad0be549292f3aa21b156c0688392dff64",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/versi/99_lengkap.cpp"
+  },
+  "pertemuan09/03_cloud/wokwi.toml": {
+    "sha256": "002204c1a137b3bb4cac685be2b399551044ee969b70195ad69b4660f6d14d74",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/03_cloud/wokwi.toml"
+  },
+  "pertemuan09/04_server/.gitignore": {
+    "sha256": "6c2b8c25f9d027265c3391184826d42e8cd79a6ea07c87e342d7cab0cf0e4e8a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/.gitignore"
+  },
+  "pertemuan09/04_server/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/diagram.json"
+  },
+  "pertemuan09/04_server/platformio.ini": {
+    "sha256": "6fe239a93bbf261fedf5f0c23da4e9945dfc61fd452f46ed3323b7ee607709f4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/platformio.ini"
+  },
+  "pertemuan09/04_server/src/main.cpp": {
+    "sha256": "21941101ee1662743d7f7044ce87209786b8a0408c0c9ba292accdbe9368a778",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/src/main.cpp"
+  },
+  "pertemuan09/04_server/versi/01_teks.cpp": {
+    "sha256": "21dff6c75a8bb2c87f0649b7521e52e3458d75fc5da30fae3fad0a5bf0e716be",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/versi/01_teks.cpp"
+  },
+  "pertemuan09/04_server/versi/02_sensor.cpp": {
+    "sha256": "7330b4c26139209512312e33929bf2e268a4fa43162440a70ee59e92ebc59ed7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/versi/02_sensor.cpp"
+  },
+  "pertemuan09/04_server/versi/99_lengkap.cpp": {
+    "sha256": "21941101ee1662743d7f7044ce87209786b8a0408c0c9ba292accdbe9368a778",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/versi/99_lengkap.cpp"
+  },
+  "pertemuan09/04_server/wokwi.toml": {
+    "sha256": "002204c1a137b3bb4cac685be2b399551044ee969b70195ad69b4660f6d14d74",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/wokwi.toml"
+  },
+  "pertemuan09/05_api_laravel/.gitignore": {
+    "sha256": "644f72a6f802ba419b892dd05d4314b9aedd5736b59909949e319b44dcdf6bfc",
+    "source": "modul_mk38/api_sensor/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/AUDIT_DASHBOARD.md": {
+    "sha256": "294510cd6c61aa792ce3b84c7b21821f0bfc3c702af1ab0b37451209ba62fb16",
+    "source": "modul_mk38/api_sensor/AUDIT_DASHBOARD.md"
+  },
+  "pertemuan09/05_api_laravel/DASHBOARD_BERTAHAP.md": {
+    "sha256": "74a7aa8b04e653af7ec7889c186ea2822c6fed0bde0f4eba29762796d55a6b88",
+    "source": "modul_mk38/api_sensor/DASHBOARD_BERTAHAP.md"
+  },
+  "pertemuan09/05_api_laravel/DESIGN.md": {
+    "sha256": "6952402c6f456cb107cdc6694e3dd2709329b91db0c73908f0d3875c41b923bd",
+    "source": "modul_mk38/api_sensor/DESIGN.md"
+  },
+  "pertemuan09/05_api_laravel/PENGEMBANGAN_PROYEK.md": {
+    "sha256": "ee2ad3173ef3893059a1fa78f907b00ff0ddc7fb47337063b4056af213835edb",
+    "source": "modul_mk38/api_sensor/PENGEMBANGAN_PROYEK.md"
+  },
+  "pertemuan09/05_api_laravel/README.md": {
+    "sha256": "c0fbfe55bef8e43a4b8c1237bf74da739fecc73aa224bd27490f2b96e8cfef6b",
+    "source": "modul_mk38/api_sensor/README.md"
+  },
+  "pertemuan09/05_api_laravel/VERIFIKASI.md": {
+    "sha256": "4e8f01442390c339db07f03c14a04662ec63fde246110e5c7ae635a5d756ccd0",
+    "source": "modul_mk38/api_sensor/VERIFIKASI.md"
+  },
+  "pertemuan09/05_api_laravel/VERIFIKASI_DASHBOARD.md": {
+    "sha256": "ca062f0736f1e33da961d56b965d4a7753ebbbaea1ad2e090a8ffe4cfc025abc",
+    "source": "modul_mk38/api_sensor/VERIFIKASI_DASHBOARD.md"
+  },
+  "pertemuan09/05_api_laravel/backend/.editorconfig": {
+    "sha256": "f78cc5a2ef8ba61ad956d0f5db453748a981270f6a1b9f4a5a00df8690e7946d",
+    "source": "modul_mk38/api_sensor/backend/.editorconfig"
+  },
+  "pertemuan09/05_api_laravel/backend/.env.example": {
+    "sha256": "c49532425ae1099a7c1f5e7c98ac96370c6fdd7f3b930b38feb667efb3321f03",
+    "source": "modul_mk38/api_sensor/backend/.env.example"
+  },
+  "pertemuan09/05_api_laravel/backend/.gitignore": {
+    "sha256": "41e54abd62aa86fd5b731e0cd411c5bc7d4196a1f7aef363f434672da8fffa5d",
+    "source": "modul_mk38/api_sensor/backend/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/README.md": {
+    "sha256": "7d5a7d41fb0b925ec25db183a2543b59a50f9314be3eb90b43796cd5a7271267",
+    "source": "modul_mk38/api_sensor/backend/README.md"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Http/Controllers/Controller.php": {
+    "sha256": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1",
+    "source": "modul_mk38/api_sensor/backend/app/Http/Controllers/Controller.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Http/Controllers/DashboardController.php": {
+    "sha256": "aec4d4d2e1ada65a2a2b1dfed343f850ab013b2a0406e54ac1e4db4ab2d6265c",
+    "source": "modul_mk38/api_sensor/backend/app/Http/Controllers/DashboardController.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Http/Controllers/DeviceController.php": {
+    "sha256": "15f9f328d6caefb1d8a86138f086314077364ae159dac36f6cc579c4e5a0d768",
+    "source": "modul_mk38/api_sensor/backend/app/Http/Controllers/DeviceController.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Http/Controllers/SensorController.php": {
+    "sha256": "f758fce90f660140e30482be95f5c4ac527345fc6efe1d4bb01bb5974eeddad8",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/backend/app/Http/Controllers/SensorController.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Http/Requests/StoreSensorRequest.php": {
+    "sha256": "9a05c2a27d1710c582fe22bff56e4a3c1e6d035d23d77ab58630c31d875dc0d4",
+    "source": "modul_mk38/api_sensor/backend/app/Http/Requests/StoreSensorRequest.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Models/Command.php": {
+    "sha256": "1386db953418480e96454027e15f50f2de9d3f9c1cf03b4d806c0b2cb5684b70",
+    "source": "modul_mk38/api_sensor/backend/app/Models/Command.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Models/Device.php": {
+    "sha256": "aa1f47c5ce9aba54cfb4bf73e6ade87318c888e5ecf24981913e5597e5daa251",
+    "source": "modul_mk38/api_sensor/backend/app/Models/Device.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Models/Sensor.php": {
+    "sha256": "92d83393923516d534afb84cced2962db9d4fd203cf1c4649024e10f4cf5be92",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/backend/app/Models/Sensor.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Models/User.php": {
+    "sha256": "41d800ffd4887c75e66af8eaedc756edce052eb662baae357308c6e364a6c9d2",
+    "source": "modul_mk38/api_sensor/backend/app/Models/User.php"
+  },
+  "pertemuan09/05_api_laravel/backend/app/Providers/AppServiceProvider.php": {
+    "sha256": "caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7",
+    "source": "modul_mk38/api_sensor/backend/app/Providers/AppServiceProvider.php"
+  },
+  "pertemuan09/05_api_laravel/backend/artisan": {
+    "sha256": "f91a517c0c5d3a904c3f390933964a5e08ec1fc68146882730daac4aca4ffcec",
+    "source": "modul_mk38/api_sensor/backend/artisan"
+  },
+  "pertemuan09/05_api_laravel/backend/bootstrap/app.php": {
+    "sha256": "1e5273590addd91a51dafd53ada4abff09a2e38139d08bdc56775492bfdbe9ec",
+    "source": "modul_mk38/api_sensor/backend/bootstrap/app.php"
+  },
+  "pertemuan09/05_api_laravel/backend/bootstrap/cache/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/bootstrap/cache/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/bootstrap/providers.php": {
+    "sha256": "f720e185207a343d4c19fc99dbb317a4187efbcd7d38a303a695bbdd77ffb943",
+    "source": "modul_mk38/api_sensor/backend/bootstrap/providers.php"
+  },
+  "pertemuan09/05_api_laravel/backend/composer.json": {
+    "sha256": "9023ea01b48d81e3debff88db0638f1d022aef0ac8ee4be03576cac48bb5215c",
+    "source": "modul_mk38/api_sensor/backend/composer.json"
+  },
+  "pertemuan09/05_api_laravel/backend/composer.lock": {
+    "sha256": "7c50a91b752e5421c19930412e6e4a754d67bf4b61058f66fbe27616ab482a7b",
+    "source": "modul_mk38/api_sensor/backend/composer.lock"
+  },
+  "pertemuan09/05_api_laravel/backend/config/app.php": {
+    "sha256": "78dcd36b226fd7b24057cb95f567cb6e96561c2406653892d8aef6dcea8461e4",
+    "source": "modul_mk38/api_sensor/backend/config/app.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/auth.php": {
+    "sha256": "c7e204e9785c9f596d66fb884b493f658f2327f157646bdb4088efd6b3a7773f",
+    "source": "modul_mk38/api_sensor/backend/config/auth.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/cache.php": {
+    "sha256": "b8bcf382283330b94c0a602ff06452de819041ea709e28eea5065d51d1d7d085",
+    "source": "modul_mk38/api_sensor/backend/config/cache.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/database.php": {
+    "sha256": "06759b7b36b8641e9025fe03dd728970c4cb02d5b58ff709cbb0649987b4bfc2",
+    "source": "modul_mk38/api_sensor/backend/config/database.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/filesystems.php": {
+    "sha256": "ba7060d7a23e490c3ce830656f6d24ad3ccf5b868e3293f2a12e411959dc5635",
+    "source": "modul_mk38/api_sensor/backend/config/filesystems.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/logging.php": {
+    "sha256": "299ec1ba5b5a803c8e20f666ae7628e442e856cc2ff7ac9e2adb17b97e8ad63b",
+    "source": "modul_mk38/api_sensor/backend/config/logging.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/mail.php": {
+    "sha256": "c43ff49a31c5f32ce21eb7159f2a4b3cd2f4074eaed5838d265646dbfedd3474",
+    "source": "modul_mk38/api_sensor/backend/config/mail.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/queue.php": {
+    "sha256": "6101774da7c8b79af46d0028f2b8b31a484c3f7eda10b76e5b27b6093ad364a4",
+    "source": "modul_mk38/api_sensor/backend/config/queue.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/services.php": {
+    "sha256": "8258c4487eb1d73a97e569eb0e411e3f25368044812df4cba807860432be1d92",
+    "source": "modul_mk38/api_sensor/backend/config/services.php"
+  },
+  "pertemuan09/05_api_laravel/backend/config/session.php": {
+    "sha256": "f2e75e189021597e29940c0859c00c3088ec591e403768fff5143c5687a80f59",
+    "source": "modul_mk38/api_sensor/backend/config/session.php"
+  },
+  "pertemuan09/05_api_laravel/backend/database/.gitignore": {
+    "sha256": "e758642d95e83e907e010b6e46b07b3f953c7cef11fe5ebefc2a77b9d7b4d5f7",
+    "source": "modul_mk38/api_sensor/backend/database/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/database/factories/UserFactory.php": {
+    "sha256": "50bdc543f1b09d1a57260be55ad0e1a68aee4b34f63e1109dc94d9bcd3080526",
+    "source": "modul_mk38/api_sensor/backend/database/factories/UserFactory.php"
+  },
+  "pertemuan09/05_api_laravel/backend/database/migrations/2026_11_06_000001_create_sensors_table.php": {
+    "sha256": "b8f133a55000309da7ebd6189be1254298db6cf64939627cecb576b0e504a2c8",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/backend/database/migrations/2026_11_06_000001_create_sensors_table.php"
+  },
+  "pertemuan09/05_api_laravel/backend/database/migrations/2026_11_06_000002_create_devices_and_commands.php": {
+    "sha256": "48694177536c62573c4feb9fc49159264b58855b1c5a022a5de415be7854f20f",
+    "source": "modul_mk38/api_sensor/backend/database/migrations/2026_11_06_000002_create_devices_and_commands.php"
+  },
+  "pertemuan09/05_api_laravel/backend/database/seeders/DatabaseSeeder.php": {
+    "sha256": "cf8e4b6e48360218bb5534f66419c955288f78338eb8a3dba9d8ac3394ec3dbc",
+    "source": "modul_mk38/api_sensor/backend/database/seeders/DatabaseSeeder.php"
+  },
+  "pertemuan09/05_api_laravel/backend/package.json": {
+    "sha256": "e1bf666b49a401c06ede562b32fc741b8e8dc45cca0a67de136edfbd51335f33",
+    "source": "modul_mk38/api_sensor/backend/package.json"
+  },
+  "pertemuan09/05_api_laravel/backend/phpunit.xml": {
+    "sha256": "8aea5d40234dae4a2ab455e3f59e41a566d2bbd77725c5df1043c731ebf2b805",
+    "source": "modul_mk38/api_sensor/backend/phpunit.xml"
+  },
+  "pertemuan09/05_api_laravel/backend/public/dashboard.css": {
+    "sha256": "a62de242db5ff1ac4978f7052b8368f83ba79b1f4af3281ebda3c8f36721aecc",
+    "source": "modul_mk38/api_sensor/backend/public/dashboard.css"
+  },
+  "pertemuan09/05_api_laravel/backend/public/dashboard.js": {
+    "sha256": "9a538bafa60c5e21edbd6418bad6930c8b5e2aedec97546cb27983597f3e3878",
+    "source": "modul_mk38/api_sensor/backend/public/dashboard.js"
+  },
+  "pertemuan09/05_api_laravel/backend/public/favicon.ico": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source": "modul_mk38/api_sensor/backend/public/favicon.ico"
+  },
+  "pertemuan09/05_api_laravel/backend/public/index.php": {
+    "sha256": "eba77cba39695b6bd091fe5211d481f7ebb2ce2d8d26230b5a609465d0a4aff9",
+    "source": "modul_mk38/api_sensor/backend/public/index.php"
+  },
+  "pertemuan09/05_api_laravel/backend/public/robots.txt": {
+    "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f",
+    "source": "modul_mk38/api_sensor/backend/public/robots.txt"
+  },
+  "pertemuan09/05_api_laravel/backend/resources/css/app.css": {
+    "sha256": "9f49ed837fdc773b89a294d1e86dc68828ef2f774d7e797ba5f89c2a08c84760",
+    "source": "modul_mk38/api_sensor/backend/resources/css/app.css"
+  },
+  "pertemuan09/05_api_laravel/backend/resources/js/app.js": {
+    "sha256": "cf6dab196c721f6911ff99cc4f910897f978599a2d289971a316a5fc33091f94",
+    "source": "modul_mk38/api_sensor/backend/resources/js/app.js"
+  },
+  "pertemuan09/05_api_laravel/backend/resources/js/bootstrap.js": {
+    "sha256": "6fd9fc82e68fa915a882f4e227b9faacbe7bfd66cb953c628840e83bda6b72f4",
+    "source": "modul_mk38/api_sensor/backend/resources/js/bootstrap.js"
+  },
+  "pertemuan09/05_api_laravel/backend/resources/views/dashboard.blade.php": {
+    "sha256": "c614f868a07c2cba8f2516433bda8b9de2b5f3ff975f7ca6dd8b80441d077705",
+    "source": "modul_mk38/api_sensor/backend/resources/views/dashboard.blade.php"
+  },
+  "pertemuan09/05_api_laravel/backend/resources/views/latest.blade.php": {
+    "sha256": "76a237c63bc019c23b5cdff643380c39d50fa929a254c1247c6ebb90215cfd5d",
+    "source": "modul_mk38/api_sensor/backend/resources/views/latest.blade.php"
+  },
+  "pertemuan09/05_api_laravel/backend/resources/views/table.blade.php": {
+    "sha256": "d04940318fefc2425473773435cbb5d8f2e7a6ec430d7c644a2455cfaf16701a",
+    "source": "modul_mk38/api_sensor/backend/resources/views/table.blade.php"
+  },
+  "pertemuan09/05_api_laravel/backend/resources/views/welcome.blade.php": {
+    "sha256": "e50e41602994840b788471625fec54a4db6138ec971be05cfdfba40daf906c22",
+    "source": "modul_mk38/api_sensor/backend/resources/views/welcome.blade.php"
+  },
+  "pertemuan09/05_api_laravel/backend/routes/api.php": {
+    "sha256": "e1d1bea2f400df22a0d92cb48df1e0adc84876be2be104bbd55fe46cfe872d8b",
+    "source": "modul_mk38/api_sensor/backend/routes/api.php"
+  },
+  "pertemuan09/05_api_laravel/backend/routes/console.php": {
+    "sha256": "9adccc33e7dd400683e434774077c7fdb2f299c5712cedf16a43fdf56f2850fa",
+    "source": "modul_mk38/api_sensor/backend/routes/console.php"
+  },
+  "pertemuan09/05_api_laravel/backend/routes/web.php": {
+    "sha256": "a24d1cfb40de6ba8ab5cf83683ecdd391dc39f5acd7ba62e327e25aa6fbc03af",
+    "source": "modul_mk38/api_sensor/backend/routes/web.php"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/app/.gitignore": {
+    "sha256": "993b9e3709d7b5189da331725d1169d79e561a509db2490b722b525073d2d976",
+    "source": "modul_mk38/api_sensor/backend/storage/app/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/app/private/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/storage/app/private/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/app/public/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/storage/app/public/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/framework/.gitignore": {
+    "sha256": "2d452d65596636197757afa17df52331c84da7bb74ee0f3462fd5be4eb6afdc6",
+    "source": "modul_mk38/api_sensor/backend/storage/framework/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/framework/cache/.gitignore": {
+    "sha256": "32f79194633ddb34f013c6ee8819d112104ff822357adf308ec385b46a7f42f6",
+    "source": "modul_mk38/api_sensor/backend/storage/framework/cache/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/framework/cache/data/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/storage/framework/cache/data/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/framework/sessions/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/storage/framework/sessions/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/framework/testing/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/storage/framework/testing/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/framework/views/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/storage/framework/views/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/storage/logs/.gitignore": {
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "source": "modul_mk38/api_sensor/backend/storage/logs/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/backend/tests/Feature/DashboardApiTest.php": {
+    "sha256": "975c29c9ec7323fe204bb2a71d5d31126e914b6841603670f13f6708fa8e5471",
+    "source": "modul_mk38/api_sensor/backend/tests/Feature/DashboardApiTest.php"
+  },
+  "pertemuan09/05_api_laravel/backend/tests/Feature/SensorApiTest.php": {
+    "sha256": "33808858b1f450048413b4ac33dce05a843b92936002195236d677b8e9db3125",
+    "source": "modul_mk38/api_sensor/backend/tests/Feature/SensorApiTest.php"
+  },
+  "pertemuan09/05_api_laravel/backend/tests/TestCase.php": {
+    "sha256": "c7c209f5579c42647c1f7b2a79ac828e8b54ac62a98442045a6e94fa2c0d0ebc",
+    "source": "modul_mk38/api_sensor/backend/tests/TestCase.php"
+  },
+  "pertemuan09/05_api_laravel/backend/tests/UsesLabMysql.php": {
+    "sha256": "973e38b97febb28be97c3b34d1f9cd0da7a7b911f56d808df1cf3932c84d2ce3",
+    "source": "modul_mk38/api_sensor/backend/tests/UsesLabMysql.php"
+  },
+  "pertemuan09/05_api_laravel/backend/tests/inspect_database.php": {
+    "sha256": "4c4a467d3dd10c70ad18bf3c0c42b839156bfadbc97223dd6351e0f80361a62f",
+    "source": "modul_mk38/api_sensor/backend/tests/inspect_database.php"
+  },
+  "pertemuan09/05_api_laravel/backend/vite.config.js": {
+    "sha256": "b981a284135bcb7da21ea5e1aaa2dc31c8daeef92d9b4e5c79538bdb8dfaf6f0",
+    "source": "modul_mk38/api_sensor/backend/vite.config.js"
+  },
+  "pertemuan09/05_api_laravel/bukti/browser_dashboard_checks.json": {
+    "sha256": "4eeaf459cb3cb4ad4bec03885ed178f65c786c53f51eb02e0f61601da7818433",
+    "source": "modul_mk38/api_sensor/bukti/browser_dashboard_checks.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/browser_latest_checks.json": {
+    "sha256": "07b93857483574bf3b24649ff67756b81cd4b743bf1e0dd2c45df65305f55a93",
+    "source": "modul_mk38/api_sensor/bukti/browser_latest_checks.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_connection_error.png": {
+    "sha256": "4d1f9a8bb9cc7f4bf9fcb7e3262af011abfa3631de1cddd2dc536699d3c89010",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_connection_error.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_contrast.json": {
+    "sha256": "7055e3424b657dcaf6be9016165389f078c05a0fdd90ec74c27b21acb285b5d5",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_contrast.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_dark.png": {
+    "sha256": "8754e482164c9e591b7a4b4c107618960a352c43baf855dc61becbe0391d9968",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_dark.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_empty.png": {
+    "sha256": "03f8595e91d4cba9b43d1dcf4974c833c50ca85a01e73d0d23a34465d9952505",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_empty.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_export.csv": {
+    "sha256": "fac2b7ea23199d9439f76fab5eb58bbb1dc5c9bdd08dbf466771e164eb980e1a",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_export.csv"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_led_on.png": {
+    "sha256": "a977e342bae27ee9989cea2ae605e950622bd6f858976d9bd8e646f3a921721e",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_led_on.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_light.png": {
+    "sha256": "24349508f7dc6bf5d750312bf634814f6dbd3f36a2c9f737bf06b29f326f4bca",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_light.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_mobile.png": {
+    "sha256": "5d329cd2ea2f90459569af5a4b905fc15c42018ccc5f555a0d198e44dc738889",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_mobile.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/dashboard_mobile_dark.png": {
+    "sha256": "61e1254a2abe561bb3764107b98eb3075b8ebfd4df4f5f8348812042b0912906",
+    "source": "modul_mk38/api_sensor/bukti/dashboard_mobile_dark.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/firmware_builds.json": {
+    "sha256": "8a0da3fe4659d2287bdf63c63d8b19bbaca5ccbdea6d0f852e31b3dd2b4b0cb4",
+    "source": "modul_mk38/api_sensor/bukti/firmware_builds.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/firmware_dashboard_builds.json": {
+    "sha256": "6918732324b9a0d0d58ea487e7ade483f048516c6e0d6d0f47a5f6c0978428e6",
+    "source": "modul_mk38/api_sensor/bukti/firmware_dashboard_builds.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/laravel_dashboard_tests.json": {
+    "sha256": "9666d6304e135a891364b9a2dff1b15238828e1e680e9a9a1c7b094cdb37fc06",
+    "source": "modul_mk38/api_sensor/bukti/laravel_dashboard_tests.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/laravel_tests.json": {
+    "sha256": "56f1f04acf55410c0b284daa7a2ee8e3d39c103341bf328f9bfabb6c65499059",
+    "source": "modul_mk38/api_sensor/bukti/laravel_tests.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/latihan_nilai.png": {
+    "sha256": "c618adf831f637f04a774e9ff2129b1d11d974cccfc2210d32d66a44f673ac54",
+    "source": "modul_mk38/api_sensor/bukti/latihan_nilai.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/live_dashboard_result.json": {
+    "sha256": "11d5e8e70db1043d7b91914dd762c6474295913cf319309a4c0941dbb18dc853",
+    "source": "modul_mk38/api_sensor/bukti/live_dashboard_result.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/live_result.json": {
+    "sha256": "110f9c691bc3c24ea7bd5a8544b8c8c1cda74bd6141f7b348e2ce93d18bfb5ce",
+    "source": "modul_mk38/api_sensor/bukti/live_result.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/wokwi_32_70.png": {
+    "sha256": "573e45d7d5df6bacfcbcf9aa732057a2c7fa9813f885f2e92d5924045546863d",
+    "source": "modul_mk38/api_sensor/bukti/wokwi_32_70.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/wokwi_35_75.png": {
+    "sha256": "d72815ca2064eae5756622268ad421a948275f75e4afb7a20a5ef3c03594a139",
+    "source": "modul_mk38/api_sensor/bukti/wokwi_35_75.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/wokwi_control_off.png": {
+    "sha256": "78b7587dfe8e30d931432b9c0a3015d1f28aa585fbcb7f3348d58d82987f4226",
+    "source": "modul_mk38/api_sensor/bukti/wokwi_control_off.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/wokwi_control_on.png": {
+    "sha256": "bc6e1a8195fe090fb57aaf1c8793499d845387bf9b2eee41868fbd77e0c9829f",
+    "source": "modul_mk38/api_sensor/bukti/wokwi_control_on.png"
+  },
+  "pertemuan09/05_api_laravel/bukti/wokwi_ui_excerpt.txt": {
+    "sha256": "6a936cc1bb41f6a859213ab837ca3ebc3a7c50bb703621e160a84f069f09d57e",
+    "source": "modul_mk38/api_sensor/bukti/wokwi_ui_excerpt.txt"
+  },
+  "pertemuan09/05_api_laravel/esp32/.gitignore": {
+    "sha256": "d952abf002d5e1ec80c8ab1bfc9f38eb5b62fc310667d501cb2ce9f21c3effb2",
+    "source": "modul_mk38/api_sensor/esp32/.gitignore"
+  },
+  "pertemuan09/05_api_laravel/esp32/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/api_sensor/esp32/diagram.json"
+  },
+  "pertemuan09/05_api_laravel/esp32/include/config.h": {
+    "sha256": "16f8cb290c02e6dcd2e3ed9fe751cfc5288b8606eaf4c2b667ebd775ebd93597",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/esp32/include/config.h"
+  },
+  "pertemuan09/05_api_laravel/esp32/platformio.ini": {
+    "sha256": "37c439d0f90153209b42df1d551a2893b4105430ae550d0bf7838998a4ffc47d",
+    "source": "modul_mk38/api_sensor/esp32/platformio.ini"
+  },
+  "pertemuan09/05_api_laravel/esp32/src/main.cpp": {
+    "sha256": "2349e1e6deef5e6f85b4712ed342094c574207c55eeae5880abd8823881ec725",
+    "source": "modul_mk38/api_sensor/esp32/src/main.cpp"
+  },
+  "pertemuan09/05_api_laravel/esp32/versi/01_health.cpp": {
+    "sha256": "4224db7826ecffcf4076068806fc8d4df51fda3cc4032df5bb9d27687e675efe",
+    "source": "modul_mk38/api_sensor/esp32/versi/01_health.cpp"
+  },
+  "pertemuan09/05_api_laravel/esp32/versi/02_kirim_contoh.cpp": {
+    "sha256": "26ded88867af368ce73cdbcb079724c0cb83d6cf4c1812dbd44823d835baa7d3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/esp32/versi/02_kirim_contoh.cpp"
+  },
+  "pertemuan09/05_api_laravel/esp32/versi/03_sensor.cpp": {
+    "sha256": "1602dbf0f367129b60d6407de4cbcbf6264521cd8c06960cd3cfb95c9abb0028",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/esp32/versi/03_sensor.cpp"
+  },
+  "pertemuan09/05_api_laravel/esp32/versi/04_kendali.cpp": {
+    "sha256": "2349e1e6deef5e6f85b4712ed342094c574207c55eeae5880abd8823881ec725",
+    "source": "modul_mk38/api_sensor/esp32/versi/04_kendali.cpp"
+  },
+  "pertemuan09/05_api_laravel/esp32/wokwi.toml": {
+    "sha256": "f9d2c605015f9f02e2c87790483c5bf577e5fb506963f3ca42803331f715f4a3",
+    "source": "modul_mk38/api_sensor/esp32/wokwi.toml"
+  },
+  "pertemuan09/05_api_laravel/referensi/README.md": {
+    "sha256": "a50d2da892d020288f549dcfcb06235434465d02891ac8313bcb9edb084d25d0",
+    "source": "modul_mk38/api_sensor/referensi/README.md"
+  },
+  "pertemuan09/05_api_laravel/referensi/project_brief.tex": {
+    "sha256": "527fffb9dd5d102ce69ae4136de890622469ce4033045f2716194fbb09d6eec8",
+    "source": "modul_mk38/api_sensor/referensi/project_brief.tex"
+  },
+  "pertemuan09/05_api_laravel/tahapan/01_api_health.php": {
+    "sha256": "4c959885020f3d2b1f646ba75a8f0b61ef925fab00ef901bcda3d165503fcdfc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/tahapan/01_api_health.php"
+  },
+  "pertemuan09/05_api_laravel/tahapan/02_api_terima.php": {
+    "sha256": "f3c2e4429dd682174e8a91f363bda338083462cd8eb94dd0e00a8c32d5aa5fca",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/tahapan/02_api_terima.php"
+  },
+  "pertemuan09/05_api_laravel/tahapan/03_api_mysql.php": {
+    "sha256": "b5cf1f3849456178ca465f8770b50e67448212c660e415a462524a9e83462f3a",
+    "source": "modul_mk38/api_sensor/tahapan/03_api_mysql.php"
+  },
+  "pertemuan09/05_api_laravel/tahapan/04_api_dashboard.php": {
+    "sha256": "e1d1bea2f400df22a0d92cb48df1e0adc84876be2be104bbd55fe46cfe872d8b",
+    "source": "modul_mk38/api_sensor/tahapan/04_api_dashboard.php"
+  },
+  "pertemuan09/05_api_laravel/tests/build_versions.py": {
+    "sha256": "9b623b2a4ce8b1a733b925b4f32051f529619713433eed00e3c9d2eef217f2ac",
+    "source": "modul_mk38/api_sensor/tests/build_versions.py"
+  },
+  "pertemuan09/05_api_laravel/tests/check_dashboard_contrast.py": {
+    "sha256": "4b7bf769fd1bdda95780c207b43350a58c3e703b5205c99d5793618da0e6a4fe",
+    "source": "modul_mk38/api_sensor/tests/check_dashboard_contrast.py"
+  },
+  "pertemuan09/05_api_laravel/tests/package_lab.py": {
+    "sha256": "76c115076ce622f5657f6331ac156691bcea8772618110eebde9a76d92a68f56",
+    "source": "modul_mk38/api_sensor/tests/package_lab.py"
+  },
+  "pertemuan09/05_api_laravel/tests/verify_dashboard_live.py": {
+    "sha256": "b4876c94672079b3a4b45170f21927a8c672e344a2484d573412eeabe3fa582f",
+    "source": "modul_mk38/api_sensor/tests/verify_dashboard_live.py"
+  },
+  "pertemuan09/05_api_laravel/tests/verify_live.py": {
+    "sha256": "f7b1e503a0573a27d5254742e80aabda47cd0357ed63b6f7b157fea6a3cc3f2a",
+    "source": "modul_mk38/api_sensor/tests/verify_live.py"
+  },
+  "pertemuan09/README.md": {
+    "sha256": "3ab4434f503c7416095260c68d9458a06569d8eb3a8c0f0f11365976fa9de742",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/README.md"
+  },
+  "pertemuan09/TAHAPAN.md": {
+    "sha256": "dffd659ebedad621fded20edf94c5898a46721279b7a1d1e885f72eb265cf7d4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/TAHAPAN.md"
+  },
+  "pertemuan09/cuplikan/api_laravel-01.txt": {
+    "sha256": "7cd6b08d2acdd86250ac23d60609c38f75cc7873aa0308297a79c37c79681bc6",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-02.txt": {
+    "sha256": "698bb1bd79433721b85d2b11111ad9871a339f2dbe8be5816f0bb1a625786fc7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-03.txt": {
+    "sha256": "8f63b3066985866f30d21065848f3092392e4c37f88919155190e87b1a9717fc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-04.txt": {
+    "sha256": "f2f6f1727173ae2dd80bb890465e86e819ef936c5791cd7e489c199319fe6478",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-05.txt": {
+    "sha256": "0c12ead9a1dfb63fefb138ae7cb19849cc03c84bce7c9566392f833742df7807",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-06.txt": {
+    "sha256": "b5c4ceb95ce3dea38281c5e0d05c1a89688ec3b3e9024ee8b526854c9ed8fb33",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-07.txt": {
+    "sha256": "d32cee6e3d182c54b366c60cc5bf57966f5f95205fccf745ea4d42af5c17c8f0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-08.sql": {
+    "sha256": "a6071883b6e6b9d4d8c28438d693de5f71138565d8fa5f27fd5bb9d3d24e0cd3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-09.txt": {
+    "sha256": "0ceb09cd59311574746ecd145a1b65686c5d05e607a35c6d469cb8d25fda060e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-10.txt": {
+    "sha256": "df1b7c47f20690dcd6ae9fe4d29e4c5f2da607b568c3e261b737a870826ae07e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-11.txt": {
+    "sha256": "325ac089e5db63eb3ba093d55d4d15bb6a031c404a6b4aec8ad7b8d554f39795",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-12.txt": {
+    "sha256": "b0fd694ce076b55b6a3dceb5f06f951cc3e021ce8a644818283ad98177f6abf2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-13.sql": {
+    "sha256": "53b3eac8fcf774b4615d7868640536d05ef39ebb1762c85e744102336bad694e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-14.txt": {
+    "sha256": "886d747f2e52f04d29cb60ec2f40287512341b4d36e305b16b155fe2c96370e7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-15.txt": {
+    "sha256": "6ccb1e5b8db0277205ec7e2f0190f960d2568af5b249f6c6fbcc56b9d19a1f0d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-16.txt": {
+    "sha256": "c67b22aaa26ecb1de7e936fbb2068f81ba4cd7d6183ab0084ac9a1f7edffdc2e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-17.txt": {
+    "sha256": "de06a55940033b0796cffb47b40faf438a52549bf888f1e6b31741c19f5bbd20",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-18.php": {
+    "sha256": "5a4966bff74bb62eb6cc702512bcaf9be6f44b2191720d73d0b433412ba017db",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-19.txt": {
+    "sha256": "80adffa7733542db565d50f078da83133b5fd49d778508efc43d3999819e3898",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-20.js": {
+    "sha256": "ddbb772edcd78c6077c1d0fe6159e2bbf9568a3807bff68d127106b08a9a5d49",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-21.txt": {
+    "sha256": "ea84bc8a0f885c1e6f242cfbfc1dde875e1ef8187483b3479cc04dad30d914a2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-22.txt": {
+    "sha256": "1166369dbd0f3bf27a1c6821eabe7075afaab89f69ae985c2ce2e5d675a7b8ed",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/api_laravel-23.txt": {
+    "sha256": "eb66a4d7d826715348516e7cb640eb8171f39d0907968b23eb37c9156b4f96fc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
+  },
+  "pertemuan09/cuplikan/channel_demo-01.txt": {
+    "sha256": "28bc0127ff8cc50e6617bf6e84ff38bc86022b88ca4747f7453691a5bd5991ef",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/channel_demo.tex"
+  },
+  "pertemuan09/cuplikan/contents-01.txt": {
+    "sha256": "6f80093d7d3ab46ba4a1d120f93cf16cf5b6e968ff761a6f15c074a6ff3cca01",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/contents.tex"
+  },
+  "pertemuan09/cuplikan/contents-02.txt": {
+    "sha256": "486928cad2c6d73b56d80ed50efb28d21737987651281d039b2745bcb8dbf7c1",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/contents.tex"
+  },
+  "pertemuan09/cuplikan/contents-03.txt": {
+    "sha256": "77c74c3cc309592157f51a00c89bae977d6e610f941a88f79af7980801f251e4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/contents.tex"
+  },
+  "pertemuan09/cuplikan/contents-04.txt": {
+    "sha256": "97e46e72507d8d9450d4ac31423c8b4669ab1434ab15b4c458d45d725af15406",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/contents.tex"
+  },
+  "pertemuan09/cuplikan/contents-05.txt": {
+    "sha256": "ec31ac3f5001f83f107d68537a44baa485db3eb089e91e1382a7eb70fd04c257",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/contents.tex"
+  },
+  "pertemuan09/cuplikan/tahapan-01.txt": {
+    "sha256": "5e056024f5118c471ca5ace85c7c3e300a007946aa5c0283b0d1f737e1f4a3b7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/tahapan.tex"
+  },
+  "pertemuan09/cuplikan/tahapan-02.txt": {
+    "sha256": "3fd93c9b8ea16cae80f46bedcaee5ef5685277029ff96cd20654db184cab0b23",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/tahapan.tex"
+  },
+  "pertemuan09/cuplikan/tahapan-03.txt": {
+    "sha256": "c2ad6b3395791df244d6cd7b0eb21f3ae9ef5351453a94e9ffd14752c02296cc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/tahapan.tex"
+  },
+  "pertemuan09/cuplikan/tahapan-04.txt": {
+    "sha256": "97693e296ce5dde690cb96fe1ee5257933dcefc87b1f8b2af3ef5e246d077551",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/tahapan.tex"
+  },
+  "pertemuan09/cuplikan/tahapan-05.txt": {
+    "sha256": "a357123152a9c732f5ecdebe49d63cbb487601892681127e476ec9293016e844",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/tahapan.tex"
+  },
+  "pertemuan09/proyek/kontrak_data.csv": {
+    "sha256": "8b52cb232acb6b25fdcf4557817073041682a4c247390d3ee7d86f41e6532787",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/proyek/kontrak_data.csv"
+  },
+  "pertemuan10/01_publish/.gitignore": {
+    "sha256": "fe87927404d28f94b539478646c9bbcf049a365be9b7fb82a3505b8fe4321076",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/01_publish/.gitignore"
+  },
+  "pertemuan10/01_publish/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/01_publish/diagram.json"
+  },
+  "pertemuan10/01_publish/include/config.h": {
+    "sha256": "39a6a09b738c16cadbfd8100b00cc4cf647ff16385daba5d30a5334af5f99daf",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/01_publish/include/config.h"
+  },
+  "pertemuan10/01_publish/platformio.ini": {
+    "sha256": "dbc92e6f3217d46bfdda3f5b1f2b7058690d616b10931ce399840f0258c65250",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/01_publish/platformio.ini"
+  },
+  "pertemuan10/01_publish/src/main.cpp": {
+    "sha256": "deb66ba1b5033548586c541d6736d5eeceaf0e0bc6cc0f4f25e65b7f63ffdf5f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/01_publish/src/main.cpp"
+  },
+  "pertemuan10/01_publish/wokwi.toml": {
+    "sha256": "c18f587b10912a36e4aae6d56da079976ec70bc66cbe24e6c79ea28aa13f8ff3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/01_publish/wokwi.toml"
+  },
+  "pertemuan10/02_sensor/.gitignore": {
+    "sha256": "fe87927404d28f94b539478646c9bbcf049a365be9b7fb82a3505b8fe4321076",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/02_sensor/.gitignore"
+  },
+  "pertemuan10/02_sensor/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/02_sensor/diagram.json"
+  },
+  "pertemuan10/02_sensor/include/config.h": {
+    "sha256": "39a6a09b738c16cadbfd8100b00cc4cf647ff16385daba5d30a5334af5f99daf",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/02_sensor/include/config.h"
+  },
+  "pertemuan10/02_sensor/platformio.ini": {
+    "sha256": "dbc92e6f3217d46bfdda3f5b1f2b7058690d616b10931ce399840f0258c65250",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/02_sensor/platformio.ini"
+  },
+  "pertemuan10/02_sensor/src/main.cpp": {
+    "sha256": "12fddf1fbde1d6e2425917e99302a3291cfde5207fd462ae0f0a42c8931568d2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/02_sensor/src/main.cpp"
+  },
+  "pertemuan10/02_sensor/wokwi.toml": {
+    "sha256": "c18f587b10912a36e4aae6d56da079976ec70bc66cbe24e6c79ea28aa13f8ff3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/02_sensor/wokwi.toml"
+  },
+  "pertemuan10/03_kendali/.gitignore": {
+    "sha256": "fe87927404d28f94b539478646c9bbcf049a365be9b7fb82a3505b8fe4321076",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/03_kendali/.gitignore"
+  },
+  "pertemuan10/03_kendali/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/03_kendali/diagram.json"
+  },
+  "pertemuan10/03_kendali/include/config.h": {
+    "sha256": "39a6a09b738c16cadbfd8100b00cc4cf647ff16385daba5d30a5334af5f99daf",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/03_kendali/include/config.h"
+  },
+  "pertemuan10/03_kendali/platformio.ini": {
+    "sha256": "dbc92e6f3217d46bfdda3f5b1f2b7058690d616b10931ce399840f0258c65250",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/03_kendali/platformio.ini"
+  },
+  "pertemuan10/03_kendali/src/main.cpp": {
+    "sha256": "2546f6036be9a27e7624432fab785abafbc2fcbfae8381104879d32300178938",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/03_kendali/src/main.cpp"
+  },
+  "pertemuan10/03_kendali/wokwi.toml": {
+    "sha256": "c18f587b10912a36e4aae6d56da079976ec70bc66cbe24e6c79ea28aa13f8ff3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/03_kendali/wokwi.toml"
+  },
+  "pertemuan10/README.md": {
+    "sha256": "162e274d55c5e397b72e4e8b9dc7927d07b8846bd1953413754323f2fa79d6ef",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/README.md"
+  },
+  "pertemuan10/TAHAPAN.md": {
+    "sha256": "299bc0ed368542860e185fb2d37f0527cf206dfb786bf317a6993425d007ffb8",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/TAHAPAN.md"
+  },
+  "pertemuan10/cuplikan/contents-01.txt": {
+    "sha256": "32c682ca4aa054c46c2491cfcccf7decfb9341d053a3f498f175d49d57a24395",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-02.txt": {
+    "sha256": "e3eaa1779775b54fc257594b6668585fcf5ddaa2ffd2f3edea0186d97b57ce13",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-03.txt": {
+    "sha256": "3f35a20430abfa2f1582e0f2320db01f3db70ebed4aceb98cc4f13f977752418",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-04.txt": {
+    "sha256": "f6310206fec4237271d1b16ef475c01033bd8a2e0395831c48274b953bcd643f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-05.txt": {
+    "sha256": "1de72feaf5ba502d6538ec0c5acd90e19b9649bf4520e4a7607812efd10f6e34",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-06.txt": {
+    "sha256": "4041e4f33d8d777c9fdaa62a2a15a0f87647ce4753cd703b67911e6b0900fbd8",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-07.txt": {
+    "sha256": "02a5f8d000e903dc1e4701bed88948e7ccdba10731c4caae010f1a822b90ec4f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-08.txt": {
+    "sha256": "8f44f4bd56f8e9c2069770b0108c66b9f1494de15a0095a88aeae8de87dbe394",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/contents-09.txt": {
+    "sha256": "9603244d3e385e6b2250f323bbfd61689bd6ff75ddf57c42b569a69a5c1b6e27",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
+  },
+  "pertemuan10/cuplikan/node_red_bertahap-01.txt": {
+    "sha256": "a9c70819c569709630f54a4335ba946c93a5bcce494158a0e9b2fdb388dfe98f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/node_red_bertahap.tex"
+  },
+  "pertemuan10/cuplikan/node_red_bertahap-02.txt": {
+    "sha256": "b7a53b0249f317fdaf5f4608ed3661b6eec8b896cb11402115e13a83e5d71325",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/node_red_bertahap.tex"
+  },
+  "pertemuan10/cuplikan/proyek_akhir-01.txt": {
+    "sha256": "33baf4b9c664d110367ea2fc17b95ee1531b540601610a73c9bde5c4b321e662",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/proyek_akhir.tex"
+  },
+  "pertemuan10/node_red/.gitignore": {
+    "sha256": "29f6d7e150d0a806feab0fca58e648e2852567b01a2aca4b78d6fd4da4521589",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/.gitignore"
+  },
+  "pertemuan10/node_red/config.json": {
+    "sha256": "0e177b2c0256b2a730b2886b0b7e6f60cd59b13a5cc620ff7a74dac797b96abc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/config.json"
+  },
+  "pertemuan10/node_red/configure.js": {
+    "sha256": "9337124648a769aa00b3fac685e34da6af8f1dd33cde613b999b5a3feffa4599",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/configure.js"
+  },
+  "pertemuan10/node_red/flow.template.json": {
+    "sha256": "3fe93b13d37a9cbaf866731c599b070f2613278baf4f6dc26457cfcf9ed7a594",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/flow.template.json"
+  },
+  "pertemuan10/node_red/functions/parameter_sql.js": {
+    "sha256": "aa82d9083dd9a1e70bdff2e129731ccf09bf23757c0831b564e1376cbd60d0c5",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/functions/parameter_sql.js"
+  },
+  "pertemuan10/node_red/functions/validasi.js": {
+    "sha256": "d05556337afc3b1a061c78e86df7e024c53ffa9f0aed3d39d684ebbdbedccc3e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/functions/validasi.js"
+  },
+  "pertemuan10/node_red/mqtt_cli.js": {
+    "sha256": "fac0d2963517b70fded015ad773fec87e69de825bb593f30d1dd7c20350d3c3a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/mqtt_cli.js"
+  },
+  "pertemuan10/node_red/package-lock.json": {
+    "sha256": "777cc7e3d1982d4d58cb766aea83ece217a70eabb99dab0513f2c5f181ea89f1",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/package-lock.json"
+  },
+  "pertemuan10/node_red/package.json": {
+    "sha256": "90c6c6c934ee65d4041d840dbb021e5902ff9a2b4192e75acf56092562edf1ef",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/package.json"
+  },
+  "pertemuan10/node_red/settings.js": {
+    "sha256": "d8d9a9f6ba74f4dc510dc1fcb3d143b2a647705f63ee8c8cb32fae040bd2c6bc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/settings.js"
+  },
+  "pertemuan10/node_red/tahapan/jalankan.js": {
+    "sha256": "eace7bf3496581291895b9c67953241fe0ef904617c0fd99164f3164c21de096",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/tahapan/jalankan.js"
+  },
+  "pertemuan10/node_red/tahapan/validasi_awal.js": {
+    "sha256": "033124376dc5f40ad7e0890139afe64ef378c703358d2f4a2f3d56ac61ef6614",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/tahapan/validasi_awal.js"
+  },
+  "pertemuan10/proyek/jejak_perintah.csv": {
+    "sha256": "7c6e5569cd81231ace2daeb9bbe9ef770ea94d7ae62fa3e4793d9e6229dd4a68",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/proyek/jejak_perintah.csv"
+  },
+  "pertemuan11/README.md": {
+    "sha256": "d6958d233b5fabb851dbf153ddd06cbbe326c325ac644949bee77090d2df2284",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/README.md"
+  },
+  "pertemuan11/TAHAPAN.md": {
+    "sha256": "b4ab5773e5fe5e4969594975dfa41eeac8bfb4736ba334a769f165b1dc68a650",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/TAHAPAN.md"
+  },
+  "pertemuan11/cuplikan/channel_demo-01.txt": {
+    "sha256": "28bc0127ff8cc50e6617bf6e84ff38bc86022b88ca4747f7453691a5bd5991ef",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/channel_demo.tex"
+  },
+  "pertemuan11/cuplikan/contents-01.txt": {
+    "sha256": "0e318b0df02866fa9b118080b1d514c55f796264d927e1a6ad52d5072e74930d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/contents.tex"
+  },
+  "pertemuan11/cuplikan/contents-02.txt": {
+    "sha256": "e361fc777fe494fb9521bd8bfda9e00dc01ea43cfde33f99940d52c4b6dcb04c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/contents.tex"
+  },
+  "pertemuan11/cuplikan/contents-03.txt": {
+    "sha256": "d5c31c7f98ea1132c0aa9b7daabeb8603ac43f6db8f2451898f5489287971836",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/contents.tex"
+  },
+  "pertemuan11/cuplikan/contents-04.txt": {
+    "sha256": "ebad308cf8fc1098f9ceb66c8a0832bdb6f6f11283ed3128504af707467824f3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/contents.tex"
+  },
+  "pertemuan11/cuplikan/contents-05.txt": {
+    "sha256": "02a5f8d000e903dc1e4701bed88948e7ccdba10731c4caae010f1a822b90ec4f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/contents.tex"
+  },
+  "pertemuan11/cuplikan/tahapan-01.txt": {
+    "sha256": "5e056024f5118c471ca5ace85c7c3e300a007946aa5c0283b0d1f737e1f4a3b7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/tahapan.tex"
+  },
+  "pertemuan11/cuplikan/tahapan-02.txt": {
+    "sha256": "3ed44dcc002e6a339b36c3303700a279193be87f7c95d0d5e3db363b469b9754",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/tahapan.tex"
+  },
+  "pertemuan11/cuplikan/tahapan-03.txt": {
+    "sha256": "e1ea5dc971fb2aa3480205136fef889ff1dcb82f94042086d07144ca2868a5d9",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/tahapan.tex"
+  },
+  "pertemuan11/cuplikan/tahapan-04.txt": {
+    "sha256": "8031d4ecb3c2135112036ad91eedce23fa463b9e64d4cd890615f3b0eb805723",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/tahapan.tex"
+  },
+  "pertemuan11/cuplikan/tahapan-05.txt": {
+    "sha256": "c2ad6b3395791df244d6cd7b0eb21f3ae9ef5351453a94e9ffd14752c02296cc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/tahapan.tex"
+  },
+  "pertemuan11/esp32_cloud/.gitignore": {
+    "sha256": "6c2b8c25f9d027265c3391184826d42e8cd79a6ea07c87e342d7cab0cf0e4e8a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/.gitignore"
+  },
+  "pertemuan11/esp32_cloud/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/diagram.json"
+  },
+  "pertemuan11/esp32_cloud/include/cloud.h": {
+    "sha256": "8f4a2db6f9b301f086dea517385d99f07ef8693ebaacad3ad1d6c6c9965a0dc9",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/include/cloud.h"
+  },
+  "pertemuan11/esp32_cloud/include/config.h": {
+    "sha256": "466cc37cef1553b86ac62d703a149a55288460d170094aa183b85dc8fdc4a8be",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/include/config.h"
+  },
+  "pertemuan11/esp32_cloud/include/secrets.demo.h": {
+    "sha256": "ec002e503d8d11e100adc859e475523c3854b9cc2d748545a896e7793255a167",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/include/secrets.demo.h"
+  },
+  "pertemuan11/esp32_cloud/include/secrets.example.h": {
+    "sha256": "3b69bdf0783a5cbf48c956c4e162138e66238f80c3fd605f56e726fd39ecadc3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/include/secrets.example.h"
+  },
+  "pertemuan11/esp32_cloud/include/thingspeak_ca.h": {
+    "sha256": "a0817ee4c6848ae8bb4aca47bdcf2b8cfe1c6eb0754fa888861161ea2aae0c7e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/include/thingspeak_ca.h"
+  },
+  "pertemuan11/esp32_cloud/platformio.ini": {
+    "sha256": "7a94ba5d5ef63c00fe2260922fa6158789cc5d86f3c75489566a864b4017d69f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/platformio.ini"
+  },
+  "pertemuan11/esp32_cloud/src/cloud.cpp": {
+    "sha256": "c0453c0678ccb47779fa1c9ef7763e32b218000b5e0f906a5512ab5db3a3d533",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/src/cloud.cpp"
+  },
+  "pertemuan11/esp32_cloud/src/cloud_worker.cpp": {
+    "sha256": "ccac0d40f836ec73bbba3565137f27cfe64faa42d72d03ec2abe55fadbee3d3d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/src/cloud_worker.cpp"
+  },
+  "pertemuan11/esp32_cloud/src/main.cpp": {
+    "sha256": "75c3cf988cf90b08ceb3dbb8656e12d4ef98650219ee14c950dfe5561d8cbe95",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/src/main.cpp"
+  },
+  "pertemuan11/esp32_cloud/versi/01_https.cpp": {
+    "sha256": "04cb77825d84104a9ce9be49db0871ad1eb50384f92ae8a46f57454c47df289b",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/versi/01_https.cpp"
+  },
+  "pertemuan11/esp32_cloud/versi/02_parse.cpp": {
+    "sha256": "cd34c7db71f764a67e8515548dc9b905de0666a9ff530a7bdb45ec62436402ba",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/versi/02_parse.cpp"
+  },
+  "pertemuan11/esp32_cloud/versi/03_task.cpp": {
+    "sha256": "04b03515b17ab3fe6656ee9dfb3b7208ea2b033d1b7bbfb4f927a83bbcceb97f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/versi/03_task.cpp"
+  },
+  "pertemuan11/esp32_cloud/versi/04_worker.cpp": {
+    "sha256": "13dd5ce60ce4a0df48e62ace76e7892c9425946e36394eafc329391acc9445c0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/versi/04_worker.cpp"
+  },
+  "pertemuan11/esp32_cloud/versi/99_lengkap.cpp": {
+    "sha256": "75c3cf988cf90b08ceb3dbb8656e12d4ef98650219ee14c950dfe5561d8cbe95",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/versi/99_lengkap.cpp"
+  },
+  "pertemuan11/esp32_cloud/wokwi.toml": {
+    "sha256": "c18f587b10912a36e4aae6d56da079976ec70bc66cbe24e6c79ea28aa13f8ff3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/esp32_cloud/wokwi.toml"
+  },
+  "pertemuan11/laporan_tugas3.md": {
+    "sha256": "08ce7fc6753cc65ee2eb22c614f8f6451c35b1abe4fd7921c2e8bcb854e7d2c1",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/laporan_tugas3.md"
+  },
+  "pertemuan11/node_red/.gitignore": {
+    "sha256": "29f6d7e150d0a806feab0fca58e648e2852567b01a2aca4b78d6fd4da4521589",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/.gitignore"
+  },
+  "pertemuan11/node_red/config.json": {
+    "sha256": "fd7fac6659c5200860662e14b6fe4baed035994ca5f27d43d69259a059163f33",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/config.json"
+  },
+  "pertemuan11/node_red/configure.js": {
+    "sha256": "fa2071cb0604a5472b9cf44004bb00e226b5480567c819d63007732c7de25453",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/configure.js"
+  },
+  "pertemuan11/node_red/flow.template.json": {
+    "sha256": "2359bef28c9a75acac36d597fc879b2c4c80db10b7495e8442b8993668744767",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/flow.template.json"
+  },
+  "pertemuan11/node_red/functions/parameter_sql.js": {
+    "sha256": "aa82d9083dd9a1e70bdff2e129731ccf09bf23757c0831b564e1376cbd60d0c5",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/functions/parameter_sql.js"
+  },
+  "pertemuan11/node_red/functions/sensor_widget.html": {
+    "sha256": "167779e251ede9d49194a76106abff79d5416cf4b95d2f6d13829ff1c0bbdeda",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/functions/sensor_widget.html"
+  },
+  "pertemuan11/node_red/functions/status_cloud.js": {
+    "sha256": "5c920866ab9efa96dda26c1023fb152a516ea83b53a62034c5a377d88cfe2660",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/functions/status_cloud.js"
+  },
+  "pertemuan11/node_red/functions/validasi.js": {
+    "sha256": "d05556337afc3b1a061c78e86df7e024c53ffa9f0aed3d39d684ebbdbedccc3e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/functions/validasi.js"
+  },
+  "pertemuan11/node_red/mqtt_cli.js": {
+    "sha256": "cb160f8425c8e0c8192de02046ffc6f7c5b37f19bcb11e97968f7eddbc2beb36",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/mqtt_cli.js"
+  },
+  "pertemuan11/node_red/package-lock.json": {
+    "sha256": "68d9d5e77b03f501dedf5df170bb1aa7c2bf100f718eea1a61d31a6320b70233",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/package-lock.json"
+  },
+  "pertemuan11/node_red/package.json": {
+    "sha256": "c4b6d6b691143409ec4cf8af727a45740dabf45d809582cec47685774a84f7e8",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/package.json"
+  },
+  "pertemuan11/node_red/settings.js": {
+    "sha256": "d8d9a9f6ba74f4dc510dc1fcb3d143b2a647705f63ee8c8cb32fae040bd2c6bc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/settings.js"
+  },
+  "pertemuan11/proposal_proyek.md": {
+    "sha256": "3431b023a660891c97327a47c6cb9b472a7d5aad8ea6390ba02da9428725f664",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/proposal_proyek.md"
+  },
+  "pertemuan11/proyek/cakupan_fitur.csv": {
+    "sha256": "17048d9adef70b7cfffe6aec1d2ffa45466b89a3b02fbcfcf0760dd1d8a653d7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/proyek/cakupan_fitur.csv"
+  },
+  "pertemuan12/README.md": {
+    "sha256": "65530b1798ad6a36e5cee90c530081ff64c5d6ecaf7ecf22c5f04a9bba30315c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/README.md"
+  },
+  "pertemuan12/TAHAPAN.md": {
+    "sha256": "226be384285f925ef927285dfd7706702e51946a5900933d81b65069df97a852",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/TAHAPAN.md"
+  },
+  "pertemuan12/cek_desain.py": {
+    "sha256": "fb19029927624e0738e34f7ab413b2d353c37d81f703ee165f9e116989712b13",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/cek_desain.py"
+  },
+  "pertemuan12/cuplikan/contents-01.txt": {
+    "sha256": "a8c656ff9e8d3ab4d824d6b8bc876e2ad078bc7df6c6044e03831530731aa0fc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/latex/contents.tex"
+  },
+  "pertemuan12/cuplikan/contents-02.txt": {
+    "sha256": "0db287a49154319413f8521c30c42b71044778320c17a20e9d2e20892b0da960",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/latex/contents.tex"
+  },
+  "pertemuan12/cuplikan/contents-03.txt": {
+    "sha256": "a61f8047bb448b15d8f9d2ed04d5200809b0408880388c530742ab0550ddb737",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/latex/contents.tex"
+  },
+  "pertemuan12/cuplikan/tahapan-01.txt": {
+    "sha256": "38ad6266a0170a4aff927fd2541f26cedce22126991c7d08dc288a4d484bbe43",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/latex/tahapan.tex"
+  },
+  "pertemuan12/desain/arsitektur.drawio": {
+    "sha256": "be9264666811ca093ec041ce8ab84e97f043f4829019f580329f68d1f8161128",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/desain/arsitektur.drawio"
+  },
+  "pertemuan12/desain/arsitektur.drawio.svg": {
+    "sha256": "f63839499b82fc802b6a1dd73c560abd9111cd9896923352ea6487274bf54fb1",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/desain/arsitektur.drawio.svg"
+  },
+  "pertemuan12/desain/arsitektur_preview.png": {
+    "sha256": "ae301b12966f2f2fdf8cc14024a6511de57834b1ad45580066f73cd8f4d8b60f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/desain/arsitektur_preview.png"
+  },
+  "pertemuan12/desain/bom_contoh.csv": {
+    "sha256": "8cc916351c2b2b9d210ced5d17f034a05caeec6cd099d4668bcfef124d0375b6",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/desain/bom_contoh.csv"
+  },
+  "pertemuan12/desain/interface.json": {
+    "sha256": "022caaa8406208ab7d3b818883ed0ffcc5987c4ba532ec9ae4e7d8ef9cecf23b",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/desain/interface.json"
+  },
+  "pertemuan12/enclosure/base.stl": {
+    "sha256": "922fc29d8ba3352c7e66f900a1372f298b35ada06b7adc60bc1c1803a74b074c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/enclosure/base.stl"
+  },
+  "pertemuan12/enclosure/enclosure.scad": {
+    "sha256": "b12bbb1f04e756b7b24d5117ff1643dc875c16c909b19d37308c50515c520424",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/enclosure/enclosure.scad"
+  },
+  "pertemuan12/enclosure/lid.stl": {
+    "sha256": "7ae1016bba5e7599f87bc2d060f705b0016faf92dd7fe5e9d2b86b13ab41b322",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/enclosure/lid.stl"
+  },
+  "pertemuan12/enclosure/tahapan/01_balok.scad": {
+    "sha256": "df1bf52c11a7bd48d12473c45d518b368f5a3f63f9439b55c6448e734dfb38da",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/enclosure/tahapan/01_balok.scad"
+  },
+  "pertemuan12/enclosure/tahapan/02_rongga.scad": {
+    "sha256": "6538b4c59d05ed4b286c94f04fbc4c979079da7143b1dc72d8422fa37b7ca966",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/enclosure/tahapan/02_rongga.scad"
+  },
+  "pertemuan12/enclosure/tahapan/03_usb.scad": {
+    "sha256": "1c372940b18e74d753ceed633ef2bdd9bc8b851068ce89ef0149bd1e316eab6f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/enclosure/tahapan/03_usb.scad"
+  },
+  "pertemuan12/proyek/transisi_keadaan.csv": {
+    "sha256": "433f374bfe9814bd20903354e36cad563f12ff128a2ca63268e9e77362a75265",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/proyek/transisi_keadaan.csv"
+  },
+  "pertemuan12/rangkaian/acuan_logika.fzz": {
+    "sha256": "d2c0d733a89bbafac41fc7fc06c04871119329a5505fd9c241ab913c4ca5c1f9",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/rangkaian/acuan_logika.fzz"
+  },
+  "pertemuan12/rangkaian/acuan_logika_breadboard.svg": {
+    "sha256": "99356e4ef0d1222cd45dd7c89c00b72dfe5cab9d7f762b01e115d746606081d7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/rangkaian/acuan_logika_breadboard.svg"
+  },
+  "pertemuan12/rangkaian/acuan_logika_schematic.svg": {
+    "sha256": "bc3a251b1337925d6c138a2d755299bca6e845e85d93bf468f6e51333498a8ff",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/rangkaian/acuan_logika_schematic.svg"
+  },
+  "pertemuan12/rangkaian/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/rangkaian/diagram.json"
+  },
+  "pertemuan12/rangkaian/pinmap.csv": {
+    "sha256": "84cdf15aa55bcd200f3283a62a5c97519e7dace140769224444da02602f3b1a2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/rangkaian/pinmap.csv"
+  },
+  "pertemuan12/template/progress_report_1.md": {
+    "sha256": "482520958f02be67cf0e301017ecd0639aacece2d44b6fbb09025b09fb878e58",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/template/progress_report_1.md"
+  },
+  "pertemuan12/template/ukuran_komponen.csv": {
+    "sha256": "cc119c6e1fdb4847d5824a95f77be5aa7eb082fbc3cebdf3e1db7161948d0669",
+    "source": "modul_mk38/source/weekly_modules/pertemuan12/praktik/template/ukuran_komponen.csv"
+  },
+  "pertemuan13/README.md": {
+    "sha256": "e82e63ceb62a7f3ec5c60f31e1e65f4c3deccfff49fd4eb364cf2a548ef98429",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/README.md"
+  },
+  "pertemuan13/TAHAPAN.md": {
+    "sha256": "de289a6a17811897d25c1f87f7d386136c2a3179fff94cf9c35695430bfc43ab",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/TAHAPAN.md"
+  },
+  "pertemuan13/amazon-root-ca1.pem": {
+    "sha256": "2c43952ee9e000ff2acc4e2ed0897c0a72ad5fa72c3d934e81741cbd54f05bd1",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/amazon-root-ca1.pem"
+  },
+  "pertemuan13/cuplikan/contents-01.txt": {
+    "sha256": "0083c7557fe18adfb52fd04505fd3a859c8583b928db37e94d8f6cccc9d69c88",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/contents.tex"
+  },
+  "pertemuan13/cuplikan/contents-02.txt": {
+    "sha256": "3a2e23ce853f560b28a84733b88e1ca0c07b09614125ff22ddbad9340939f223",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/contents.tex"
+  },
+  "pertemuan13/cuplikan/contents-03.txt": {
+    "sha256": "93b985be1feb5f42315d5159a08319a68e5e2096f401ebe79ea99414b8e45a2d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/contents.tex"
+  },
+  "pertemuan13/cuplikan/contents-04.txt": {
+    "sha256": "af416f4361f1f9c7633124a8d159364f680bd44ca53b81c469bbe58bbb82dbbb",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/contents.tex"
+  },
+  "pertemuan13/cuplikan/contents-05.txt": {
+    "sha256": "fd399025940d1cac040dfa69b5c558ba9da151c0ea6a3d5fc82eeb16838b3bea",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/contents.tex"
+  },
+  "pertemuan13/cuplikan/contents-06.txt": {
+    "sha256": "a6457abf0f3b885f947bce296998bfe6fea96d81e41e536e1760a9362779772d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/contents.tex"
+  },
+  "pertemuan13/cuplikan/proyek_akhir-01.txt": {
+    "sha256": "35368c901469e8d3f636350487fada0a1e73e53e72ebfee3d02e19ec6bb017d6",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/proyek_akhir.tex"
+  },
+  "pertemuan13/cuplikan/tahapan-01.txt": {
+    "sha256": "97693e296ce5dde690cb96fe1ee5257933dcefc87b1f8b2af3ef5e246d077551",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/tahapan.tex"
+  },
+  "pertemuan13/cuplikan/tahapan-02.txt": {
+    "sha256": "a357123152a9c732f5ecdebe49d63cbb487601892681127e476ec9293016e844",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/tahapan.tex"
+  },
+  "pertemuan13/cuplikan/tahapan-03.txt": {
+    "sha256": "c2ad6b3395791df244d6cd7b0eb21f3ae9ef5351453a94e9ffd14752c02296cc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/latex/tahapan.tex"
+  },
+  "pertemuan13/emqx-ca.crt": {
+    "sha256": "39fdcf28aeffe08d03251fccaf645e3c5de19fa4ebbafc89b4ede2a422148bab",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/emqx-ca.crt"
+  },
+  "pertemuan13/esp32_tls/.gitignore": {
+    "sha256": "007b6b75138da151a7f02556e4d0db9015cda1e7db4704e168424111bbe046ca",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/.gitignore"
+  },
+  "pertemuan13/esp32_tls/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/diagram.json"
+  },
+  "pertemuan13/esp32_tls/include/broker_ca.h": {
+    "sha256": "84b6226e1b44ac1163fad2888518dde5a8aa2a5a611a284cb5c3095f380c2169",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/include/broker_ca.h"
+  },
+  "pertemuan13/esp32_tls/include/secrets.example.h": {
+    "sha256": "df4b09364c9129e01a39207e8cfdb1b0187aa0e2ed490f772dc4b9c08feee13a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/include/secrets.example.h"
+  },
+  "pertemuan13/esp32_tls/platformio.ini": {
+    "sha256": "c62af495d32dc06cada96fd6efac2d57ae85ed9c45855afd348693ad7bceb81b",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/platformio.ini"
+  },
+  "pertemuan13/esp32_tls/src/main.cpp": {
+    "sha256": "ca8a224881adb08fb311c98bb63e12f2470e910879edf361e86bdfd8cb3ca3a2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/src/main.cpp"
+  },
+  "pertemuan13/esp32_tls/versi/01_teks.cpp": {
+    "sha256": "e9ec09d7c383de6b38adc63e8a1d545dddfa21aceb960050c61c979431b30359",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/versi/01_teks.cpp"
+  },
+  "pertemuan13/esp32_tls/versi/02_sensor.cpp": {
+    "sha256": "72cd2277223bae72a501e6fe65e4a68e0e1c1c6527488553959ec3e3b1b9de2b",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/versi/02_sensor.cpp"
+  },
+  "pertemuan13/esp32_tls/versi/99_lengkap.cpp": {
+    "sha256": "ca8a224881adb08fb311c98bb63e12f2470e910879edf361e86bdfd8cb3ca3a2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/versi/99_lengkap.cpp"
+  },
+  "pertemuan13/esp32_tls/wokwi.toml": {
+    "sha256": "b7226059de37049512b3a7c6cb42b042084b8fd2698aaed6731a2041a24dd75a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/esp32_tls/wokwi.toml"
+  },
+  "pertemuan13/kendali_lokal/.gitignore": {
+    "sha256": "5c1f1a54f51eea19bfc76d12d705d1773464a84e4933a3262531cde41a2f30e7",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/.gitignore"
+  },
+  "pertemuan13/kendali_lokal/README.md": {
+    "sha256": "15ea308d555eb0012dce49d8610f80cf3520b8f91b3b25aefc62eab11d85c1e2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/README.md"
+  },
+  "pertemuan13/kendali_lokal/diagram.json": {
+    "sha256": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/diagram.json"
+  },
+  "pertemuan13/kendali_lokal/include/aturan.h": {
+    "sha256": "10b673e2382de0254b590f09475dbe316f097c07d7b511af266b7323797c623f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/include/aturan.h"
+  },
+  "pertemuan13/kendali_lokal/include/uji_aturan.h": {
+    "sha256": "00f04b73da469484743ffd46eb5562b984f0bab72e147592ca05a4db99c1e8f2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/include/uji_aturan.h"
+  },
+  "pertemuan13/kendali_lokal/platformio.ini": {
+    "sha256": "6fe239a93bbf261fedf5f0c23da4e9945dfc61fd452f46ed3323b7ee607709f4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/platformio.ini"
+  },
+  "pertemuan13/kendali_lokal/src/main.cpp": {
+    "sha256": "a8da0f697b4c930c8d444d315502aa32d49804d4161717defce2c777659258c0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/src/main.cpp"
+  },
+  "pertemuan13/kendali_lokal/wokwi.toml": {
+    "sha256": "a928ff9a0c0b60942c6c8f92b808c959bff731db807c4df92d9af95f9ef8d496",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/kendali_lokal/wokwi.toml"
+  },
+  "pertemuan13/requirements.txt": {
+    "sha256": "f25fd7e6bc5f969a6d58986dab6d8eb1ea85dadf5f4d44a3d521db941709ab6c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/requirements.txt"
+  },
+  "pertemuan13/siapkan_lab.py": {
+    "sha256": "81c1ca98d8a3b172dceb4b5ecdf0d8f3ca7a4cd1bb81c027e1046649028d5b9f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/siapkan_lab.py"
+  },
+  "pertemuan13/templates/progress_report_2.md": {
+    "sha256": "4cf9c66c1a9de9aeda5e9ef82b137bf95af31b642aefb9216834793041d64b05",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/templates/progress_report_2.md"
+  },
+  "pertemuan13/uji_lokal.py": {
+    "sha256": "4039b0e42a62b1945738862ec0f39f30bb980c3b83c5f11d009b9f31dd9950bd",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/uji_lokal.py"
+  },
+  "pertemuan13/uji_tls.py": {
+    "sha256": "cf34c2d01d65cf7b22763abde77951a9284447dd8bb907b4f765609966700762",
+    "source": "modul_mk38/source/weekly_modules/pertemuan13/praktik/uji_tls.py"
+  },
+  "pertemuan14/.gitignore": {
+    "sha256": "c6b75888ca258b575ce4b8415385d9c46e69af7401d01f759eeb26a6b96aa742",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/.gitignore"
+  },
+  "pertemuan14/README.md": {
+    "sha256": "cc6f8ea05ede3f533e6a52fbbbd4724d3c53c1944f349b9ee2dde31c1a80c212",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/README.md"
+  },
+  "pertemuan14/TAHAPAN.md": {
+    "sha256": "bf8b1d2bc2d61269dca644737ba3a176ffc20d59333c8dea8113b098fca08499",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/TAHAPAN.md"
+  },
+  "pertemuan14/compose.yaml": {
+    "sha256": "4f4de2c36df6a004829da52de448545f6158cbecbc0a7c789fed66ee3ed29b23",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/compose.yaml"
+  },
+  "pertemuan14/config.example.json": {
+    "sha256": "5414df3d00e08098d462b69a3ebe72ea6105f694a82f9edc168c82f5a0bccada",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/config.example.json"
+  },
+  "pertemuan14/config.uji-lokal.example.json": {
+    "sha256": "6ad3fd2548e54668d0775688aa3bf7e6856e4aeae66f3f23ffd254029283caf9",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/config.uji-lokal.example.json"
+  },
+  "pertemuan14/cuplikan/contents-01.txt": {
+    "sha256": "4906ef08b2e142662336f93652e457259b3551b583956501227cfae7cce88cfd",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-02.txt": {
+    "sha256": "d12dcdac55b584f17991646378d879c7bab716006c0eb0da844b6e33fa03e241",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-03.txt": {
+    "sha256": "dca18d0e1c7b2c6d013352aebd25903602a7b5c8b831f9eeca56f3c87a283247",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-04.txt": {
+    "sha256": "676027ac050de9d574eb304705af3b99d6d4a564dbe1484f4720d9699d4d13e2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-05.txt": {
+    "sha256": "9825b5f0794e774967cc0df3de1045ae62b4718f6eaa38b819b130d83117e5cf",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-06.txt": {
+    "sha256": "754ca39d9ce1deb0ed400345d1cc9addeeb78f88bf4ceb5a13c4a74ed95e67fb",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-07.txt": {
+    "sha256": "64535c9f65bcbf7d6470f3770f499870835201177297b045849fa309fcea1a96",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-08.txt": {
+    "sha256": "9c548101e3c4d60dced8b17c8df0ab5a7038f237a107e65f91b74968e054229f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-09.txt": {
+    "sha256": "1bcc3001c5c4bd7de51ab086f18abeb13db39ebdd8c5404de6de72c810502c35",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/contents-10.txt": {
+    "sha256": "4db808fb212a1cb05615b927188074d02cef460a9bce6af4884e5fa1ef9a8c7d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/contents.tex"
+  },
+  "pertemuan14/cuplikan/proyek_akhir-01.txt": {
+    "sha256": "2c0a7f6d218cbe0d90717a020400f083babe9a72884ad93cd7892b8935e3d700",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/proyek_akhir.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-01.txt": {
+    "sha256": "1e0ee4aa711d60f205fb567f3c0d42c426190ecfa60fff8eeaff8bb5ecd208f5",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-02.txt": {
+    "sha256": "7e28cd8d606a0fdf781508a4ad980ff44e30694fa0b84286ff14f87093fa6f9c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-03.txt": {
+    "sha256": "a352b247c9e1c31c849740212592c14237247a98061799e41b92124ff40302d0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-04.txt": {
+    "sha256": "dde462ecbfd27f4b4336d6de2f4aa34cb25280af8ee9f351d1af7871e4414490",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-05.txt": {
+    "sha256": "d0096f473deef74ae96929d09731c25bdf7e939e7ecb99cf8fdf1cf6d4d92e9a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-06.txt": {
+    "sha256": "58b5c51bf93827fef5b6665d4d4df0fb19f879380484febd26112326581a66dc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-07.txt": {
+    "sha256": "172651f2f23c0e59a39ece274f76550fe69b8a89f4a6b7e56cb083b16e947d0b",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-08.txt": {
+    "sha256": "89a2a1a92a2e27dd99b4d241ba954267b2e046cb94c2313a83736a818d9461a0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/cuplikan/tahapan-09.txt": {
+    "sha256": "8e14260b800f3c1d76db9f503569300fafcb9642ddffeb7a36fd69c681c5f919",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/latex/tahapan.tex"
+  },
+  "pertemuan14/deploy/mk38-gateway.service": {
+    "sha256": "3ce0659c8e20ef1b8a1054923ef9f57104c14be473633d825f5a2486c64d0adf",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/deploy/mk38-gateway.service"
+  },
+  "pertemuan14/emqx-ca.crt": {
+    "sha256": "39fdcf28aeffe08d03251fccaf645e3c5de19fa4ebbafc89b4ede2a422148bab",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/emqx-ca.crt"
+  },
+  "pertemuan14/gateway.py": {
+    "sha256": "2e827f68c97b99300cf7f4af624d9b1ffbd33a72c570f2557a12d2e1080cfe45",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/gateway.py"
+  },
+  "pertemuan14/kirim_sensor.py": {
+    "sha256": "d243a413ef1b587c4abdc9508674d982b71ee7952adde43512baa2a35777f048",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/kirim_sensor.py"
+  },
+  "pertemuan14/lihat_data.py": {
+    "sha256": "92ee52a5e8785d758803da76ff17b434d444f0a81ba8fd089878b1214548c6e4",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/lihat_data.py"
+  },
+  "pertemuan14/proyek/BACA_KODE.md": {
+    "sha256": "99452191d6225f09c313b7e603d81baf37fe80283d79bcfaa467fb352454bd45",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/proyek/BACA_KODE.md"
+  },
+  "pertemuan14/proyek/README.md": {
+    "sha256": "c588ae923fd30be01d6d5457d27c55daf91e42069b8f0dedb1bed8ea005ce3c6",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/proyek/README.md"
+  },
+  "pertemuan14/proyek/contoh_sintetis/klasifikasi.csv": {
+    "sha256": "2c4ea10ed327e654406e185755358db95b5e9a93d8686508173e7b3eb08cf47d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/proyek/contoh_sintetis/klasifikasi.csv"
+  },
+  "pertemuan14/proyek/contoh_sintetis/latensi.csv": {
+    "sha256": "913c5d35611e4d05e9e29ef9b917c377832c0cec79858751a0e506f8fad04fe2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/proyek/contoh_sintetis/latensi.csv"
+  },
+  "pertemuan14/proyek/contoh_sintetis/perbandingan.csv": {
+    "sha256": "5588bf38856b467e8a7c3da280ec242311a59b059048781d0665a5c32df24c72",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/proyek/contoh_sintetis/perbandingan.csv"
+  },
+  "pertemuan14/proyek/hitung_metrik.py": {
+    "sha256": "266d7f686cb06faf05564325af5b447c74e800fb722b2e96cac11deb8da61d23",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/proyek/hitung_metrik.py"
+  },
+  "pertemuan14/proyek/rencana_metrik.csv": {
+    "sha256": "4200e1a1b2e33b8b38ed5d4a4bc7ae64bb88e7b6c4824d99ee96352a196b8cc0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/proyek/rencana_metrik.csv"
+  },
+  "pertemuan14/requirements.txt": {
+    "sha256": "f25fd7e6bc5f969a6d58986dab6d8eb1ea85dadf5f4d44a3d521db941709ab6c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/requirements.txt"
+  },
+  "pertemuan14/siapkan_lab.py": {
+    "sha256": "81c1ca98d8a3b172dceb4b5ecdf0d8f3ca7a4cd1bb81c027e1046649028d5b9f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/siapkan_lab.py"
+  },
+  "pertemuan14/tahapan/01_terima.py": {
+    "sha256": "4313c651e22dd6a685fa3a10eb070f3a342bcb1c016bbc8718b8fa1496f69a6b",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/tahapan/01_terima.py"
+  },
+  "pertemuan14/tahapan/02_simpan.py": {
+    "sha256": "7b1831189dbdbaf81e4ed8abda8714fbc358703dfbcfa51704538fc70b39f20f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/tahapan/02_simpan.py"
+  },
+  "pertemuan14/tahapan/03_kirim.py": {
+    "sha256": "eb4a87d7996488a0e93fef3e1030297cb1ca7ebf58df307c77fb3daf9bc0f63a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/tahapan/03_kirim.py"
+  },
+  "pertemuan14/tahapan/koneksi.py": {
+    "sha256": "ee2f999e41f66ef5299964e034fcf4f88395c76178c2bb1aaa992389366e1778",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/tahapan/koneksi.py"
+  },
+  "pertemuan14/tahapan/sampel.json": {
+    "sha256": "6f80093d7d3ab46ba4a1d120f93cf16cf5b6e968ff761a6f15c074a6ff3cca01",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/tahapan/sampel.json"
+  },
+  "pertemuan14/templates/hasil_integrasi.csv": {
+    "sha256": "669815fce8b12a880d0724cb4984eef8e89ec8f79e5abb4c7033b90229c8c0d5",
+    "source": "modul_mk38/source/weekly_modules/pertemuan14/praktik/templates/hasil_integrasi.csv"
+  },
+  "pertemuan15/README.md": {
+    "sha256": "44a76847b4547741131da6e5d185b5dd562f98dd2999187c2b108888340f4171",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/README.md"
+  },
+  "pertemuan15/TAHAPAN.md": {
+    "sha256": "aa029e8f73d9397f35e6a5ae3100af997cc89bb7066dac64b45ee0f46d914fa3",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/TAHAPAN.md"
+  },
+  "pertemuan15/cek_pengumpulan.py": {
+    "sha256": "17757f0073e6acb459d384b07e90053a5599f1065194eee6c9913afbff7ab1de",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/cek_pengumpulan.py"
+  },
+  "pertemuan15/cuplikan/contents-01.txt": {
+    "sha256": "39798945afc8cbb8376d532fa5278f385fcfd4303f59e53564a07a0754a98a5d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/latex/contents.tex"
+  },
+  "pertemuan15/cuplikan/contents-02.txt": {
+    "sha256": "a468f050ff97d14a69af7bc75642a828572ebdbe8b74efee84bf0624f0600b08",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/latex/contents.tex"
+  },
+  "pertemuan15/cuplikan/contents-03.txt": {
+    "sha256": "346743fa499c788817307fb8355fe6ea4e6a68741f86ea81cb9855744b991535",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/latex/contents.tex"
+  },
+  "pertemuan15/cuplikan/contents-04.txt": {
+    "sha256": "cd37c97934a33e6fa4b67f94fc47c60a85d648599dcba3b173e4b13fde6f55ba",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/latex/contents.tex"
+  },
+  "pertemuan15/cuplikan/tahapan-01.txt": {
+    "sha256": "22f77b2f9d7b1551fbefb494513302d003813c158171260f72676dce36a71ae0",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/latex/tahapan.tex"
+  },
+  "pertemuan15/cuplikan/tahapan-02.txt": {
+    "sha256": "50ff2949471848993d7974fa81650095e60174ed3a2ad8e406d8b9b741d89da5",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/latex/tahapan.tex"
+  },
+  "pertemuan15/cuplikan/tahapan-03.txt": {
+    "sha256": "cd37c97934a33e6fa4b67f94fc47c60a85d648599dcba3b173e4b13fde6f55ba",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/latex/tahapan.tex"
+  },
+  "pertemuan15/proyek/cakupan_demo.csv": {
+    "sha256": "09ccc49ab9ce14feab4d3fd538b40598b855cb545385c4791808e9388c90dc02",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/proyek/cakupan_demo.csv"
+  },
+  "pertemuan15/tahapan/01_struktur.py": {
+    "sha256": "43879e5a59e8a50459ca34d96a624f004fd304059d7cb8f2e57370d22b236b1f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/tahapan/01_struktur.py"
+  },
+  "pertemuan15/tahapan/02_hasil.py": {
+    "sha256": "04abc70df4fa4dd0f750286979518bf3ed26185d4e873cf0fc880a9b92477ea1",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/tahapan/02_hasil.py"
+  },
+  "pertemuan15/template_pengumpulan/README.md": {
+    "sha256": "b9b92ec16616f6a0360ef754a839951c0fa6676e40e81918f02b1631f47f07f6",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/template_pengumpulan/README.md"
+  },
+  "pertemuan15/template_pengumpulan/hasil_uji.csv": {
+    "sha256": "9b4bc0a282c4d83a5e9186d8c75cbf157e11e654683f5811c56350ef7834b58a",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/template_pengumpulan/hasil_uji.csv"
+  },
+  "pertemuan15/template_pengumpulan/project.json": {
+    "sha256": "9291b897d777e75344c8d894881bf1eb70dffdeb947a80598edfd2f2709d1737",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/template_pengumpulan/project.json"
+  },
+  "pertemuan15/templates/laporan_akhir.md": {
+    "sha256": "5c3b9907308c451d79916cb38bf6de24a44e56f91ed744160d725d22afa056d9",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/templates/laporan_akhir.md"
+  },
+  "pertemuan15/templates/presentasi.md": {
+    "sha256": "ba189d3421d3257a17b09d4e5867572bbeef725026f455aeed3817995cbe2a2c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan15/praktik/templates/presentasi.md"
+  }
+}

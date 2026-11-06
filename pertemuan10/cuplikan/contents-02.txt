@@ -1,0 +1,1 @@
+{"suhu":28.0,"kelembapan":65.0}

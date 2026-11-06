@@ -1,0 +1,12 @@
+kode,komponen,jumlah,satuan,spesifikasi,dimensi_terukur_mm,status,harga_satuan_rp,sumber_harga
+U1,ESP32 DevKit,1,buah,Varian board harus dicatat,,Periksa stok,,
+U2,DHT22,1,buah,Sensor bare 4 pin 3.3 V,,Periksa stok,,
+D1,LED merah,1,buah,Indikator GPIO 23,,Periksa stok,,
+R1,Resistor,1,buah,220 ohm seri LED,,Periksa stok,,
+R2,Resistor,1,buah,10000 ohm pull-up DATA,,Periksa stok,,
+BB1,Breadboard,1,buah,Ukuran diukur sebelum desain akhir,,Periksa stok,,
+J1,Kabel jumper,1,set,Hitung sesuai susunan breadboard,,Periksa stok,,
+USB1,Kabel USB data,1,buah,Cocokkan konektor dan ruang tekuk kabel,,Periksa stok,,
+M1,Base enclosure,1,buah,Contoh luar 110 x 80 x 35,,Rancangan latihan,,
+M2,Lid enclosure,1,buah,Contoh pelat 110 x 80 x 2 dan lip 3 mm,,Rancangan latihan,,
+M3,Baut dan mur M3,4,pasang,Panjang ditetapkan setelah ketebalan rakitan diukur,,Belum ditentukan,,

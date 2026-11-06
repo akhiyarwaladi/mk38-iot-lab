@@ -1,0 +1,2 @@
+{"suhu":"panas","kelembapan":65}
+{"suhu":28,"kelembapan":150}

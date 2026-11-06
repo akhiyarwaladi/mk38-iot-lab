@@ -1,0 +1,4 @@
+Copy-Item tahapan/03_api_mysql.php backend/routes/api.php
+cd backend
+php artisan route:list --path=api
+cd ..

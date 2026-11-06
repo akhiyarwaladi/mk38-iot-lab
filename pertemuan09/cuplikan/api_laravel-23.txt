@@ -1,0 +1,3 @@
+JsonDocument document;
+if (deserializeJson(document, reply) || document["command"].isNull()) return;
+JsonObject command = document["command"].as<JsonObject>();

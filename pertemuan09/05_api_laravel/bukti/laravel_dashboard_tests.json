@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "command": "php artisan test --no-ansi --log-junit=dashboard_phpunit.xml",
+  "suite": {
+    "name": "C:\\Users\\MyPC PRO\\Documents\\akreditasi\\modul_mk38\\api_sensor\\backend\\phpunit.xml",
+    "tests": "12",
+    "assertions": "105",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "time": "14.221263"
+  },
+  "test_cases": [
+    "test_empty_dashboard_and_unknown_device_are_truthful",
+    "test_threshold_warning_staleness_and_device_filter",
+    "test_csv_matches_the_selected_device_and_limit",
+    "test_command_waits_for_matching_device_confirmation",
+    "test_superseded_expired_and_foreign_commands_cannot_be_acknowledged",
+    "test_old_ack_retry_does_not_overwrite_newer_reported_state",
+    "test_post_commits_the_values_returned_to_the_client",
+    "test_invalid_payloads_are_rejected_without_creating_rows",
+    "test_list_supports_device_filter_latest_first_and_limit",
+    "test_unknown_fields_cannot_set_the_database_id",
+    "test_health_and_api_errors_do_not_require_browser_headers",
+    "test_progressive_routes_receive_data_before_database_writes"
+  ],
+  "source_hashes": {
+    "backend/tests/Feature/DashboardApiTest.php": "975c29c9ec7323fe204bb2a71d5d31126e914b6841603670f13f6708fa8e5471",
+    "backend/tests/Feature/SensorApiTest.php": "33808858b1f450048413b4ac33dce05a843b92936002195236d677b8e9db3125",
+    "backend/tests/inspect_database.php": "4c4a467d3dd10c70ad18bf3c0c42b839156bfadbc97223dd6351e0f80361a62f",
+    "backend/tests/TestCase.php": "c7c209f5579c42647c1f7b2a79ac828e8b54ac62a98442045a6e94fa2c0d0ebc",
+    "backend/tests/UsesLabMysql.php": "973e38b97febb28be97c3b34d1f9cd0da7a7b911f56d808df1cf3932c84d2ce3"
+  },
+  "database": "MySQL 8.4.13, mk38_sensor_test; isolated from simulator data",
+  "recorded_date": "2026-11-07",
+  "junit_sha256": "3e7a40eb7c594edd02b98b925fb4d44f7b54e709e530152e24939384a87401d8"
+}

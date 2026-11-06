@@ -1,0 +1,2 @@
+$pilihan = '?device_id=esp32-kelompok-01&limit=5'
+Invoke-RestMethod ($url + $pilihan)

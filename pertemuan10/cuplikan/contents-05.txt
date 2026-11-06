@@ -1,0 +1,2 @@
+INSERT INTO pengamatan(waktu,suhu,kelembapan,led)
+VALUES ($waktu,$suhu,$kelembapan,$led)

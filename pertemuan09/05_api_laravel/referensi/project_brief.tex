@@ -1,0 +1,432 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{microtype}
+
+\setlist[enumerate]{itemsep=4pt, topsep=4pt, leftmargin=2em}
+\setlist[itemize]{itemsep=3pt, topsep=4pt}
+\setlength{\emergencystretch}{3em}
+
+\title{\textbf{Proyek Akhir}\\Internet of Things (MK38)}
+\author{Program Studi Informatika, Universitas Jambi}
+\date{}
+
+\begin{document}
+
+\maketitle
+\vspace{-2em}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Item} & \textbf{Keterangan} \\
+\midrule
+Mata kuliah & Internet of Things (MK38), 3 SKS, Semester 5 \\
+Bentuk & Proyek kelompok (\textbf{6 kelompok $\times$ 5 mahasiswa}) \\
+Dosen Pengampu & Edi Saputra, S.T., M.Sc. \\
+ & Akhiyar Waladi, S.Komp., M.Kom. \\
+Bobot & Milestone Proyek 10\% + Proyek Akhir 40\% \\
+Alur kerja & Simulasi \texttt{Wokwi} lebih dahulu, baru implementasi \\
+ & perangkat keras (hardware) \\
+Pengerjaan & Pertemuan 11 sampai 15 (bimbingan dan milestone) \\
+Presentasi & Pertemuan 15 (demonstrasi langsung) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Deskripsi Umum}
+
+Proyek akhir adalah puncak mata kuliah Internet of Things. Setiap kelompok
+membangun \textbf{satu sistem IoT end-to-end} untuk satu kasus nyata: mulai
+dari perancangan (blok diagram, skematik \texttt{Fritzing}, desain 3D),
+implementasi perangkat keras berbasis \textbf{ESP32}, komunikasi nirkabel ke
+cloud menggunakan \textbf{MQTT} dan/atau \textbf{REST API}, sampai dashboard
+pemantauan dan kendali jarak jauh.
+
+Seluruh tahap pengembangan mengikuti alur kerja \emph{simulate first}: setiap
+rangkaian \textbf{wajib disimulasikan di \texttt{Wokwi}}
+(\url{https://wokwi.com}) sebelum dirakit pada perangkat keras, sehingga
+kesalahan wiring dan program dapat dideteksi lebih awal tanpa merusak
+komponen.
+
+\section{Tujuan}
+
+\begin{enumerate}
+  \item Menerapkan siklus lengkap sistem IoT: sensor $\rightarrow$
+        mikrokontroler $\rightarrow$ komunikasi nirkabel $\rightarrow$ cloud
+        $\rightarrow$ aktuator/dashboard.
+  \item Melatih kerja tim dalam kelompok besar (5 orang) dengan pembagian
+        peran yang jelas (perangkat keras, firmware, cloud/dashboard,
+        dokumentasi, pengujian).
+  \item Menghasilkan prototype yang berfungsi, terdokumentasi, dan dapat
+        didemonstrasikan secara langsung.
+\end{enumerate}
+
+\section{Ketentuan Kelompok dan Topik}
+
+\begin{enumerate}
+  \item Kelas dibagi menjadi \textbf{6 kelompok}, setiap kelompok
+        \textbf{5 mahasiswa}. Pembagian dilakukan pada pertemuan 11.
+  \item Setiap kelompok memilih \textbf{satu topik berbeda} dari enam topik
+        pada Bagian~\ref{sec:topik} (satu topik hanya boleh diambil satu
+        kelompok).
+  \item Usulan topik lain diperbolehkan dengan tingkat kesulitan setara dan
+        persetujuan dosen.
+  \item Semua topik telah diseimbangkan bobot kerjanya: jumlah sensor,
+        aktuator, protokol komunikasi, dan keluaran yang wajib dibuat
+        \textbf{setara} (lihat matriks keseimbangan pada
+        Bagian~\ref{sec:balance}).
+\end{enumerate}
+
+\section{Topik Proyek}\label{sec:topik}
+
+Setiap topik memiliki: masalah yang dipecahkan, daftar komponen, protokol
+komunikasi, dan metrik keberhasilan. Fitur disusun \textbf{bertingkat}:
+
+\begin{itemize}
+  \item \textbf{Tingkat 1 --- Dasar (wajib):} inti sistem yang harus berjalan;
+        menjadi batas minimal kelulusan fungsi.
+  \item \textbf{Tingkat 2 --- Menengah (pilih minimal 2):} fitur integrasi
+        cloud/dashboard yang menaikkan nilai fungsionalitas.
+  \item \textbf{Tingkat 3 --- Lanjutan (bonus):} fitur pembeda; dikerjakan
+        bila waktu dan kemampuan mendukung.
+\end{itemize}
+
+Struktur bertingkat ini membuat \textbf{upaya tetap terlihat dan dinilai}
+meskipun kelompok tidak menuntaskan seluruh tingkat: capaian Tiap tingkat
+didokumentasikan pada progress report, dan penilaian menghitung apa yang
+berhasil dibangun dengan baik --- bukan hanya apa yang gagal dicapai.
+
+\subsection*{Topik 1 --- Smart Parking dengan Payment Gateway}
+
+\begin{itemize}
+  \item \textbf{Masalah:} Pengemudi sulit mengetahui slot parkir kosong dan
+        proses bayar manual lambat. Sistem mendeteksi slot secara otomatis,
+        membuka palang saat masuk/keluar, dan menghitung tarif dengan
+        pembayaran digital.
+  \item \textbf{Tingkat 1 --- Dasar (wajib):} (1) deteksi 4--6 slot parkir;
+        (2) palang servo otomatis di pintu masuk/keluar; (3) tampilan sisa
+        slot pada LCD/OLED; (4) publish status slot ke broker MQTT.
+  \item \textbf{Tingkat 2 --- Menengah (pilih minimal 2):} verifikasi
+        kartu RFID RC522 untuk akses member; riwayat masuk/keluar tersimpan ke
+        database; indikator LED merah/hijau per slot; mode offline (palang
+        tetap bekerja tanpa internet).
+  \item \textbf{Tingkat 3 --- Lanjutan (bonus):} simulasi pembayaran
+        \emph{payment gateway} (sandbox Midtrans/Xendit atau QR mock) yang
+        membuka palang keluar setelah lunas; pengenalan plat nomor sederhana
+        dengan ESP32-CAM; analitik okupansi harian di dashboard.
+  \item \textbf{Komponen:} ESP32 ($\times$2: gerbang + slot), sensor
+        ultrasonik/IR ($\times$4--6), servo ($\times$2), LCD/OLED I2C,
+        RFID RC522 (opsional), buzzer.
+  \item \textbf{Protokol:} MQTT (status slot, kendali palang) + REST API
+        (verifikasi pembayaran); dashboard web/Node-RED.
+  \item \textbf{Metrik:} akurasi deteksi slot ($\geq$ 95\%), waktu respon
+        buka palang ($\leq$ 2 detik), alur bayar-palang berjalan utuh.
+  \item \textbf{Sisi menyenangkan:} maket parkir mini dengan mobil-mobilan;
+        scan QR palsu untuk ``membayar''.
+\end{itemize}
+
+\subsection*{Topik 2 --- Smart Greenhouse Otomatis}
+
+\begin{itemize}
+  \item \textbf{Masalah:} Tanaman greenhouse butuh suhu, kelembapan tanah, dan
+        penyiraman terkontrol; petani tidak bisa memantau 24 jam. Sistem
+        menyiram dan menjentikkan ventilasi otomatis sesuai ambang batas.
+  \item \textbf{Tingkat 1 --- Dasar (wajib):} (1) monitoring suhu/kelembapan
+        udara (DHT22); (2) kelembapan tanah (soil moisture); (3) pompa siram
+        otomatis lewat relay saat tanah kering; (4) kipas ventilasi otomatis
+        saat panas.
+  \item \textbf{Tingkat 2 --- Menengah (pilih minimal 2):} dashboard MQTT
+        (Node-RED/Grafana) dengan grafik real-time; notifikasi Telegram bila
+        tangki air kritis (level HC-SR04); tampilan status lokal OLED;
+        pencahayaan tumbuh otomatis mengikuti LDR.
+  \item \textbf{Tingkat 3 --- Lanjutan (bonus):} data historis tersimpan ke
+        InfluxDB/ThingSpeak; jadwal penyiraman berbasis waktu via dashboard;
+        node sensor ESP-NOW terpisah untuk beda rak tanaman; rekomendasi
+        penyiraman berbasis tren kelembapan.
+  \item \textbf{Komponen:} ESP32, DHT22, soil moisture capacitive, LDR,
+        HC-SR04 (level tangki), relay ($\times$2), pompa mini 5V, kipas DC,
+        OLED SSD1306, tanaman pot kecil.
+  \item \textbf{Protokol:} MQTT ke broker Mosquitto/HiveMQ; data historis ke
+        Node-RED/InfluxDB; notifikasi via Telegram Bot API (REST).
+  \item \textbf{Metrik:} kelembapan tanah terjaga pada rentang target
+        ($\geq$ 90\% waktu), notifikasi Telegram terkirim 100\%, grafik
+        historis terekam.
+  \item \textbf{Sisi menyenangkan:} benar-benar merawat tanaman hidup selama
+        proyek; demo menyiram otomatis di depan kelas.
+\end{itemize}
+
+\subsection*{Topik 3 --- Smart Home Terintegrasi Aplikasi Mobile/Web}
+
+\begin{itemize}
+  \item \textbf{Masalah:} Perabot rumah masih dikendalikan manual padahal
+        penghuni ingin kontrol dan pemantauan energi dari ponsel, termasuk
+        mode otomatis ketika ruangan kosong.
+  \item \textbf{Tingkat 1 --- Dasar (wajib):} (1) kendali 3--4 peralatan
+        (relay lampu/kipas); (2) deteksi keberadaan PIR untuk mode otomatis;
+        (3) monitoring suhu/kelembapan ruangan; (4) aplikasi web/mobile
+        dashboard dengan tombol kendali real-time.
+  \item \textbf{Tingkat 2 --- Menengah (pilih minimal 2):} monitoring daya
+        listrik per perangkat (PZEM-004T); scene otomatis (mode malam / mode
+        pergi); log aktivitas kendali tersimpan; notifikasi anomali (PIR
+        mendeteksi orang saat mode pergi).
+  \item \textbf{Tingkat 3 --- Lanjutan (bonus):} integrasi voice assistant
+        (Google Assistant/IFTTT); ESP32-CAM doorbell dengan deteksi wajah;
+        update firmware over-the-air (OTA); analitik konsumsi energi mingguan.
+  \item \textbf{Komponen:} ESP32 ($\times$1--2), relay 4-channel, PIR HC-SR501,
+        DHT22, PZEM-004T (opsional, pengukur daya), buzzer.
+  \item \textbf{Protokol:} REST API (kendali dari aplikasi) + MQTT (telemetri);
+        dashboard web (HTML/Node-RED/Blynk).
+  \item \textbf{Metrik:} latensi kendali aplikasi-perangkat ($\leq$ 1 detik),
+        mode otomatis aktif tepat saat ruangan kosong/logis, semua relay
+        dapat dikendalikan dari luar jaringan lokal.
+  \item \textbf{Sisi menyenangkan:} mengendalikan ``rumah'' dari HP teman di
+        kursi sebelah; mode malam otomatis yang bisa dipamerkan.
+\end{itemize}
+
+\subsection*{Topik 4 --- Adaptive Traffic Light Persimpungan Cerdas}
+
+\begin{itemize}
+  \item \textbf{Masalah:} Lampu lalu lintas durasi tetap menyia-nyiakan waktu
+        di jalanan sepi dan memadatkan jalanan ramai. Sistem memberi hijau
+        dinamis sesuai antrian tiap lengan.
+  \item \textbf{Tingkat 1 --- Dasar (wajib):} (1) model persimpangan 4
+        lengan; (2) sensor antrean per lengan (IR/PIR near-far); (3) lampu
+        R/Y/G per lengan dengan siklus aman (all-red delay); (4) algoritma
+        prioritas antrean dasar.
+  \item \textbf{Tingkat 2 --- Menengah (pilih minimal 2):} dashboard MQTT
+        menampilkan antrean dan fase lampu real-time; mode preemption saat
+        antrean $\geq$ ambang; countdown waktu hijau pada LCD per lengan;
+        logging statistik antrean per jam.
+  \item \textbf{Tingkat 3 --- Lanjutan (bonus):} mode darurat ambulans
+        (RFID/tombol) dengan prioritas tertinggi; sinkronisasi green-wave dua
+        simpang (master-slave ESP-NOW); penghitungan kendaraan ESP32-CAM;
+        prediksi densitas berbasis data historis.
+  \item \textbf{Komponen:} ESP32 ($\times$1--2 master-slave), sensor IR/PIR
+        ($\times$8), LED R/Y/G ($\times$12), LCD antrean, buzzer (mode
+        darurat).
+  \item \textbf{Protokol:} MQTT (skor antrean, fase lampu) + web dashboard;
+        opsional ESP-NOW antar controller.
+  \item \textbf{Metrik:} penurunan rata-rata waktu tunggu simulasi vs.\ timer
+        tetap ($\geq$ 20\%), fase transisi selalu melalui all-red, prioritas
+        ambulans bekerja.
+  \item \textbf{Sisi menyenangkan:} maket persimpangan dengan mobil mainan;
+        mengetahui bahwa algoritma kalian ``menyelamatkan'' ambulans.
+\end{itemize}
+
+\subsection*{Topik 5 --- Sistem Peringatan Dini Banjir / Flood Early Warning System}
+
+\begin{itemize}
+  \item \textbf{Masalah:} Banjir kilat menerpa tanpa peringatan. Sistem
+        memantau ketinggian air dan intensitas hujan, lalu memberi sirene dan
+        notifikasi bertingkat ke warga.
+  \item \textbf{Tingkat 1 --- Dasar (wajib):} (1) ketinggian air via
+        ultrasonik (3 level: aman\slash waspada\slash bahaya); (2) sensor
+        hujan (rain drop module); (3) sirene buzzer + lampu status otomatis
+        per level; (4) notifikasi Telegram Bot dengan perintah /status.
+  \item \textbf{Tingkat 2 --- Menengah (pilih minimal 2):} dashboard MQTT
+        dengan grafik riwayat level air; pola sirene berbeda per level
+        bahaya; broadcast Telegram berkala tiap jam; relay + pompa mini
+        sebagai demo drainase otomatis.
+  \item \textbf{Tingkat 3 --- Lanjutan (bonus):} node sensor terpisah
+        (ESP-NOW/LoRa) untuk titik pantau jauh; sensor debit aliran air;
+        integrasi data cuaca publik via API; maket menara sirine mini.
+  \item \textbf{Komponen:} ESP32, HC-SR04 (non-kontak, anti korosi), rain
+        sensor, buzzer + LED RGB, relay + pompa mini (demo drainase), OLED.
+  \item \textbf{Protokol:} REST API (Telegram Bot API) + MQTT (telemetri ke
+        dashboard); debounce/filter agar tidak alarm palsu.
+  \item \textbf{Metrik:} klasifikasi level akurat ($\geq$ 95\% uji), notifikasi
+        terkirim $\leq$ 5 detik setelah level berubah, tanpa false alarm pada
+        uji 30 menit.
+  \item \textbf{Sisi menyenangkan:} membuat ``hujan'' dengan spray di atas
+        sensor; grup kelas menerima alert Telegram sungguhan saat demo.
+\end{itemize}
+
+\subsection*{Topik 6 --- Smart Health Monitoring Portabel}
+
+\begin{itemize}
+  \item \textbf{Masalah:} Pemeriksaan detak jantung dan SpO$_2$ butuh alat
+        mahal; pasien rawat inap/puskesmas desa perlu pemantauan jarak jauh
+        dengan peringatan otomatis ke petugas.
+  \item \textbf{Tingkat 1 --- Dasar (wajib):} (1) BPM dan SpO$_2$ via
+        MAX30100\slash 30102; (2) suhu tubuh DS18B20\slash MLX90614;
+        (3) tampilan lokal OLED; (4) publish data ke broker MQTT.
+  \item \textbf{Tingkat 2 --- Menengah (pilih minimal 2):} dashboard grafik
+        tren BPM/SpO$_2$ real-time; alarm otomatis (buzzer + Telegram
+        petugas) bila nilai keluar ambang normal; profil multi-pasien dengan
+        pemilihan via tombol; ekspor data pengukuran ke CSV.
+  \item \textbf{Tingkat 3 --- Lanjutan (bonus):} eskalasi bertingkat
+        (petugas $\rightarrow$ dokter) bila tidak ditanggapi; deteksi jatuh
+        MPU6050 untuk pasien rawat; casing wearable hasil 3D print;
+        mode hemat daya deep-sleep dengan bangun berkala.
+  \item \textbf{Komponen:} ESP32, MAX30100/30102, DS18B20 waterproof, OLED
+        SSD1306, buzzer, button (mode ukur).
+  \item \textbf{Protokol:} MQTT (BPM, SpO$_2$, suhu) + REST (Telegram alert);
+        dashboard Node-RED/Grafana.
+  \item \textbf{Metrik:} BPM terbaca konsisten vs.\ oximeter referensi
+        (selisih $\leq$ 5 bpm), alarm terpicu tepat pada uji ambang,
+        data terekam kontinu $\geq$ 30 menit.
+  \item \textbf{Sisi menyenangkan:} mengukur detak jantung anggota kelompok
+        sebelum dan sesudah lari keliling gedung; data langsung muncul di
+        layar dosen.
+\end{itemize}
+
+\subsection*{Matriks Keseimbangan Bobot Antar Topik}\label{sec:balance}
+
+Semua topik dirancang setara pada lima dimensi berikut:
+
+\begin{center}
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Topik} & \textbf{Sensor} & \textbf{Aktuator} & \textbf{Komunikasi} &
+\textbf{Dashboard} & \textbf{Tingkat 2} \\
+\midrule
+1 Parking        & 2 jenis & 3 jenis & MQTT + REST & ya & 4 pilihan \\
+2 Greenhouse     & 4 jenis & 3 jenis & MQTT + REST & ya & 4 pilihan \\
+3 Smart Home     & 2--3 jenis & relay $\times$4 & MQTT + REST & ya & 4 pilihan \\
+4 Traffic Light  & 8 unit IR/PIR & LED 12 + LCD & MQTT & ya & 4 pilihan \\
+5 Flood Warning  & 2 jenis & buzzer + relay & REST + MQTT & ya & 4 pilihan \\
+6 Health Monitor & 2 jenis & buzzer + OLED & MQTT + REST & ya & 4 pilihan \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Catatan keseimbangan: Topik 4 memiliki jumlah unit sensor terbanyak namun
+tiap unit sederhana (digital read); Topik 2 dan 6 memiliki sensor kalibrasi
+yang sedikit lebih sensitif namun jumlahnya lebih sedikit; Topik 1 dan 3
+memuat kompleksitas integrasi layanan eksternal (payment sandbox/aplikasi)
+sebagai penggani kompleksitas sensor. Estimasi beban kerja tiap topik
+setara $\pm$ 40--50 jam-jam-orang.
+
+\section{Alur Pengerjaan (Milestone)}
+
+\begin{center}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{1.1cm}p{2.0cm}p{11.2cm}@{}}
+\toprule
+\textbf{Tahap} & \textbf{Sesi} & \textbf{Kegiatan} \\
+\midrule
+1 & 11 & Kickoff: pembagian 6 kelompok, pemilihan topik, pembagian peran \\
+2 & 12 & Design awal (blok diagram), skematik \texttt{Fritzing}, 3D design
+       enclosure, dan \textbf{Progress Report 1} --- \textbf{(Milestone,
+       bobot 10\%)} \\
+3 & 13 & Implementasi awal firmware + keamanan dasar (TLS, autentikasi);
+       \textbf{Progress Report 2}: demo prototype awal \\
+4 & 14 & Integrasi menyeluruh (sensor--ESP32--cloud--dashboard), debugging,
+       dan uji coba \\
+5 & 15 & Finalisasi laporan, rehearsal, dan \textbf{presentasi +
+       demonstrasi} --- \textbf{(bobot 40\%)} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Progress report disampaikan singkat setiap pertemuan sebagai bagian penilaian
+proses (tercatat pada rubrik kerja tim).
+
+\section{Keluaran (Deliverables)}
+
+\begin{enumerate}
+  \item \textbf{Prototype perangkat keras} yang berfungsi (bukan hanya
+        simulasi Wokwi), dalam enclosure/rangkaian rapi.
+  \item \textbf{Kode program} firmware dan sisi cloud/dashboard, diunggah ke
+        repositori GitHub kelompok dengan README cara replikasi.
+  \item \textbf{Desain teknis}: blok diagram, skematik Fritzing, file 3D
+        enclosure (STL), dan daftar komponen beserta estimasi biaya.
+  \item \textbf{Laporan} (5--10 halaman): latar belakang, desain sistem,
+        implementasi, hasil pengujian (metrik), kendala, dan pembagian tugas
+        anggota.
+  \item \textbf{Video demo cadangan} (2--3 menit) untuk antisipasi kendala
+        saat demo langsung.
+  \item \textbf{Slide presentasi} untuk pertemuan 15.
+\end{enumerate}
+
+\section{Kriteria Penilaian Proyek}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{7.9cm}p{1.8cm}}
+\toprule
+\textbf{Komponen} & \textbf{Deskripsi} & \textbf{Bobot} \\
+\midrule
+Fungsionalitas \& integrasi cloud & Alur end-to-end berfungsi: sensor
+  $\rightarrow$ ESP32 $\rightarrow$ MQTT/REST $\rightarrow$ dashboard
+  $\rightarrow$ kendali balik & 25\% \\
+Desain \& implementasi hardware & Kualitas rangkaian/solder, kesesuaian
+  skematik Fritzing, kerapian enclosure 3D & 15\% \\
+Cakupan tingkat fitur & Tingkat 1 tuntas + minimal 2 pilihan Tingkat 2
+  berfungsi; metrik keberhasilan tercapai & 15\% \\
+Laporan \& dokumentasi & Kelengkapan laporan, README repositori, dokumentasi
+  pengujian & 15\% \\
+Presentasi \& demonstrasi & Kejelasan penyampaian, live demo lancar, kemampuan
+  menjawab pertanyaan teknis & 15\% \\
+Kerja tim \& progres & Kontribusi merata (progress report 1 \& 2, catatan
+  bimbingan) & 10\% \\
+Kreativitas & Fitur tambahan di luar spesifikasi yang relevan & 5\% \\
+\midrule
+\textbf{Total} & & \textbf{100\%} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Nilai proyek akhir $=$ 10\% (milestone desain) $+$ 40\% (tabel di atas
+$\times$ bobot proyek), sesuai struktur penilaian pada RPS.
+
+\section{Platform dan Komponen}
+
+\subsection*{Perangkat lunak (gratis/open source)}
+
+\begin{itemize}
+  \item \texttt{Wokwi} (\url{https://wokwi.com}) --- simulasi rangkaian
+        \textbf{wajib sebelum perakitan}.
+  \item \texttt{Fritzing} --- skematik dan breadboard view.
+  \item \texttt{Tinkercad}/\texttt{Fusion 360} --- desain enclosure 3D.
+  \item \texttt{Arduino IDE 2.0} --- firmware ESP32.
+  \item Broker MQTT: \texttt{HiveMQ Cloud} (gratis) atau \texttt{Mosquitto};
+        klien uji: \texttt{MQTT Explorer}.
+  \item Dashboard: \texttt{Node-RED}, \texttt{Grafana}, atau halaman web
+        mandiri; opsi \texttt{ThingSpeak}/\texttt{Blynk} free tier.
+\end{itemize}
+
+\subsection*{Estimasi biaya komponen per kelompok}
+
+Komponen inti (ESP32, breadboard, kabel) dimanfaatkan dari praktikum
+pertemuan 1--10. Komponen tambahan per topik diperkirakan Rp75.000--150.000
+(sensor spesifik, relay, servo/pompa, OLED). Rencanakan belanja sesuai bill
+of materials pada milestone desain.
+
+\section{Ketentuan}
+
+\begin{itemize}
+  \item Setiap anggota wajib memahami seluruh bagian sistem, bukan hanya
+        bagiannya; penilaian presentasi dapat menyasar siapa pun.
+  \item \textbf{Aturan simulate-first}: rangkaian baru boleh dirakit pada
+        hardware setelah lolos simulasi Wokwi dan disetujui dosen/asisten
+        pada progress report 1.
+  \item Layanan cloud digunakan pada \textbf{tier gratis}; dilarang memasukkan
+        kartu kredit/membuat langganan berbayar atas nama institusi.
+  \item Pembayaran (Topik 1) menggunakan \textbf{sandbox/mock}, bukan uang
+        sungguhan.
+  \item \textbf{Upaya dinilai}: tidak semua kelompok harus mencapai Tingkat
+        3. Penilaian mengikuti struktur bertingkat --- Tingkat 1 yang berjalan
+        sempurna, dokumentasi rapi, dan progress report jujur tentang apa yang
+        berhasil/gagal tetap memperoleh nilai baik. Catat capaian tiap tingkat
+        pada laporan.
+  \item Penggunaan alat bantu AI generatif diperbolehkan untuk keperluan
+        pembelajaran (menjelaskan konsep, debug), namun \textbf{wajib
+        dideklarasikan} pada laporan; menyalin hasil mentah tanpa pemahaman
+        akan terdeteksi pada sesi tanya jawab demo.
+  \item Proyek yang terbukti menyalin karya kelompok lain dinilai 0 untuk
+        seluruh anggota.
+\end{itemize}
+
+\end{document}

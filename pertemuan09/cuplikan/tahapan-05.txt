@@ -1,0 +1,2 @@
+Copy-Item versi/02_sensor.cpp src/main.cpp
+pio run

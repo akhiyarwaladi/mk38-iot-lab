@@ -1,0 +1,5 @@
+{
+  "broker": "broker.hivemq.com",
+  "port": 1883,
+  "topicRoot": "unja/mk38/p10/ganti-nim-anda"
+}

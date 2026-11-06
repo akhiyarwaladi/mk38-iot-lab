@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "tests": 6,
+  "assertions": 47,
+  "command": "php artisan test --filter=SensorApiTest",
+  "database_driver": "mysql",
+  "database": "mk38_sensor_test",
+  "test_source_sha256": "7b62589217125014cb83e4b1f0cb8ef819f7c9d2fd4a88b6c1f538e6344cb35b"
+}

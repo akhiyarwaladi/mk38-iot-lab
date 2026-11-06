@@ -1,0 +1,2 @@
+openscad.com -o base.stl -D 'part="base"' enclosure.scad
+openscad.com -o lid.stl -D 'part="lid"' enclosure.scad

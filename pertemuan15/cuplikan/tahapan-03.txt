@@ -1,0 +1,2 @@
+python cek_pengumpulan.py kelompok-NN
+python cek_pengumpulan.py kelompok-NN --zip kelompok-NN.zip

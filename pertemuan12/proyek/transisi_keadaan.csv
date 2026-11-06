@@ -1,0 +1,5 @@
+id_transisi,id_fitur,keadaan_awal,masukan,syarat,keadaan_baru,keluaran,harapan_saat_gangguan
+LED-01,contoh_LED,mati,suhu,>=30 C,nyala,GPIO23 HIGH,tetap mengikuti sensor lokal
+LED-02,contoh_LED,nyala,suhu,<=28 C,mati,GPIO23 LOW,tetap mengikuti sensor lokal
+LED-03,contoh_LED,mati atau nyala,suhu,antara 28 dan 30 C,tetap,keadaan sebelumnya,tetap mengikuti sensor lokal
+LED-04,contoh_LED,apa pun,sensor,tidak valid,mati,GPIO23 LOW,aturan latihan yang dipilih

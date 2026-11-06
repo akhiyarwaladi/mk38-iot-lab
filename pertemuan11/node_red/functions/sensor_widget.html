@@ -1,0 +1,23 @@
+<template>
+  <section aria-label="Pengamatan DHT22" class="sensor-reading">
+    <p v-if="!msg || !msg.payload || !msg.payload.waktu">
+      Belum ada pengamatan. Jalankan ESP32 dan cocokkan topic root.
+    </p>
+    <template v-else>
+      <dl>
+        <div><dt>Suhu</dt><dd>{{ Number(msg.payload.suhu).toFixed(1) }} C</dd></div>
+        <div><dt>Kelembapan</dt><dd>{{ Number(msg.payload.kelembapan).toFixed(1) }} %</dd></div>
+      </dl>
+      <p>Waktu pengamatan: {{ msg.payload.waktu }} (UTC)</p>
+    </template>
+  </section>
+</template>
+<style>
+.sensor-reading { width: 100%; }
+.sensor-reading dl { margin: 0; }
+.sensor-reading dl div { display: flex; justify-content: space-between; gap: 16px; margin: 6px 0; }
+.sensor-reading dt { font-weight: 400; }
+.sensor-reading dd { margin: 0; font-size: 1.5rem; font-weight: 600; }
+.sensor-reading p { margin: 10px 0 0; overflow-wrap: anywhere; }
+button:focus-visible { outline: 3px solid #19364b; outline-offset: 3px; }
+</style>

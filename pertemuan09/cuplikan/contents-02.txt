@@ -1,0 +1,5 @@
+01_wifi/                 # contoh folder tahap
+  platformio.ini         # board, framework, dan pustaka
+  diagram.json           # komponen serta sambungan Wokwi
+  wokwi.toml             # lokasi firmware dan penerusan port
+  src/main.cpp           # program yang dikompilasi

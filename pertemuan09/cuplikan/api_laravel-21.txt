@@ -1,0 +1,5 @@
+Copy-Item tahapan/04_api_dashboard.php backend/routes/api.php
+cd backend
+php artisan migrate
+php artisan route:list --path=api
+cd ..

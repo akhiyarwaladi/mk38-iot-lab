@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+secrets.h
+.pio/
+node_modules/
+vendor/
+.venv/
+__pycache__/
+*.log

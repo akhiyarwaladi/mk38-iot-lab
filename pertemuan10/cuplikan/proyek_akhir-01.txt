@@ -1,0 +1,2 @@
+{"command_id":"uji-001","actuator":"led-1","value":true}
+{"command_id":"uji-001","reported":true,"result":"applied"}

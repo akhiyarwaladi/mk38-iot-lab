@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "author": "Praktikum MK38 Universitas Jambi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -30,
+      "left": 230,
+      "attrs": {
+        "temperature": "28",
+        "humidity": "65"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": 180,
+      "left": 240,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r",
+      "top": 130,
+      "left": 200,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "pullup",
+      "top": -80,
+      "left": 170,
+      "attrs": {
+        "value": "10000"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "esp:3V3",
+      "dht:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "dht:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:D15",
+      "dht:SDA",
+      "green",
+      []
+    ],
+    [
+      "esp:3V3",
+      "pullup:1",
+      "red",
+      []
+    ],
+    [
+      "pullup:2",
+      "dht:SDA",
+      "green",
+      []
+    ],
+    [
+      "esp:D23",
+      "r:1",
+      "blue",
+      []
+    ],
+    [
+      "r:2",
+      "led:A",
+      "blue",
+      []
+    ],
+    [
+      "led:C",
+      "esp:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

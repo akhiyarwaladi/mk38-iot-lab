@@ -1,0 +1,13 @@
+{
+  "local": {
+    "host": "localhost", "port": 18883,
+    "ca": "runtime/ca.crt", "username": "perangkat",
+    "password_env": "LOCAL_MQTT_PASSWORD", "root": "unja/mk38/p14/lokal"
+  },
+  "cloud": {
+    "host": "broker.emqx.io", "port": 8883,
+    "ca": "emqx-ca.crt", "username": "",
+    "password_env": "CLOUD_MQTT_PASSWORD", "root": "unja/mk38/p14/ganti-identitas/cloud"
+  },
+  "database": "runtime/gateway.sqlite", "allow_cloud_control": false
+}

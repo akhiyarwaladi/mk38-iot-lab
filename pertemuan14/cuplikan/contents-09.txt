@@ -1,0 +1,11 @@
+sudo useradd --system --home /opt/mk38-gateway --shell /usr/sbin/nologin mk38
+sudo mkdir -p /opt/mk38-gateway
+sudo cp gateway.py config.json requirements.txt /opt/mk38-gateway/
+sudo cp emqx-ca.crt /opt/mk38-gateway/
+sudo mkdir -p /opt/mk38-gateway/runtime
+sudo cp runtime/ca.crt /opt/mk38-gateway/runtime/
+sudo python3 -m venv /opt/mk38-gateway/.venv
+sudo /opt/mk38-gateway/.venv/bin/python -m pip install -r /opt/mk38-gateway/requirements.txt
+sudo chown -R mk38:mk38 /opt/mk38-gateway
+sudo install -m 600 /dev/null /etc/mk38-gateway.env
+sudo nano /etc/mk38-gateway.env

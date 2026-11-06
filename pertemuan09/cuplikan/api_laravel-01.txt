@@ -1,0 +1,4 @@
+php -v
+composer --version
+mysql --version
+php -m

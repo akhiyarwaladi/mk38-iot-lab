@@ -1,0 +1,2 @@
+Copy-Item versi/04_worker.cpp src/main.cpp
+pio run

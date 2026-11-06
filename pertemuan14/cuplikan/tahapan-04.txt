@@ -1,0 +1,1 @@
+python tahapan/01_terima.py --config config.uji-lokal.json

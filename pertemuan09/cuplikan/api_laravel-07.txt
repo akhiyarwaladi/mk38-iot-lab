@@ -1,0 +1,8 @@
+$data = @{
+  device_id = 'esp32-kelompok-01'
+  suhu = 28.0
+  kelembapan = 65.0
+} | ConvertTo-Json
+$url = 'http://127.0.0.1:8000/api/v1/sensor'
+Invoke-RestMethod $url -Method Post `
+  -ContentType 'application/json' -Body $data

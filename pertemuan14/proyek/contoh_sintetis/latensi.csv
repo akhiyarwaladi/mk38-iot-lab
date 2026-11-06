@@ -1,0 +1,4 @@
+id,lingkungan,status,durasi_ms
+cmd-1,SINTETIS,LULUS,100
+cmd-2,SINTETIS,LULUS,1100
+cmd-3,SINTETIS,TIMEOUT,

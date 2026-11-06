@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "Compilation only; simulator evidence is recorded separately.",
+  "versions": [
+    {
+      "version": "01_health.cpp",
+      "status": "PASS",
+      "source_sha256": "4224db7826ecffcf4076068806fc8d4df51fda3cc4032df5bb9d27687e675efe",
+      "firmware_sha256": "08d32790d12354c8b0c888573607603a1dc909e96569e815b41891704d4d0e24"
+    },
+    {
+      "version": "02_kirim_contoh.cpp",
+      "status": "PASS",
+      "source_sha256": "26ded88867af368ce73cdbcb079724c0cb83d6cf4c1812dbd44823d835baa7d3",
+      "firmware_sha256": "c37bf81ededc99d75ed29dd31d7a2743c54a4e3f7937793f4dacccf9ba508840"
+    },
+    {
+      "version": "03_sensor.cpp",
+      "status": "PASS",
+      "source_sha256": "1602dbf0f367129b60d6407de4cbcbf6264521cd8c06960cd3cfb95c9abb0028",
+      "firmware_sha256": "332780b8655b8c4d3b6ef9bfa312456e881d096339b9866f945be6172523b4de"
+    },
+    {
+      "version": "04_kendali.cpp",
+      "status": "PASS",
+      "source_sha256": "2349e1e6deef5e6f85b4712ed342094c574207c55eeae5880abd8823881ec725",
+      "firmware_sha256": "37edcc1c3bff9b42e2cd5d75248814b0807bbbc8dc9309a382cac920942e869f",
+      "final_build": "PlatformIO run SUCCESS, 6 November 2026; RAM 45892, Flash 800349 bytes"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-11-06T17:25:16.266438+00:00",
+  "path": "Browser button -> Laravel command -> Wokwi ESP32 GPIO -> confirmation -> MySQL -> HTTP/SQL check",
+  "database": {
+    "driver": "mysql",
+    "server_version": "8.4.13",
+    "database": "mk38_sensor",
+    "count": 244,
+    "examples": [
+      {
+        "id": 1,
+        "suhu": "28.0",
+        "kelembapan": "65.0"
+      },
+      {
+        "id": 47,
+        "suhu": "32.0",
+        "kelembapan": "65.0"
+      },
+      {
+        "id": 49,
+        "suhu": "32.0",
+        "kelembapan": "70.0"
+      },
+      {
+        "id": 66,
+        "suhu": "35.0",
+        "kelembapan": "75.0"
+      },
+      {
+        "id": 78,
+        "suhu": "-20.0",
+        "kelembapan": "22.0"
+      }
+    ],
+    "rows": [
+      {
+        "id": 244,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 12:18:17",
+        "updated_at": "2026-11-06 12:18:17"
+      },
+      {
+        "id": 243,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 12:18:11",
+        "updated_at": "2026-11-06 12:18:11"
+      },
+      {
+        "id": 242,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 12:18:05",
+        "updated_at": "2026-11-06 12:18:05"
+      },
+      {
+        "id": 241,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 12:17:59",
+        "updated_at": "2026-11-06 12:17:59"
+      },
+      {
+        "id": 240,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 12:17:53",
+        "updated_at": "2026-11-06 12:17:53"
+      }
+    ],
+    "devices": [
+      {
+        "device_id": "esp32-kelompok-01",
+        "suhu_batas": "30.0",
+        "led": 0,
+        "reported_at": "2026-11-06 12:18:18.599",
+        "created_at": "2026-11-06 11:44:33.000",
+        "updated_at": "2026-11-06 12:18:18.599"
+      }
+    ],
+    "commands": [
+      {
+        "id": 4,
+        "device_id": "esp32-kelompok-01",
+        "led": 0,
+        "status": "applied",
+        "expires_at": "2026-11-06 12:13:35.330",
+        "acknowledged_at": "2026-11-06 12:13:06.828",
+        "created_at": "2026-11-06 12:13:05.332",
+        "updated_at": "2026-11-06 12:13:06.828"
+      },
+      {
+        "id": 3,
+        "device_id": "esp32-kelompok-01",
+        "led": 1,
+        "status": "applied",
+        "expires_at": "2026-11-06 12:12:50.966",
+        "acknowledged_at": "2026-11-06 12:12:28.160",
+        "created_at": "2026-11-06 12:12:20.968",
+        "updated_at": "2026-11-06 12:12:28.160"
+      },
+      {
+        "id": 2,
+        "device_id": "esp32-kelompok-01",
+        "led": 0,
+        "status": "applied",
+        "expires_at": "2026-11-06 11:57:01.513",
+        "acknowledged_at": "2026-11-06 11:56:33.023",
+        "created_at": "2026-11-06 11:56:31.515",
+        "updated_at": "2026-11-06 11:56:33.023"
+      },
+      {
+        "id": 1,
+        "device_id": "esp32-kelompok-01",
+        "led": 1,
+        "status": "applied",
+        "expires_at": "2026-11-06 11:55:20.126",
+        "acknowledged_at": "2026-11-06 11:54:51.299",
+        "created_at": "2026-11-06 11:54:50.128",
+        "updated_at": "2026-11-06 11:54:51.300"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "id": 3,
+      "led": true,
+      "status": "applied",
+      "created_at_utc": "2026-11-06 12:12:20.968",
+      "acknowledged_at_utc": "2026-11-06 12:12:28.160",
+      "request_to_ack_seconds": 7.192
+    },
+    {
+      "id": 4,
+      "led": false,
+      "status": "applied",
+      "created_at_utc": "2026-11-06 12:13:05.332",
+      "acknowledged_at_utc": "2026-11-06 12:13:06.828",
+      "request_to_ack_seconds": 1.496
+    }
+  ],
+  "csv_rows_matched": 20,
+  "csv_href": "/api/v1/ekspor.csv?limit=20&device_id=esp32-kelompok-01&until_id=236",
+  "latest": {
+    "id": 244,
+    "device_id": "esp32-kelompok-01",
+    "suhu": 35,
+    "kelembapan": 75,
+    "created_at": "2026-11-06T12:18:17.000000Z"
+  },
+  "online_at_check": false,
+  "previous_samples_preserved": true,
+  "source_hashes": {
+    "backend/app/Http/Controllers/Controller.php": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1",
+    "backend/app/Http/Controllers/DashboardController.php": "aec4d4d2e1ada65a2a2b1dfed343f850ab013b2a0406e54ac1e4db4ab2d6265c",
+    "backend/app/Http/Controllers/DeviceController.php": "15f9f328d6caefb1d8a86138f086314077364ae159dac36f6cc579c4e5a0d768",
+    "backend/app/Http/Controllers/SensorController.php": "f758fce90f660140e30482be95f5c4ac527345fc6efe1d4bb01bb5974eeddad8",
+    "backend/app/Http/Requests/StoreSensorRequest.php": "9a05c2a27d1710c582fe22bff56e4a3c1e6d035d23d77ab58630c31d875dc0d4",
+    "backend/app/Models/Command.php": "1386db953418480e96454027e15f50f2de9d3f9c1cf03b4d806c0b2cb5684b70",
+    "backend/app/Models/Device.php": "aa1f47c5ce9aba54cfb4bf73e6ade87318c888e5ecf24981913e5597e5daa251",
+    "backend/app/Models/Sensor.php": "92d83393923516d534afb84cced2962db9d4fd203cf1c4649024e10f4cf5be92",
+    "backend/app/Models/User.php": "41d800ffd4887c75e66af8eaedc756edce052eb662baae357308c6e364a6c9d2",
+    "backend/app/Providers/AppServiceProvider.php": "caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7",
+    "backend/routes/api.php": "e1d1bea2f400df22a0d92cb48df1e0adc84876be2be104bbd55fe46cfe872d8b",
+    "backend/routes/console.php": "9adccc33e7dd400683e434774077c7fdb2f299c5712cedf16a43fdf56f2850fa",
+    "backend/routes/web.php": "a24d1cfb40de6ba8ab5cf83683ecdd391dc39f5acd7ba62e327e25aa6fbc03af",
+    "backend/database/migrations/2026_11_06_000001_create_sensors_table.php": "b8f133a55000309da7ebd6189be1254298db6cf64939627cecb576b0e504a2c8",
+    "backend/database/migrations/2026_11_06_000002_create_devices_and_commands.php": "48694177536c62573c4feb9fc49159264b58855b1c5a022a5de415be7854f20f",
+    "backend/resources/views/dashboard.blade.php": "c614f868a07c2cba8f2516433bda8b9de2b5f3ff975f7ca6dd8b80441d077705",
+    "backend/resources/views/latest.blade.php": "76a237c63bc019c23b5cdff643380c39d50fa929a254c1247c6ebb90215cfd5d",
+    "backend/resources/views/table.blade.php": "d04940318fefc2425473773435cbb5d8f2e7a6ec430d7c644a2455cfaf16701a",
+    "backend/resources/views/welcome.blade.php": "e50e41602994840b788471625fec54a4db6138ec971be05cfdfba40daf906c22",
+    "backend/public/.htaccess": "b7e379c77639fd56144947dbae84c84eb466d9c686ea81f2f013ae85421da923",
+    "backend/public/dashboard.css": "a62de242db5ff1ac4978f7052b8368f83ba79b1f4af3281ebda3c8f36721aecc",
+    "backend/public/dashboard.js": "9a538bafa60c5e21edbd6418bad6930c8b5e2aedec97546cb27983597f3e3878",
+    "backend/public/favicon.ico": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/public/index.php": "eba77cba39695b6bd091fe5211d481f7ebb2ce2d8d26230b5a609465d0a4aff9",
+    "backend/public/robots.txt": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f",
+    "backend/tests/Feature/DashboardApiTest.php": "975c29c9ec7323fe204bb2a71d5d31126e914b6841603670f13f6708fa8e5471",
+    "backend/tests/Feature/SensorApiTest.php": "33808858b1f450048413b4ac33dce05a843b92936002195236d677b8e9db3125",
+    "backend/tests/inspect_database.php": "4c4a467d3dd10c70ad18bf3c0c42b839156bfadbc97223dd6351e0f80361a62f",
+    "backend/tests/TestCase.php": "c7c209f5579c42647c1f7b2a79ac828e8b54ac62a98442045a6e94fa2c0d0ebc",
+    "backend/tests/UsesLabMysql.php": "973e38b97febb28be97c3b34d1f9cd0da7a7b911f56d808df1cf3932c84d2ce3",
+    "esp32/include/config.h": "16f8cb290c02e6dcd2e3ed9fe751cfc5288b8606eaf4c2b667ebd775ebd93597",
+    "esp32/src/main.cpp": "2349e1e6deef5e6f85b4712ed342094c574207c55eeae5880abd8823881ec725",
+    "esp32/versi/01_health.cpp": "4224db7826ecffcf4076068806fc8d4df51fda3cc4032df5bb9d27687e675efe",
+    "esp32/versi/02_kirim_contoh.cpp": "26ded88867af368ce73cdbcb079724c0cb83d6cf4c1812dbd44823d835baa7d3",
+    "esp32/versi/03_sensor.cpp": "1602dbf0f367129b60d6407de4cbcbf6264521cd8c06960cd3cfb95c9abb0028",
+    "esp32/versi/04_kendali.cpp": "2349e1e6deef5e6f85b4712ed342094c574207c55eeae5880abd8823881ec725",
+    "tahapan/01_api_health.php": "4c959885020f3d2b1f646ba75a8f0b61ef925fab00ef901bcda3d165503fcdfc",
+    "tahapan/02_api_terima.php": "f3c2e4429dd682174e8a91f363bda338083462cd8eb94dd0e00a8c32d5aa5fca",
+    "tahapan/03_api_mysql.php": "b5cf1f3849456178ca465f8770b50e67448212c660e415a462524a9e83462f3a",
+    "tahapan/04_api_dashboard.php": "e1d1bea2f400df22a0d92cb48df1e0adc84876be2be104bbd55fe46cfe872d8b",
+    "backend/composer.lock": "7c50a91b752e5421c19930412e6e4a754d67bf4b61058f66fbe27616ab482a7b",
+    "backend/bootstrap/app.php": "1e5273590addd91a51dafd53ada4abff09a2e38139d08bdc56775492bfdbe9ec",
+    "esp32/platformio.ini": "37c439d0f90153209b42df1d551a2893b4105430ae550d0bf7838998a4ffc47d",
+    "esp32/diagram.json": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "esp32/wokwi.toml": "f9d2c605015f9f02e2c87790483c5bf577e5fb506963f3ca42803331f715f4a3"
+  },
+  "limits": [
+    "Request-to-ack times include simulator scheduling/startup and HTTP polling; no one-second guarantee.",
+    "GPIO confirmation is firmware feedback, not a physical current measurement.",
+    "Only the final control firmware was operated in this dashboard run; all four versions were compiled.",
+    "Local HTTP without device authentication, TLS, MQTT, or physical hardware validation."
+  ]
+}

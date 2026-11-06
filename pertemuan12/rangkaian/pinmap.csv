@@ -1,0 +1,14 @@
+net,komponen,pin,keterangan
+V3V3,esp,3V3,Catu sensor 3.3 V dari board
+V3V3,dht,VCC,DHT22 pin 1
+V3V3,pullup,1,R pull-up 10000 ohm
+GND,esp,GND.1,Ground bersama
+GND,dht,GND,DHT22 pin 4
+GND,led,C,Katoda LED
+DATA,esp,D15,GPIO 15
+DATA,dht,SDA,DHT22 pin 2 DATA; bukan bus I2C
+DATA,pullup,2,R pull-up 10000 ohm
+LED_DRIVE,esp,D23,GPIO 23
+LED_DRIVE,r,1,R seri 220 ohm
+LED_ANODE,r,2,R seri 220 ohm
+LED_ANODE,led,A,Anoda LED

@@ -1,0 +1,7 @@
+Invoke-RestMethod http://localhost:8180/sensor
+
+Invoke-WebRequest http://localhost:8180/led `
+  -Method Post -Body @{state='on'} -UseBasicParsing
+
+Invoke-WebRequest http://localhost:8180/led `
+  -Method Post -Body @{state='off'} -UseBasicParsing

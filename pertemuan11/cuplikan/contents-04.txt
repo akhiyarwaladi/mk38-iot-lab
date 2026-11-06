@@ -1,0 +1,4 @@
+node mqtt_cli.js watch
+node mqtt_cli.js send on
+node mqtt_cli.js send off
+node mqtt_cli.js send salah

@@ -1,0 +1,3 @@
+chmod 700 runtime
+chmod 600 runtime/server.key runtime/passwords
+mosquitto -c "$PWD/runtime/mosquitto.conf"

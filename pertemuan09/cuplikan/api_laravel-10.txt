@@ -1,0 +1,5 @@
+cd backend
+php artisan config:clear
+php artisan migrate
+php artisan migrate:status
+cd ..

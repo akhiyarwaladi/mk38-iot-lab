@@ -1,0 +1,639 @@
+[
+  {
+    "id": "p10tab",
+    "type": "tab",
+    "label": "Pertemuan 10 - MQTT dan SQLite",
+    "disabled": false,
+    "info": "Sensor ke dasbor/SQLite; tombol mengirim perintah, status berasal dari ESP32."
+  },
+  {
+    "id": "p10broker",
+    "type": "mqtt-broker",
+    "name": "Broker latihan",
+    "broker": "__BROKER__",
+    "port": "__PORT__",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "30",
+    "cleansession": true,
+    "autoUnsubscribe": true
+  },
+  {
+    "id": "p10db",
+    "type": "sqlitedb",
+    "db": "__DB_FILE__",
+    "mode": "RWC"
+  },
+  {
+    "id": "p10ui",
+    "type": "ui-base",
+    "name": "Praktik MK38",
+    "path": "/dashboard",
+    "includeClientData": true,
+    "acceptsClientConfig": [
+      "ui-control",
+      "ui-notification"
+    ],
+    "showPathInSidebar": false,
+    "headerContent": "page",
+    "navigationStyle": "none",
+    "titleBarStyle": "default",
+    "allowInstall": false
+  },
+  {
+    "id": "p10theme",
+    "type": "ui-theme",
+    "name": "MK38",
+    "colors": {
+      "surface": "#ffffff",
+      "primary": "#19364b",
+      "bgPage": "#f4f5f6",
+      "groupBg": "#ffffff",
+      "groupOutline": "#ced5da"
+    },
+    "sizes": {
+      "density": "default",
+      "pagePadding": "16px",
+      "groupGap": "16px",
+      "groupBorderRadius": "4px",
+      "widgetGap": "12px"
+    }
+  },
+  {
+    "id": "p10page",
+    "type": "ui-page",
+    "name": "Pemantauan ruangan",
+    "ui": "p10ui",
+    "path": "/ruangan",
+    "icon": "",
+    "layout": "grid",
+    "theme": "p10theme",
+    "order": 1,
+    "visible": true,
+    "disabled": false,
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": 0,
+        "cols": 3
+      },
+      {
+        "name": "Tablet",
+        "px": 576,
+        "cols": 6
+      },
+      {
+        "name": "Desktop",
+        "px": 1024,
+        "cols": 12
+      }
+    ]
+  },
+  {
+    "id": "p10monitor",
+    "type": "ui-group",
+    "name": "Sensor DHT22",
+    "page": "p10page",
+    "width": 6,
+    "height": 1,
+    "order": 1,
+    "showTitle": true,
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "p10control",
+    "type": "ui-group",
+    "name": "Kendali dan konfirmasi",
+    "page": "p10page",
+    "width": 6,
+    "height": 1,
+    "order": 2,
+    "showTitle": true,
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "p10init",
+    "type": "inject",
+    "name": "Siapkan tabel",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "once": true,
+    "onceDelay": 0.2,
+    "repeat": "",
+    "payload": "",
+    "payloadType": "date",
+    "z": "p10tab",
+    "x": 130,
+    "y": 80,
+    "wires": [
+      [
+        "p10create"
+      ]
+    ]
+  },
+  {
+    "id": "p10create",
+    "type": "function",
+    "name": "CREATE TABLE",
+    "func": "msg.topic = \"CREATE TABLE IF NOT EXISTS pengamatan (id INTEGER PRIMARY KEY AUTOINCREMENT, waktu TEXT NOT NULL, suhu REAL NOT NULL, kelembapan REAL NOT NULL, led INTEGER);\";\nreturn msg;",
+    "outputs": 1,
+    "z": "p10tab",
+    "x": 350,
+    "y": 80,
+    "wires": [
+      [
+        "p10schema"
+      ]
+    ]
+  },
+  {
+    "id": "p10schema",
+    "type": "sqlite",
+    "name": "Buat tabel jika belum ada",
+    "mydb": "p10db",
+    "sqlquery": "batch",
+    "sql": "",
+    "z": "p10tab",
+    "x": 550,
+    "y": 80,
+    "wires": [
+      [
+        "p10ready"
+      ]
+    ]
+  },
+  {
+    "id": "p10ready",
+    "type": "function",
+    "name": "Tabel siap",
+    "func": "flow.set(\"dbSiap\", true);\nreturn msg;",
+    "outputs": 1,
+    "z": "p10tab",
+    "x": 780,
+    "y": 80,
+    "wires": [
+      [
+        "p10count"
+      ]
+    ]
+  },
+  {
+    "id": "p10sensor",
+    "type": "mqtt in",
+    "name": "Data sensor",
+    "topic": "__ROOT__/sensor",
+    "qos": "0",
+    "datatype": "utf8",
+    "broker": "p10broker",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "z": "p10tab",
+    "x": 130,
+    "y": 220,
+    "wires": [
+      [
+        "p10json"
+      ]
+    ]
+  },
+  {
+    "id": "p10json",
+    "type": "json",
+    "name": "Teks menjadi objek",
+    "property": "payload",
+    "action": "obj",
+    "pretty": false,
+    "z": "p10tab",
+    "x": 340,
+    "y": 220,
+    "wires": [
+      [
+        "p10valid"
+      ]
+    ]
+  },
+  {
+    "id": "p10valid",
+    "type": "function",
+    "name": "Validasi nilai",
+    "func": "__VALIDATE__",
+    "outputs": 1,
+    "z": "p10tab",
+    "x": 550,
+    "y": 220,
+    "wires": [
+      [
+        "p10suhu",
+        "p10humidity",
+        "p10chart",
+        "p10params",
+        "p10debug"
+      ]
+    ]
+  },
+  {
+    "id": "p10suhu",
+    "type": "ui-gauge",
+    "name": "Suhu",
+    "group": "p10monitor",
+    "order": 1,
+    "width": 3,
+    "height": 3,
+    "value": "payload.suhu",
+    "valueType": "msg",
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "Suhu",
+    "units": "C",
+    "suffix": "",
+    "min": -40,
+    "max": 80,
+    "segments": [
+      {
+        "color": "#19364b",
+        "from": -40
+      }
+    ],
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "prefix": "",
+    "icon": "",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "styleRounded": false,
+    "styleGlow": false,
+    "z": "p10tab",
+    "x": 820,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "p10humidity",
+    "type": "ui-gauge",
+    "name": "Kelembapan",
+    "group": "p10monitor",
+    "order": 2,
+    "width": 3,
+    "height": 3,
+    "value": "payload.kelembapan",
+    "valueType": "msg",
+    "gtype": "gauge-half",
+    "gstyle": "needle",
+    "title": "Kelembapan",
+    "units": "%",
+    "suffix": "",
+    "min": 0,
+    "max": 100,
+    "segments": [
+      {
+        "color": "#19364b",
+        "from": 0
+      }
+    ],
+    "sizeThickness": 16,
+    "sizeGap": 4,
+    "sizeKeyThickness": 8,
+    "prefix": "",
+    "icon": "",
+    "alwaysShowTitle": false,
+    "floatingTitlePosition": "top-left",
+    "styleRounded": false,
+    "styleGlow": false,
+    "z": "p10tab",
+    "x": 820,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "p10chart",
+    "type": "ui-chart",
+    "name": "Riwayat suhu",
+    "group": "p10monitor",
+    "label": "Suhu selama sesi",
+    "order": 3,
+    "width": 6,
+    "height": 4,
+    "chartType": "line",
+    "category": "Suhu",
+    "categoryType": "str",
+    "xAxisPropertyType": "timestamp",
+    "xAxisType": "time",
+    "xAxisLabel": "Waktu",
+    "yAxisLabel": "C",
+    "yAxisProperty": "payload.suhu",
+    "yAxisPropertyType": "msg",
+    "action": "append",
+    "pointRadius": 2,
+    "showLegend": false,
+    "removeOlder": 10,
+    "removeOlderUnit": "60",
+    "removeOlderPoints": "120",
+    "colors": [
+      "#19364b"
+    ],
+    "z": "p10tab",
+    "x": 820,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "p10params",
+    "type": "function",
+    "name": "Parameter INSERT",
+    "func": "__PARAMS__",
+    "outputs": 1,
+    "z": "p10tab",
+    "x": 800,
+    "y": 400,
+    "wires": [
+      [
+        "p10insert"
+      ]
+    ]
+  },
+  {
+    "id": "p10insert",
+    "type": "sqlite",
+    "name": "Simpan pengamatan",
+    "mydb": "p10db",
+    "sqlquery": "prepared",
+    "sql": "INSERT INTO pengamatan(waktu,suhu,kelembapan,led) VALUES ($waktu,$suhu,$kelembapan,$led)",
+    "z": "p10tab",
+    "x": 1020,
+    "y": 400,
+    "wires": [
+      [
+        "p10count"
+      ]
+    ]
+  },
+  {
+    "id": "p10count",
+    "type": "sqlite",
+    "name": "Hitung data tersimpan",
+    "mydb": "p10db",
+    "sqlquery": "fixed",
+    "sql": "SELECT COUNT(*) AS jumlah FROM pengamatan",
+    "z": "p10tab",
+    "x": 1040,
+    "y": 80,
+    "wires": [
+      [
+        "p10countvalue"
+      ]
+    ]
+  },
+  {
+    "id": "p10countvalue",
+    "type": "function",
+    "name": "Ambil jumlah",
+    "func": "msg.payload = msg.payload[0].jumlah;\nreturn msg;",
+    "outputs": 1,
+    "z": "p10tab",
+    "x": 1250,
+    "y": 80,
+    "wires": [
+      [
+        "p10countui"
+      ]
+    ]
+  },
+  {
+    "id": "p10countui",
+    "type": "ui-text",
+    "name": "Jumlah data",
+    "group": "p10control",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "label": "Data tersimpan",
+    "value": "payload",
+    "valueType": "msg",
+    "layout": "row-spread",
+    "z": "p10tab",
+    "x": 1450,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "p10debug",
+    "type": "debug",
+    "name": "Data yang diterima",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "z": "p10tab",
+    "x": 810,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "p10state",
+    "type": "mqtt in",
+    "name": "Konfirmasi LED",
+    "topic": "__ROOT__/led/state",
+    "qos": "1",
+    "datatype": "utf8",
+    "broker": "p10broker",
+    "inputs": 0,
+    "z": "p10tab",
+    "x": 140,
+    "y": 580,
+    "wires": [
+      [
+        "p10stateui"
+      ]
+    ]
+  },
+  {
+    "id": "p10stateui",
+    "type": "ui-text",
+    "name": "Keadaan LED",
+    "group": "p10control",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "label": "Konfirmasi LED",
+    "value": "payload",
+    "valueType": "msg",
+    "layout": "row-spread",
+    "z": "p10tab",
+    "x": 400,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "p10on",
+    "type": "ui-button",
+    "name": "Nyalakan LED",
+    "group": "p10control",
+    "order": 2,
+    "width": 3,
+    "height": 1,
+    "label": "Nyalakan LED",
+    "payload": "on",
+    "payloadType": "str",
+    "topic": "__ROOT__/led/set",
+    "topicType": "str",
+    "enableClick": true,
+    "emulateClick": false,
+    "buttonColor": "#19364b",
+    "textColor": "#ffffff",
+    "icon": "",
+    "z": "p10tab",
+    "x": 140,
+    "y": 680,
+    "wires": [
+      [
+        "p10command"
+      ]
+    ]
+  },
+  {
+    "id": "p10off",
+    "type": "ui-button",
+    "name": "Matikan LED",
+    "group": "p10control",
+    "order": 3,
+    "width": 3,
+    "height": 1,
+    "label": "Matikan LED",
+    "payload": "off",
+    "payloadType": "str",
+    "topic": "__ROOT__/led/set",
+    "topicType": "str",
+    "enableClick": true,
+    "emulateClick": false,
+    "buttonColor": "#19364b",
+    "textColor": "#ffffff",
+    "icon": "",
+    "z": "p10tab",
+    "x": 400,
+    "y": 680,
+    "wires": [
+      [
+        "p10command"
+      ]
+    ]
+  },
+  {
+    "id": "p10command",
+    "type": "mqtt out",
+    "name": "Kirim perintah tanpa retain",
+    "topic": "",
+    "qos": "1",
+    "retain": "false",
+    "broker": "p10broker",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "z": "p10tab",
+    "x": 700,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "p10history",
+    "type": "http in",
+    "name": "GET riwayat",
+    "url": "/api/riwayat",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "z": "p10tab",
+    "x": 140,
+    "y": 820,
+    "wires": [
+      [
+        "p10select"
+      ]
+    ]
+  },
+  {
+    "id": "p10select",
+    "type": "sqlite",
+    "name": "Baca 20 data terakhir",
+    "mydb": "p10db",
+    "sqlquery": "fixed",
+    "sql": "SELECT id,waktu,suhu,kelembapan,led FROM pengamatan ORDER BY id DESC LIMIT 20",
+    "z": "p10tab",
+    "x": 400,
+    "y": 820,
+    "wires": [
+      [
+        "p10headers"
+      ]
+    ]
+  },
+  {
+    "id": "p10headers",
+    "type": "function",
+    "name": "Respons JSON",
+    "func": "msg.headers = {\"content-type\":\"application/json\"};\nreturn msg;",
+    "outputs": 1,
+    "z": "p10tab",
+    "x": 680,
+    "y": 820,
+    "wires": [
+      [
+        "p10response"
+      ]
+    ]
+  },
+  {
+    "id": "p10response",
+    "type": "http response",
+    "name": "Kirim riwayat",
+    "statusCode": "",
+    "headers": {},
+    "z": "p10tab",
+    "x": 900,
+    "y": 820,
+    "wires": []
+  },
+  {
+    "id": "p10catch",
+    "type": "catch",
+    "name": "Catat galat alur",
+    "scope": null,
+    "uncaught": false,
+    "z": "p10tab",
+    "x": 140,
+    "y": 920,
+    "wires": [
+      [
+        "p10errors"
+      ]
+    ]
+  },
+  {
+    "id": "p10errors",
+    "type": "debug",
+    "name": "Periksa pesan/SQL",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "complete": "error",
+    "targetType": "msg",
+    "z": "p10tab",
+    "x": 400,
+    "y": 920,
+    "wires": []
+  }
+]

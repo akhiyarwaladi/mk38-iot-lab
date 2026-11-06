@@ -1,0 +1,2 @@
+Copy-Item include/secrets.demo.h include/secrets.h
+pio run

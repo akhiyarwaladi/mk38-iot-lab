@@ -1,0 +1,4 @@
+POST https://api.thingspeak.com/update
+Content-Type: application/json
+
+{"api_key":"KEY_CHANNEL_SENDIRI","field1":28.0,"field2":65.0}

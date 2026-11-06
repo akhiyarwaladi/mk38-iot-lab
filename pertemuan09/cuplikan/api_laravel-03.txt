@@ -1,0 +1,6 @@
+cd backend
+composer install
+Copy-Item .env.example .env
+php artisan key:generate
+cd ..
+Copy-Item tahapan/01_api_health.php backend/routes/api.php

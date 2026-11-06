@@ -1,0 +1,1 @@
+python kirim_sensor.py --suhu 28 --kelembapan 65

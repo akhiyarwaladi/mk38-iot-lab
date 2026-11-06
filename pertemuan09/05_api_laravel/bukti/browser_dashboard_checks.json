@@ -1,0 +1,252 @@
+{
+  "recorded_utc": "2026-11-06T12:18:42.229Z",
+  "checks": [
+    {
+      "case": "threshold_saved_with_auto_refresh_paused",
+      "result": "Peringatan suhu · ambang latihan 30,0 °C."
+    },
+    {
+      "case": "responsive",
+      "documentWidth": 375,
+      "mainWidth": 375,
+      "rows": 50,
+      "scrollWidth": 375,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "case": "responsive",
+      "documentWidth": 305,
+      "mainWidth": 305,
+      "rows": 50,
+      "scrollWidth": 305,
+      "theme": "light",
+      "width": 320
+    },
+    {
+      "case": "responsive",
+      "documentWidth": 753,
+      "mainWidth": 753,
+      "rows": 50,
+      "scrollWidth": 753,
+      "theme": "light",
+      "width": 768
+    },
+    {
+      "case": "keyboard_theme",
+      "focusOutline": "3px",
+      "focused": "dark-mode",
+      "theme": "dark"
+    },
+    {
+      "case": "empty_device",
+      "ledDisabled": true,
+      "message": "Belum ada kiriman untuk perangkat ini. Jalankan ESP32 sebelum memeriksa riwayat.",
+      "scrollWidth": 375,
+      "threshold": "",
+      "viewport": 375
+    },
+    {
+      "case": "keyboard_tab_from_refresh",
+      "focused": "auto-refresh",
+      "outline": "3px"
+    },
+    {
+      "case": "real_api_disconnect",
+      "message": "Gagal membaca API. Tampilan masih memakai data sebelumnya. Periksa proses Laravel dan MySQL, lalu pilih Perbarui data. (Failed to fetch)"
+    },
+    {
+      "case": "real_api_recovered",
+      "message": "Pemeriksaan terakhir 06 Nov, 19.10.14 WIB. Pembaruan otomatis dijeda."
+    },
+    {
+      "check": "csv_matches_paused_visible_table",
+      "status": "PASS",
+      "href": "/api/v1/ekspor.csv?limit=20&device_id=esp32-kelompok-01&until_id=236",
+      "table_ids_descending": [
+        "236",
+        "235",
+        "234",
+        "233",
+        "232",
+        "231",
+        "230",
+        "229",
+        "228",
+        "227",
+        "226",
+        "225",
+        "224",
+        "223",
+        "222",
+        "221",
+        "220",
+        "219",
+        "218",
+        "217"
+      ],
+      "csv_ids_ascending": [
+        "217",
+        "218",
+        "219",
+        "220",
+        "221",
+        "222",
+        "223",
+        "224",
+        "225",
+        "226",
+        "227",
+        "228",
+        "229",
+        "230",
+        "231",
+        "232",
+        "233",
+        "234",
+        "235",
+        "236"
+      ]
+    },
+    {
+      "check": "final_firmware_control",
+      "status": "PASS",
+      "commands": [
+        {
+          "id": 3,
+          "led": true,
+          "observed": "Nyala; Dikonfirmasi ESP32"
+        },
+        {
+          "id": 4,
+          "led": false,
+          "observed": "Mati; Dikonfirmasi ESP32"
+        }
+      ],
+      "sensor": {
+        "suhu": 35,
+        "kelembapan": 75
+      }
+    },
+    {
+      "check": "desktop_light",
+      "status": "PASS",
+      "client": 1265,
+      "commands": "#4 · Mati · Dikonfirmasi ESP3206 Nov, 19.13.05 WIB#3 · Nyala · Dikonfirmasi ESP3206 Nov, 19.12.20 WIB#2 · Mati · Dikonfirmasi ESP3206 Nov, 18.56.31 WIB#1 · Nyala · Dikonfirmasi ESP3206 Nov, 18.54.50 WIB",
+      "led": "Mati",
+      "scroll": 1265,
+      "theme": "light",
+      "tokens": [
+        [
+          "--page",
+          "#eef2f4"
+        ],
+        [
+          "--surface",
+          "#fff"
+        ],
+        [
+          "--ink",
+          "#25313a"
+        ],
+        [
+          "--title",
+          "#19364b"
+        ],
+        [
+          "--muted",
+          "#52606c"
+        ],
+        [
+          "--border",
+          "#73838f"
+        ],
+        [
+          "--focus",
+          "#006e67"
+        ],
+        [
+          "--warn",
+          "#873b08"
+        ],
+        [
+          "--warn-bg",
+          "#fff3df"
+        ],
+        [
+          "--button-ink",
+          "#fff"
+        ]
+      ],
+      "values": [
+        "35,0 °C",
+        "75,0 %"
+      ],
+      "viewport": 1280
+    },
+    {
+      "check": "desktop_dark",
+      "status": "PASS",
+      "client": 1265,
+      "scroll": 1265,
+      "theme": "dark",
+      "tokens": [
+        [
+          "--page",
+          "#111c25"
+        ],
+        [
+          "--surface",
+          "#1a2a35"
+        ],
+        [
+          "--ink",
+          "#e5edf1"
+        ],
+        [
+          "--title",
+          "#b9d5e6"
+        ],
+        [
+          "--muted",
+          "#b2c1cb"
+        ],
+        [
+          "--border",
+          "#8b9eaa"
+        ],
+        [
+          "--focus",
+          "#7ee0d3"
+        ],
+        [
+          "--warn",
+          "#ffd99b"
+        ],
+        [
+          "--warn-bg",
+          "#3c2e1c"
+        ],
+        [
+          "--button-ink",
+          "#122532"
+        ]
+      ],
+      "viewport": 1280
+    },
+    {
+      "check": "simulator_stopped_after_confirmed_off",
+      "status": "PASS",
+      "observed": "Start the simulation"
+    },
+    {
+      "check": "current_console",
+      "status": "PASS",
+      "errors": []
+    }
+  ],
+  "limits": [
+    "No 200 percent browser zoom test performed.",
+    "No complete WCAG conformance audit performed."
+  ]
+}

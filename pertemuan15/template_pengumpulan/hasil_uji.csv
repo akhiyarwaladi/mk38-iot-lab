@@ -1,0 +1,8 @@
+kasus,langkah,harapan,hasil_aktual,status,bukti
+sensor_valid,ubah masukan sensor,data berubah di dashboard,,BELUM_DIUJI,
+kendali_on_off,kirim dua perintah,aktuator dan status sesuai,,BELUM_DIUJI,
+payload_invalid,kirim perintah tidak dikenal,status tidak berubah,,BELUM_DIUJI,
+tls_ca_salah,pakai CA yang tidak menerbitkan sertifikat,koneksi ditolak,,BELUM_DIUJI,
+password_salah,pakai kredensial salah,koneksi ditolak,,BELUM_DIUJI,
+koneksi_pulih,putuskan lalu pulihkan cloud,antrean terkirim dan kendali pulih,,BELUM_DIUJI,
+restart_gateway,restart saat ada data pending,data pending tetap ada,,BELUM_DIUJI,

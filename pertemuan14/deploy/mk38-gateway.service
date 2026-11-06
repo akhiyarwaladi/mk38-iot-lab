@@ -1,0 +1,22 @@
+[Unit]
+Description=MK38 TLS MQTT gateway
+Wants=network-online.target
+After=network-online.target mosquitto.service
+
+[Service]
+Type=simple
+User=mk38
+Group=mk38
+WorkingDirectory=/opt/mk38-gateway
+EnvironmentFile=/etc/mk38-gateway.env
+ExecStart=/opt/mk38-gateway/.venv/bin/python /opt/mk38-gateway/gateway.py --config /opt/mk38-gateway/config.json
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/mk38-gateway/runtime
+
+[Install]
+WantedBy=multi-user.target

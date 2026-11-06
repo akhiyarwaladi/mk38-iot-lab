@@ -1,0 +1,3 @@
+# Raspberry Pi / Linux
+export LOCAL_MQTT_PASSWORD
+.venv/bin/python gateway.py --config config.json

@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-11-06T11:23:39.362925+00:00",
+  "path": "ESP32 DHT22 in Wokwi VS Code -> local Laravel API -> MySQL -> independent HTTP GET and SQL read",
+  "database": {
+    "driver": "mysql",
+    "server_version": "8.4.13",
+    "database": "mk38_sensor",
+    "count": 77,
+    "examples": [
+      {
+        "id": 1,
+        "suhu": "28.0",
+        "kelembapan": "65.0"
+      },
+      {
+        "id": 47,
+        "suhu": "32.0",
+        "kelembapan": "65.0"
+      },
+      {
+        "id": 49,
+        "suhu": "32.0",
+        "kelembapan": "70.0"
+      },
+      {
+        "id": 66,
+        "suhu": "35.0",
+        "kelembapan": "75.0"
+      }
+    ],
+    "rows": [
+      {
+        "id": 77,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 11:18:58",
+        "updated_at": "2026-11-06 11:18:58"
+      },
+      {
+        "id": 76,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 11:18:51",
+        "updated_at": "2026-11-06 11:18:51"
+      },
+      {
+        "id": 75,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 11:18:44",
+        "updated_at": "2026-11-06 11:18:44"
+      },
+      {
+        "id": 74,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 11:18:38",
+        "updated_at": "2026-11-06 11:18:38"
+      },
+      {
+        "id": 73,
+        "device_id": "esp32-kelompok-01",
+        "suhu": "35.0",
+        "kelembapan": "75.0",
+        "created_at": "2026-11-06 11:18:32",
+        "updated_at": "2026-11-06 11:18:32"
+      }
+    ]
+  },
+  "matched_examples": [
+    {
+      "id": 1,
+      "device_id": "esp32-kelompok-01",
+      "suhu": 28,
+      "kelembapan": 65,
+      "created_at": "2026-11-06T11:11:14.000000Z"
+    },
+    {
+      "id": 49,
+      "device_id": "esp32-kelompok-01",
+      "suhu": 32,
+      "kelembapan": 70,
+      "created_at": "2026-11-06T11:15:54.000000Z"
+    },
+    {
+      "id": 66,
+      "device_id": "esp32-kelompok-01",
+      "suhu": 35,
+      "kelembapan": 75,
+      "created_at": "2026-11-06T11:17:43.000000Z"
+    }
+  ],
+  "api_process_restart_preserved_record": true,
+  "before_restart": {
+    "id": 1,
+    "device_id": "esp32-kelompok-01",
+    "suhu": 28,
+    "kelembapan": 65,
+    "created_at": "2026-11-06T11:11:14Z"
+  },
+  "source_hashes": {
+    "backend/app/Http/Controllers/Controller.php": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1",
+    "backend/app/Http/Controllers/SensorController.php": "98b64a96ef18630a615557fff09434f7cb5bf09b149eaf8fbba98afef34a9138",
+    "backend/app/Http/Requests/StoreSensorRequest.php": "9a05c2a27d1710c582fe22bff56e4a3c1e6d035d23d77ab58630c31d875dc0d4",
+    "backend/app/Models/Sensor.php": "92d83393923516d534afb84cced2962db9d4fd203cf1c4649024e10f4cf5be92",
+    "backend/app/Models/User.php": "41d800ffd4887c75e66af8eaedc756edce052eb662baae357308c6e364a6c9d2",
+    "backend/app/Providers/AppServiceProvider.php": "caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7",
+    "backend/routes/api.php": "b5cf1f3849456178ca465f8770b50e67448212c660e415a462524a9e83462f3a",
+    "backend/routes/console.php": "9adccc33e7dd400683e434774077c7fdb2f299c5712cedf16a43fdf56f2850fa",
+    "backend/routes/web.php": "e247ed2b4287a0db871e065c7767974088b8b5ee99e1606e11b2010d9292cb0c",
+    "backend/database/migrations/2026_11_06_000001_create_sensors_table.php": "b8f133a55000309da7ebd6189be1254298db6cf64939627cecb576b0e504a2c8",
+    "esp32/include/config.h": "16f8cb290c02e6dcd2e3ed9fe751cfc5288b8606eaf4c2b667ebd775ebd93597",
+    "esp32/src/main.cpp": "1602dbf0f367129b60d6407de4cbcbf6264521cd8c06960cd3cfb95c9abb0028",
+    "esp32/versi/01_health.cpp": "4224db7826ecffcf4076068806fc8d4df51fda3cc4032df5bb9d27687e675efe",
+    "esp32/versi/02_kirim_contoh.cpp": "26ded88867af368ce73cdbcb079724c0cb83d6cf4c1812dbd44823d835baa7d3",
+    "esp32/versi/03_sensor.cpp": "1602dbf0f367129b60d6407de4cbcbf6264521cd8c06960cd3cfb95c9abb0028",
+    "tahapan/01_api_health.php": "4c959885020f3d2b1f646ba75a8f0b61ef925fab00ef901bcda3d165503fcdfc",
+    "tahapan/02_api_terima.php": "f3c2e4429dd682174e8a91f363bda338083462cd8eb94dd0e00a8c32d5aa5fca",
+    "tahapan/03_api_mysql.php": "b5cf1f3849456178ca465f8770b50e67448212c660e415a462524a9e83462f3a",
+    "backend/composer.lock": "7c50a91b752e5421c19930412e6e4a754d67bf4b61058f66fbe27616ab482a7b",
+    "backend/bootstrap/app.php": "1e5273590addd91a51dafd53ada4abff09a2e38139d08bdc56775492bfdbe9ec",
+    "esp32/diagram.json": "e267438c156f1074c788150962c66a0298f684cf759a27692cd9fd8016a3ddd0",
+    "esp32/platformio.ini": "72164b93f76fe5ad08de3a65150a1627ea01b058b175fd8bcc7789de10a1ff4e"
+  },
+  "limits": [
+    "Local HTTP lab without device authentication; not deployed to the internet.",
+    "The final sensor firmware ran in Wokwi. The first two firmware versions were compiled, not separately run in the simulator.",
+    "A valid intermediate 32/65 sample was recorded while the two sliders were changed separately."
+  ]
+}

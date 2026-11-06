@@ -1,0 +1,18 @@
+{
+  "name": "mk38-pertemuan11",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "prestart": "node configure.js",
+    "start": "node node_modules/node-red/red.js --userDir . --settings settings.js flow.runtime.json"
+  },
+  "dependencies": {
+    "node-red": "5.0.9",
+    "@flowfuse/node-red-dashboard": "1.34.1",
+    "node-red-node-sqlite": "2.0.1",
+    "mqtt": "5.16.1"
+  }
+}

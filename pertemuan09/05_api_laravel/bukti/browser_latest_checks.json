@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "date": "2026-11-07",
+  "path": "/latihan/nilai",
+  "method": "Observed through CUA browser controls; no API response was injected.",
+  "checks": [
+    "Initial page does not pretend to have requested data.",
+    "Button reads existing record 244, device esp32-kelompok-01, 35 C and 75%.",
+    "Unknown ID belum-ada produces the empty-data message.",
+    "Enter in the device field submits the form.",
+    "At 320 px, scrollWidth equals viewport width; text input is 44.39 px high.",
+    "Blade link opens the table with IDs 244 through 235."
+  ],
+  "source_hashes": {
+    "backend/resources/views/latest.blade.php": "76a237c63bc019c23b5cdff643380c39d50fa929a254c1247c6ebb90215cfd5d",
+    "backend/routes/web.php": "a24d1cfb40de6ba8ab5cf83683ecdd391dc39f5acd7ba62e327e25aa6fbc03af",
+    "backend/public/dashboard.css": "a62de242db5ff1ac4978f7052b8368f83ba79b1f4af3281ebda3c8f36721aecc"
+  },
+  "screenshot": "latihan_nilai.png",
+  "screenshot_sha256": "c618adf831f637f04a774e9ff2129b1d11d974cccfc2210d32d66a44f673ac54",
+  "limits": [
+    "Network-error message reviewed in source; outage was not induced for this added reader.",
+    "Control simulator run remains the separately recorded 6 November session.",
+    "No student comprehension or physical hardware test."
+  ]
+}

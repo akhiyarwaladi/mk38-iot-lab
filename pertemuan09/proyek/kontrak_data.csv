@@ -1,0 +1,5 @@
+field,tipe,satuan,rentang_atau_format,asal,arti
+device_id,string,-,maksimal 40 karakter,konfigurasi perangkat,identitas satu node
+suhu,number,Celsius,-40 sampai 80,DHT22,suhu udara
+kelembapan,number,persen,0 sampai 100,DHT22,kelembapan relatif
+created_at,string,UTC,ISO 8601,server API,waktu penerimaan bukan waktu pengukuran

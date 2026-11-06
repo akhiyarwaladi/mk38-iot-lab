@@ -1,0 +1,14 @@
+.venv/
+.pio/
+__pycache__/
+data/
+*.sqlite*
+*.log
+build/
+/backend/vendor/
+/backend/node_modules/
+/backend/.env
+/backend/.env.testing
+!/backend/.env.example
+
+

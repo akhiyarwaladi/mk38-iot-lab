@@ -1,0 +1,3 @@
+python siapkan_lab.py --out runtime-tujuan --port 28883
+Copy-Item config.uji-lokal.example.json config.uji-lokal.json
+& "C:/Program Files/mosquitto/mosquitto.exe" -c runtime-tujuan/mosquitto.conf

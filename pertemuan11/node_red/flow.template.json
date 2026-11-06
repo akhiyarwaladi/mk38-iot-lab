@@ -1,0 +1,706 @@
+[
+  {
+    "id": "p11tab",
+    "type": "tab",
+    "label": "Pertemuan 11 - MQTT dan SQLite",
+    "disabled": false,
+    "info": "Sensor ke dasbor/SQLite; tombol mengirim perintah, status berasal dari ESP32."
+  },
+  {
+    "id": "p11broker",
+    "type": "mqtt-broker",
+    "name": "Broker latihan",
+    "broker": "__BROKER__",
+    "port": "__PORT__",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "30",
+    "cleansession": true,
+    "autoUnsubscribe": true
+  },
+  {
+    "id": "p11db",
+    "type": "sqlitedb",
+    "db": "__DB_FILE__",
+    "mode": "RWC"
+  },
+  {
+    "id": "p11ui",
+    "type": "ui-base",
+    "name": "Praktik MK38",
+    "path": "/dashboard",
+    "includeClientData": true,
+    "acceptsClientConfig": [
+      "ui-control",
+      "ui-notification"
+    ],
+    "showPathInSidebar": false,
+    "headerContent": "page",
+    "navigationStyle": "none",
+    "titleBarStyle": "default",
+    "allowInstall": false
+  },
+  {
+    "id": "p11theme",
+    "type": "ui-theme",
+    "name": "MK38",
+    "colors": {
+      "surface": "#ffffff",
+      "primary": "#19364b",
+      "bgPage": "#f4f5f6",
+      "groupBg": "#ffffff",
+      "groupOutline": "#ced5da"
+    },
+    "sizes": {
+      "density": "default",
+      "pagePadding": "16px",
+      "groupGap": "16px",
+      "groupBorderRadius": "4px",
+      "widgetGap": "12px"
+    }
+  },
+  {
+    "id": "p11page",
+    "type": "ui-page",
+    "name": "Tugas 3 - Cloud dan kendali",
+    "ui": "p11ui",
+    "path": "/ruangan",
+    "icon": "",
+    "layout": "grid",
+    "theme": "p11theme",
+    "order": 1,
+    "visible": true,
+    "disabled": false,
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": 0,
+        "cols": 3
+      },
+      {
+        "name": "Tablet",
+        "px": 576,
+        "cols": 6
+      },
+      {
+        "name": "Desktop",
+        "px": 1024,
+        "cols": 12
+      }
+    ]
+  },
+  {
+    "id": "p11monitor",
+    "type": "ui-group",
+    "name": "Sensor DHT22",
+    "page": "p11page",
+    "width": 6,
+    "height": 1,
+    "order": 1,
+    "showTitle": true,
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "p11control",
+    "type": "ui-group",
+    "name": "Kendali dan konfirmasi",
+    "page": "p11page",
+    "width": 6,
+    "height": 1,
+    "order": 2,
+    "showTitle": true,
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "p11init",
+    "type": "inject",
+    "name": "Siapkan tabel",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "once": true,
+    "onceDelay": 0.2,
+    "repeat": "",
+    "payload": "",
+    "payloadType": "date",
+    "z": "p11tab",
+    "x": 130,
+    "y": 80,
+    "wires": [
+      [
+        "p11create"
+      ]
+    ]
+  },
+  {
+    "id": "p11create",
+    "type": "function",
+    "name": "CREATE TABLE",
+    "func": "msg.topic = \"CREATE TABLE IF NOT EXISTS pengamatan (id INTEGER PRIMARY KEY AUTOINCREMENT, waktu TEXT NOT NULL, suhu REAL NOT NULL, kelembapan REAL NOT NULL, led INTEGER);\";\nreturn msg;",
+    "outputs": 1,
+    "z": "p11tab",
+    "x": 350,
+    "y": 80,
+    "wires": [
+      [
+        "p11schema"
+      ]
+    ]
+  },
+  {
+    "id": "p11schema",
+    "type": "sqlite",
+    "name": "Buat tabel jika belum ada",
+    "mydb": "p11db",
+    "sqlquery": "batch",
+    "sql": "",
+    "z": "p11tab",
+    "x": 550,
+    "y": 80,
+    "wires": [
+      [
+        "p11ready"
+      ]
+    ]
+  },
+  {
+    "id": "p11ready",
+    "type": "function",
+    "name": "Tabel siap",
+    "func": "flow.set(\"dbSiap\", true);\nreturn msg;",
+    "outputs": 1,
+    "z": "p11tab",
+    "x": 780,
+    "y": 80,
+    "wires": [
+      [
+        "p11count"
+      ]
+    ]
+  },
+  {
+    "id": "p11sensor",
+    "type": "mqtt in",
+    "name": "Data sensor",
+    "topic": "__ROOT__/sensor",
+    "qos": "0",
+    "datatype": "utf8",
+    "broker": "p11broker",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "z": "p11tab",
+    "x": 130,
+    "y": 220,
+    "wires": [
+      [
+        "p11json"
+      ]
+    ]
+  },
+  {
+    "id": "p11json",
+    "type": "json",
+    "name": "Teks menjadi objek",
+    "property": "payload",
+    "action": "obj",
+    "pretty": false,
+    "z": "p11tab",
+    "x": 340,
+    "y": 220,
+    "wires": [
+      [
+        "p11valid"
+      ]
+    ]
+  },
+  {
+    "id": "p11valid",
+    "type": "function",
+    "name": "Validasi nilai",
+    "func": "__VALIDATE__",
+    "outputs": 1,
+    "z": "p11tab",
+    "x": 550,
+    "y": 220,
+    "wires": [
+      [
+        "p11sensorview",
+        "p11chart",
+        "p11params",
+        "p11debug"
+      ]
+    ]
+  },
+  {
+    "id": "p11chart",
+    "type": "ui-chart",
+    "name": "Riwayat suhu",
+    "group": "p11monitor",
+    "label": "Perubahan suhu selama sesi",
+    "order": 3,
+    "width": 6,
+    "height": 4,
+    "chartType": "line",
+    "category": "Suhu",
+    "categoryType": "str",
+    "xAxisPropertyType": "timestamp",
+    "xAxisType": "time",
+    "xAxisLabel": "Waktu",
+    "yAxisLabel": "C",
+    "yAxisProperty": "payload.suhu",
+    "yAxisPropertyType": "msg",
+    "action": "append",
+    "pointRadius": 2,
+    "showLegend": false,
+    "removeOlder": 10,
+    "removeOlderUnit": "60",
+    "removeOlderPoints": "120",
+    "colors": [
+      "#19364b"
+    ],
+    "z": "p11tab",
+    "x": 820,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "p11params",
+    "type": "function",
+    "name": "Parameter INSERT",
+    "func": "__PARAMS__",
+    "outputs": 1,
+    "z": "p11tab",
+    "x": 800,
+    "y": 400,
+    "wires": [
+      [
+        "p11insert"
+      ]
+    ]
+  },
+  {
+    "id": "p11insert",
+    "type": "sqlite",
+    "name": "Simpan pengamatan",
+    "mydb": "p11db",
+    "sqlquery": "prepared",
+    "sql": "INSERT INTO pengamatan(waktu,suhu,kelembapan,led) VALUES ($waktu,$suhu,$kelembapan,$led)",
+    "z": "p11tab",
+    "x": 1020,
+    "y": 400,
+    "wires": [
+      [
+        "p11count"
+      ]
+    ]
+  },
+  {
+    "id": "p11count",
+    "type": "sqlite",
+    "name": "Hitung data tersimpan",
+    "mydb": "p11db",
+    "sqlquery": "fixed",
+    "sql": "SELECT COUNT(*) AS jumlah FROM pengamatan",
+    "z": "p11tab",
+    "x": 1040,
+    "y": 80,
+    "wires": [
+      [
+        "p11countvalue"
+      ]
+    ]
+  },
+  {
+    "id": "p11countvalue",
+    "type": "function",
+    "name": "Ambil jumlah",
+    "func": "msg.payload = msg.payload[0].jumlah;\nreturn msg;",
+    "outputs": 1,
+    "z": "p11tab",
+    "x": 1250,
+    "y": 80,
+    "wires": [
+      [
+        "p11countui"
+      ]
+    ]
+  },
+  {
+    "id": "p11countui",
+    "type": "ui-text",
+    "name": "Jumlah data",
+    "group": "p11control",
+    "order": 4,
+    "width": 6,
+    "height": 1,
+    "label": "Data tersimpan (SQLite)",
+    "value": "payload",
+    "valueType": "msg",
+    "layout": "row-spread",
+    "z": "p11tab",
+    "x": 1450,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "p11debug",
+    "type": "debug",
+    "name": "Data yang diterima",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "z": "p11tab",
+    "x": 810,
+    "y": 480,
+    "wires": []
+  },
+  {
+    "id": "p11state",
+    "type": "mqtt in",
+    "name": "Konfirmasi LED",
+    "topic": "__ROOT__/led/state",
+    "qos": "1",
+    "datatype": "utf8",
+    "broker": "p11broker",
+    "inputs": 0,
+    "z": "p11tab",
+    "x": 140,
+    "y": 580,
+    "wires": [
+      [
+        "p11stateui"
+      ]
+    ]
+  },
+  {
+    "id": "p11stateui",
+    "type": "ui-text",
+    "name": "Keadaan LED",
+    "group": "p11control",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "label": "Konfirmasi LED",
+    "value": "payload",
+    "valueType": "msg",
+    "layout": "row-spread",
+    "z": "p11tab",
+    "x": 400,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "p11on",
+    "type": "ui-button",
+    "name": "Nyalakan LED",
+    "group": "p11control",
+    "order": 2,
+    "width": 3,
+    "height": 1,
+    "label": "Nyalakan LED",
+    "payload": "on",
+    "payloadType": "str",
+    "topic": "__ROOT__/led/set",
+    "topicType": "str",
+    "enableClick": true,
+    "emulateClick": false,
+    "buttonColor": "#19364b",
+    "textColor": "#ffffff",
+    "icon": "",
+    "z": "p11tab",
+    "x": 140,
+    "y": 680,
+    "wires": [
+      [
+        "p11command"
+      ]
+    ]
+  },
+  {
+    "id": "p11off",
+    "type": "ui-button",
+    "name": "Matikan LED",
+    "group": "p11control",
+    "order": 3,
+    "width": 3,
+    "height": 1,
+    "label": "Matikan LED",
+    "payload": "off",
+    "payloadType": "str",
+    "topic": "__ROOT__/led/set",
+    "topicType": "str",
+    "enableClick": true,
+    "emulateClick": false,
+    "buttonColor": "#19364b",
+    "textColor": "#ffffff",
+    "icon": "",
+    "z": "p11tab",
+    "x": 400,
+    "y": 680,
+    "wires": [
+      [
+        "p11command"
+      ]
+    ]
+  },
+  {
+    "id": "p11command",
+    "type": "mqtt out",
+    "name": "Kirim perintah tanpa retain",
+    "topic": "",
+    "qos": "1",
+    "retain": "false",
+    "broker": "p11broker",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "z": "p11tab",
+    "x": 700,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "p11history",
+    "type": "http in",
+    "name": "GET riwayat",
+    "url": "/api/riwayat",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "z": "p11tab",
+    "x": 140,
+    "y": 820,
+    "wires": [
+      [
+        "p11select"
+      ]
+    ]
+  },
+  {
+    "id": "p11select",
+    "type": "sqlite",
+    "name": "Baca 20 data terakhir",
+    "mydb": "p11db",
+    "sqlquery": "fixed",
+    "sql": "SELECT id,waktu,suhu,kelembapan,led FROM pengamatan ORDER BY id DESC LIMIT 20",
+    "z": "p11tab",
+    "x": 400,
+    "y": 820,
+    "wires": [
+      [
+        "p11headers"
+      ]
+    ]
+  },
+  {
+    "id": "p11headers",
+    "type": "function",
+    "name": "Respons JSON",
+    "func": "msg.headers = {\"content-type\":\"application/json\"};\nreturn msg;",
+    "outputs": 1,
+    "z": "p11tab",
+    "x": 680,
+    "y": 820,
+    "wires": [
+      [
+        "p11response"
+      ]
+    ]
+  },
+  {
+    "id": "p11response",
+    "type": "http response",
+    "name": "Kirim riwayat",
+    "statusCode": "",
+    "headers": {},
+    "z": "p11tab",
+    "x": 900,
+    "y": 820,
+    "wires": []
+  },
+  {
+    "id": "p11catch",
+    "type": "catch",
+    "name": "Catat galat alur",
+    "scope": null,
+    "uncaught": false,
+    "z": "p11tab",
+    "x": 140,
+    "y": 920,
+    "wires": [
+      [
+        "p11errors"
+      ]
+    ]
+  },
+  {
+    "id": "p11errors",
+    "type": "debug",
+    "name": "Periksa pesan/SQL",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "complete": "error",
+    "targetType": "msg",
+    "z": "p11tab",
+    "x": 400,
+    "y": 920,
+    "wires": []
+  },
+  {
+    "id": "p11cloudin",
+    "type": "mqtt in",
+    "z": "p11tab",
+    "name": "Hasil REST dari ESP32",
+    "topic": "__ROOT__/cloud/status",
+    "qos": "1",
+    "datatype": "utf8",
+    "broker": "p11broker",
+    "inputs": 0,
+    "x": 150,
+    "y": 1060,
+    "wires": [
+      [
+        "p11cloudjson"
+      ]
+    ]
+  },
+  {
+    "id": "p11cloudjson",
+    "type": "json",
+    "z": "p11tab",
+    "name": "JSON status",
+    "property": "payload",
+    "action": "obj",
+    "pretty": false,
+    "x": 370,
+    "y": 1060,
+    "wires": [
+      [
+        "p11cloudtext"
+      ]
+    ]
+  },
+  {
+    "id": "p11cloudtext",
+    "type": "function",
+    "z": "p11tab",
+    "name": "Bedakan echo dan simpan",
+    "func": "__CLOUD_STATUS__",
+    "outputs": 1,
+    "x": 620,
+    "y": 1060,
+    "wires": [
+      [
+        "p11cloudui"
+      ]
+    ]
+  },
+  {
+    "id": "p11cloudui",
+    "type": "ui-text",
+    "z": "p11tab",
+    "name": "Status REST",
+    "group": "p11control",
+    "order": 5,
+    "width": 6,
+    "height": 2,
+    "label": "Hasil REST",
+    "value": "payload",
+    "valueType": "msg",
+    "layout": "col-center",
+    "x": 880,
+    "y": 1060,
+    "wires": []
+  },
+  {
+    "id": "p11sensorview",
+    "type": "ui-template",
+    "z": "p11tab",
+    "group": "p11monitor",
+    "page": "",
+    "ui": "",
+    "name": "Pengamatan DHT22",
+    "order": 1,
+    "width": 6,
+    "height": 3,
+    "head": "",
+    "format": "__SENSOR_WIDGET__",
+    "storeOutMessages": false,
+    "passthru": false,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 820,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "p11initial",
+    "type": "inject",
+    "z": "p11tab",
+    "name": "Petunjuk sebelum data tiba",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "once": true,
+    "onceDelay": 0.3,
+    "repeat": "",
+    "payload": "",
+    "payloadType": "str",
+    "x": 150,
+    "y": 1150,
+    "wires": [
+      [
+        "p11initialstate",
+        "p11initialrest"
+      ]
+    ]
+  },
+  {
+    "id": "p11initialstate",
+    "type": "function",
+    "z": "p11tab",
+    "name": "Belum ada konfirmasi",
+    "func": "msg.payload = \"Belum ada konfirmasi ESP32\";\nreturn msg;",
+    "outputs": 1,
+    "x": 450,
+    "y": 1130,
+    "wires": [
+      [
+        "p11stateui"
+      ]
+    ]
+  },
+  {
+    "id": "p11initialrest",
+    "type": "function",
+    "z": "p11tab",
+    "name": "Menunggu hasil REST",
+    "func": "msg.payload = \"Menunggu hasil HTTPS dari ESP32; periksa mode dan koneksi\";\nreturn msg;",
+    "outputs": 1,
+    "x": 450,
+    "y": 1190,
+    "wires": [
+      [
+        "p11cloudui"
+      ]
+    ]
+  }
+]

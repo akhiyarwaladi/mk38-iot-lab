@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "topic_root": "unja/mk38/proyek/ganti-identitas-kelompok",
+  "sensor": {"dht_gpio": 15, "unit_suhu": "C", "unit_kelembapan": "%"},
+  "led": {"gpio": 23, "active_high": true, "commands": ["on", "off"]},
+  "mqtt": {
+    "sensor_suffix": "/sensor", "command_suffix": "/led/set",
+    "state_suffix": "/led/state", "cloud_suffix": "/cloud/status",
+    "command_retain": false
+  },
+  "rest_fields": {"field1": "suhu", "field2": "kelembapan", "field3": "led_1_atau_0"},
+  "status": "Rancangan; samakan topic root pada firmware dan Node-RED sebelum uji jaringan."
+}

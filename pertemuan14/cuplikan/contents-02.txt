@@ -1,0 +1,4 @@
+uname -m
+cat /etc/os-release
+sudo apt update
+sudo apt install -y python3-venv mosquitto mosquitto-clients

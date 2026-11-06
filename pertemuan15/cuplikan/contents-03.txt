@@ -1,0 +1,9 @@
+kelompok-NN/
+  README.md
+  project.json
+  laporan.pdf
+  presentasi.pdf
+  hasil_uji.csv
+  firmware/        # source dan konfigurasi contoh
+  desain/          # skematik, diagram, enclosure
+  bukti/           # log, gambar, hasil pengujian

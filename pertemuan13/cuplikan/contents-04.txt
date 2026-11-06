@@ -1,0 +1,4 @@
+python uji_tls.py --host localhost --port 18883 `
+  --ca runtime/ca.crt --username perangkat `
+  --password-env LOCAL_MQTT_PASSWORD `
+  --topic-root unja/mk38/p14/uji

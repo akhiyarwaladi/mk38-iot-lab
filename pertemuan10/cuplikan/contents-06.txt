@@ -1,0 +1,4 @@
+SELECT id,waktu,suhu,kelembapan,led
+FROM pengamatan
+ORDER BY id DESC
+LIMIT 20

@@ -1,0 +1,2 @@
+$env:Path = 'C:\xampp\php;' + $env:Path
+php -v

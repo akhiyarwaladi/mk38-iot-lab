@@ -1,0 +1,6 @@
+kasus: password_salah
+langkah: ganti password client pada broker privat
+harapan: koneksi ditolak
+hasil_aktual: isi pesan CONNACK dari run sendiri
+status: tentukan setelah pengujian
+bukti: bukti/password_salah.txt

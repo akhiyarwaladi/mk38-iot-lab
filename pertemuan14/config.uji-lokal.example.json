@@ -1,0 +1,13 @@
+{
+  "local": {
+    "host": "localhost", "port": 18883,
+    "ca": "runtime/ca.crt", "username": "perangkat",
+    "password_env": "LOCAL_MQTT_PASSWORD", "root": "unja/mk38/p14/lokal"
+  },
+  "cloud": {
+    "host": "localhost", "port": 28883,
+    "ca": "runtime-tujuan/ca.crt", "username": "perangkat",
+    "password_env": "LOCAL_MQTT_PASSWORD", "root": "unja/mk38/p14/tujuan"
+  },
+  "database": "runtime/gateway-uji.sqlite", "allow_cloud_control": true
+}

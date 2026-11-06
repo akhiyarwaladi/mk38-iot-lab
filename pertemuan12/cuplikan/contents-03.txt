@@ -1,0 +1,6 @@
+kelompok-01/
+  progress_report_1.md
+  desain/          diagram, interface, BOM, ukuran
+  rangkaian/       .fzz, ekspor breadboard dan schematic
+  enclosure/       model editable, base.stl, lid.stl
+  bukti/           screenshot, hasil ukur, catatan uji

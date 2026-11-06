@@ -1,0 +1,1 @@
+Get-FileHash .pio/build/esp32dev/firmware.bin -Algorithm SHA256

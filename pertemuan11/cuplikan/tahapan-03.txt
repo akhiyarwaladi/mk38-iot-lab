@@ -1,0 +1,2 @@
+Copy-Item versi/03_task.cpp src/main.cpp
+pio run

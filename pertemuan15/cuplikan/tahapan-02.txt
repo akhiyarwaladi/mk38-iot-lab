@@ -1,0 +1,1 @@
+python tahapan/02_hasil.py kelompok-NN

@@ -1,0 +1,2 @@
+{"mode":"read_public","http":200,"entry_id":0,
+ "tersimpan":false,"read_ok":true,"public_entry_id":12345}

@@ -1,0 +1,2 @@
+python tahapan/03_kirim.py --config config.uji-lokal.json
+python lihat_data.py --db runtime/tahapan.sqlite

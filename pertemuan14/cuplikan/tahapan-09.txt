@@ -1,0 +1,1 @@
+python gateway.py --config config.uji-lokal.json

@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "method": "sRGB relative luminance; CSS tokens from dashboard.css",
+  "results": [
+    {
+      "theme": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 11.81,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.3,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "title",
+      "background": "page",
+      "ratio": 11.16,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "title",
+      "background": "surface",
+      "ratio": 12.57,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.74,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 6.46,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "warn",
+      "background": "warn-bg",
+      "ratio": 7.2,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "button-ink",
+      "background": "title",
+      "ratio": 12.57,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "border",
+      "background": "surface",
+      "ratio": 3.91,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "focus",
+      "background": "surface",
+      "ratio": 6.13,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "theme": "light",
+      "foreground": "focus",
+      "background": "page",
+      "ratio": 5.44,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 14.56,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 12.42,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "title",
+      "background": "page",
+      "ratio": 11.28,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "title",
+      "background": "surface",
+      "ratio": 9.62,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.36,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 7.98,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "warn",
+      "background": "warn-bg",
+      "ratio": 9.78,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "button-ink",
+      "background": "title",
+      "ratio": 10.27,
+      "minimum": 4.5,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "border",
+      "background": "surface",
+      "ratio": 5.31,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "focus",
+      "background": "surface",
+      "ratio": 9.46,
+      "minimum": 3,
+      "status": "PASS"
+    },
+    {
+      "theme": "dark",
+      "foreground": "focus",
+      "background": "page",
+      "ratio": 11.09,
+      "minimum": 3,
+      "status": "PASS"
+    }
+  ],
+  "limits": [
+    "Not a full accessibility conformance audit.",
+    "Decorative table/grid separator color is excluded; graph lines use title, not separator color."
+  ]
+}

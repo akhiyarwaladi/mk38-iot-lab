@@ -1,0 +1,5 @@
+Copy-Item template_pengumpulan kelompok-NN -Recurse
+New-Item -ItemType Directory kelompok-NN/firmware
+New-Item -ItemType Directory kelompok-NN/desain
+New-Item -ItemType Directory kelompok-NN/bukti
+python tahapan/01_struktur.py kelompok-NN

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Compilation only; simulator evidence is recorded separately.",
+  "versions": [
+    {
+      "version": "01_health.cpp",
+      "status": "PASS",
+      "source_sha256": "4224db7826ecffcf4076068806fc8d4df51fda3cc4032df5bb9d27687e675efe",
+      "firmware_sha256": "2d9033fae0e79e1de51aac134c3231b37c933acba74e7e5f68d78198b1c55d32"
+    },
+    {
+      "version": "02_kirim_contoh.cpp",
+      "status": "PASS",
+      "source_sha256": "26ded88867af368ce73cdbcb079724c0cb83d6cf4c1812dbd44823d835baa7d3",
+      "firmware_sha256": "7ae587da7bfd428bc1a7ff2d2f5b03794d0e9aef50686eacf8f46fe2385faf4e"
+    },
+    {
+      "version": "03_sensor.cpp",
+      "status": "PASS",
+      "source_sha256": "1602dbf0f367129b60d6407de4cbcbf6264521cd8c06960cd3cfb95c9abb0028",
+      "firmware_sha256": "09b1804bdc646ffd81bfcfe1843e261c5ae4a14d6aa350932c176e95a926b5e9"
+    }
+  ]
+}

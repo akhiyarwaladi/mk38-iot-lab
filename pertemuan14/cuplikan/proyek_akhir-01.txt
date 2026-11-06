@@ -1,0 +1,4 @@
+cd proyek
+python hitung_metrik.py klasifikasi contoh_sintetis/klasifikasi.csv
+python hitung_metrik.py latensi contoh_sintetis/latensi.csv --batas-ms 1000
+python hitung_metrik.py perbandingan contoh_sintetis/perbandingan.csv

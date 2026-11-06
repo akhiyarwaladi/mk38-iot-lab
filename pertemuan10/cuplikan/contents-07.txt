@@ -1,0 +1,1 @@
+Invoke-RestMethod http://localhost:1880/api/riwayat

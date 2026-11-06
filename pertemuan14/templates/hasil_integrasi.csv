@@ -1,0 +1,9 @@
+kasus,langkah,harapan,hasil_aktual,status,bukti
+sensor_valid,kirim JSON suhu 28 dan kelembapan 65,satu baris tersimpan dan diterima cloud,,BELUM_DIUJI,
+sensor_invalid,kirim suhu string,ditolak tanpa baris baru,,BELUM_DIUJI,
+cloud_putus,hentikan broker cloud lokal uji,data lokal tetap tersimpan pending,,BELUM_DIUJI,
+gateway_restart,restart gateway saat pending,antrean SQLite tetap ada,,BELUM_DIUJI,
+cloud_pulih,nyalakan cloud kembali,pending terkirim setelah PUBACK,,BELUM_DIUJI,
+password_salah,ubah password client lokal,CONNACK ditolak,,BELUM_DIUJI,
+ca_salah,ganti CA client dengan CA berbeda,TLS menolak koneksi,,BELUM_DIUJI,
+perintah_invalid,kirim payload selain on atau off,LED tidak berubah,,BELUM_DIUJI,
