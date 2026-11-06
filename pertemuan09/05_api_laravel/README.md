@@ -32,7 +32,7 @@ Ulangi pada terminal baru bila diperlukan. Composer dipasang dari [situs resminy
 |---|---|---|
 | `GET /api/v1/health` | Memeriksa apakah Laravel dapat diakses | 200, `{"status":"ok"}` |
 | `POST /api/v1/sensor` | Mengirim satu pembacaan | Tahap 2: 200 tanpa penyimpanan; tahap 3: 201 dan ID catatan |
-| `GET /api/v1/sensor` | Membaca paling banyak 20 catatan terbaru | 200, larik JSON; `[]` jika belum ada data |
+| `GET /api/v1/sensor` | Membaca 20 catatan terbaru secara bawaan; `limit` dapat diisi 1 sampai 100 | 200, larik JSON; `[]` jika belum ada data |
 | `GET /api/v1/sensor/{id}` | Membaca satu catatan | 200; 404 jika ID tidak ditemukan |
 
 Body POST memakai format yang sama dari tahap 2 sampai tahap sensor:
