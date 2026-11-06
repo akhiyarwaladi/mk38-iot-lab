@@ -1,4 +1,8 @@
 {
+  ".gitattributes": {
+    "sha256": "613213856eda82b43ea5c8b4ebe2fbb0462cdc17a7f8bcf06b8380fe78b31f69",
+    "source": "generated course navigation"
+  },
   ".gitignore": {
     "sha256": "65262ed98ce17982e1726ed0dd8aab043897c3fc860516bca5f0c813ff6c9d11",
     "source": "generated course navigation"
