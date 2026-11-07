@@ -34,6 +34,12 @@ berkas agar jalur pada perintah tetap cocok.
 
 Folder `backend` memuat aplikasi Laravel; `esp32` memuat proyek PlatformIO. Folder `tahapan` menyimpan versi route yang dipakai satu per satu. `bukti` memuat hasil pengujian. Password database dan `APP_KEY` berada pada `.env` lokal; berkas tersebut tidak dibagikan.
 
+Gunakan dua jendela VS Code. Jendela pertama membuka akar lab ini untuk
+menyunting backend dan menjalankan terminal A/B. Pilih **File > New Window**,
+lalu buka subfolder `esp32` pada jendela kedua untuk PlatformIO dan Wokwi.
+Biarkan jendela pertama serta terminal server tetap berjalan. Jangan
+mengganti folder pada jendela server saat membuka proyek ESP32.
+
 Jika memakai PHP XAMPP dan perintah `php` belum dikenali, tambahkan folder PHP pada PATH **terminal tersebut** sebelum menjalankan perintah:
 
 ```powershell

@@ -24,4 +24,6 @@ Setiap file di `versi/` adalah versi program utuh. Salin satu versi ke `src/main
 
 Angka 01/02/03 adalah penanda proyek/tahap dalam paket. Pertahankan nama folder saat mengikuti tutorial agar jalur perintah cocok. Pada lab Laravel, buka `05_api_laravel/esp32` untuk PlatformIO; jalankan PHP/Composer dari `05_api_laravel/backend`. PHP, SQL, perintah PowerShell, dan contoh respons tidak ditempel ke `main.cpp`. Petunjuk di atas setiap kotak pada PDF menyebut alat, folder, dan berkas tujuannya.
 
+Gunakan jendela terpisah ketika server laptop dan simulator berjalan bersama. Untuk Laravel, jendela VS Code pertama membuka `05_api_laravel` dengan terminal server/uji; gunakan File > New Window untuk membuka `05_api_laravel/esp32` pada jendela kedua. Jangan mengganti folder pada jendela yang sedang menjalankan server. Node-RED, broker, dan gateway juga perlu terminal yang tetap berjalan.
+
 Kredensial contoh memakai placeholder. Jangan unggah `.env`, `secrets.h`, password, private key, atau database pribadi. Salinan ini diekspor dari sumber modul; manifest mencatat asal berkas serta SHA-256. Laravel dan dependency mempertahankan lisensi asalnya.
