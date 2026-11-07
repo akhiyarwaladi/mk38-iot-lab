@@ -8,7 +8,7 @@
     "source": "generated course navigation"
   },
   "README.md": {
-    "sha256": "fc7334e2650839ded54077f05a0a15c89d5f306ec73063fd347a18adf3a45615",
+    "sha256": "5372a80e2512c85074cb2316f1af65bd90da90846c00225bb425d7f098a9da00",
     "source": "generated course navigation"
   },
   "pertemuan09/01_wifi/.gitignore": {
@@ -148,7 +148,7 @@
     "source": "modul_mk38/api_sensor/PENGEMBANGAN_PROYEK.md"
   },
   "pertemuan09/05_api_laravel/README.md": {
-    "sha256": "7c9017b3a1ceb49c6681832e8aa4f27d5d4c5875ec6b476c83745311e94c3f30",
+    "sha256": "28aac558ee58b162c3a3a965b7a99df7444824d6c7fbc82da8883243d92f99d3",
     "source": "modul_mk38/api_sensor/README.md"
   },
   "pertemuan09/05_api_laravel/VERIFIKASI.md": {
@@ -608,7 +608,7 @@
     "source": "modul_mk38/api_sensor/tests/verify_live.py"
   },
   "pertemuan09/README.md": {
-    "sha256": "09389b15869755311d770d15537396502fa35f33f8484698fe8acbc63321c888",
+    "sha256": "97d52374f7a80ad4c31e39da169965d291b0e0d8f55fda20d6ed8a31fd3b80c0",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/README.md"
   },
   "pertemuan09/TAHAPAN.md": {

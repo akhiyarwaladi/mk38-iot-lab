@@ -10,6 +10,23 @@ Pada edisi terbaru modul 9, Laravel dan MySQL menjadi jalur praktik utama setela
 
 ## Persiapan sebelum kelas
 
+Lokasi kode mengikuti aplikasi yang menjalankannya:
+
+| Jenis | Letak dan tindakan |
+|---|---|
+| C++ ESP32 | Buka `esp32` sebagai workspace VS Code. Program aktif `esp32/src/main.cpp`; Build melalui PlatformIO, lalu Start Simulator melalui Wokwi. |
+| Versi C++ | Salin satu berkas utuh dari `esp32/versi` ke `esp32/src/main.cpp`. Jangan menaruh seluruh versi di `src`, karena `setup()`/`loop()` akan rangkap. |
+| Header ESP32 | Sunting berkas bernama `.h` pada `esp32/include`; nama mengikuti `#include` pada program. |
+| PHP/Blade/JavaScript | Sunting berkas pada `backend` yang disebutkan langkahnya. Laravel berjalan di laptop dan JavaScript halaman berjalan di browser. |
+| Perintah PowerShell | Ketik pada terminal A/B atau terminal PlatformIO sesuai folder yang diminta; perintah bukan isi `main.cpp`. |
+| SQL | Jalankan pada MySQL Workbench atau klien MySQL yang terhubung. |
+
+Kotak cuplikan menjelaskan bagian tertentu dari berkas yang sudah tersedia.
+Jangan menimpa satu berkas utuh dengan beberapa baris cuplikan. Folder
+`01`, `02`, dan seterusnya pada paket menandai tahap, bukan nama yang
+diwajibkan PlatformIO. Selama mengikuti modul, pertahankan nama folder dan
+berkas agar jalur pada perintah tetap cocok.
+
 - PHP 8.2 atau 8.3, Composer 2, serta ekstensi PHP `pdo_mysql`, `mbstring`, `openssl`, `fileinfo`, dan `zip`. Gunakan PHP yang sesuai dengan `composer.lock`; contoh ini memakai Laravel 12. Uji `php -v`, `composer --version`, dan `php -m` dari terminal VS Code.
 - MySQL 8.0 atau 8.4 yang sudah berjalan. Uji `mysql --version`. Database bawaan XAMPP umumnya MariaDB; keduanya harus dibedakan ketika menulis laporan hasil uji. Pengujian lab ini memakai MySQL asli.
 - VS Code, PlatformIO, dan ekstensi Wokwi yang telah diaktifkan. Gunakan cara aktivasi dari modul utama.

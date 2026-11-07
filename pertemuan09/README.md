@@ -19,6 +19,28 @@ ke ThingSpeak.
 
 ## Persiapan
 
+Kode C++ disunting di **VS Code**, dikompilasi oleh **PlatformIO**, lalu
+hasil build dijalankan oleh **Wokwi**. Buka satu folder yang langsung
+berisi `platformio.ini`. Program aktif berada pada `src/main.cpp`; header
+lokal pada `include/`. Folder `.pio` dibuat otomatis saat build.
+
+Folder `01_wifi`, `02_sensor`, `03_cloud`, dan `04_server` adalah proyek
+terpisah. Pertahankan namanya saat mengikuti modul agar perintah cocok;
+angkanya bukan syarat PlatformIO. Folder `versi/` di dalam satu proyek
+menyimpan program alternatif yang utuh. Salin **satu** versi ke
+`src/main.cpp`, simpan, build, lalu mulai ulang Wokwi. Jangan menaruh semua
+versi ke `src` sebagai `main2.cpp` atau `coba.cpp`, karena setiap versi
+mendefinisikan `setup()` dan `loop()` sendiri.
+
+Kotak berlabel **cuplikan** hanya membahas bagian program. Baca bagian itu
+pada berkas utuh; jangan mengganti seluruh `main.cpp` dengan cuplikan.
+Perintah PowerShell diketik di terminal pada folder yang disebutkan.
+SQL dijalankan pada klien MySQL. PHP/Blade/JavaScript dashboard berada
+pada backend Laravel di laptop.
+
+Pada `05_api_laravel`, workspace PlatformIO adalah subfolder `esp32`.
+Terminal server Laravel dijalankan dari subfolder `backend`.
+
 Pasang ekstensi `platformio.platformio-ide` dan `Wokwi.wokwi-vscode`.
 PlatformIO menyertakan compiler dan manajer pustaka; Wokwi menjalankan
 simulasi firmware. Jalankan `Wokwi: Request a new License` dari F1 untuk
