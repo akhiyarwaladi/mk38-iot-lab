@@ -11,9 +11,11 @@ Buka satu proyek pada satu waktu. Urutan jalur utama mengikuti PDF:
 Nomor folder lama dipertahankan. `03_cloud` menjadi pengayaan ThingSpeak;
 `04_server` dipakai untuk membandingkan layanan HTTP pada ESP32.
 
-Semua firmware memakai rangkaian yang sama. Untuk Laravel, jalankan PHP
+Firmware jalur sensor memakai rangkaian DHT22 dan LED yang sama. Pengayaan
+aktuator memakai proyek terpisah dengan LED dan servo; ikuti
+panduan `05_api_laravel/AKTUATOR_BERTAHAP.md`. Untuk Laravel, jalankan PHP
 dari `05_api_laravel/backend` dan buka `05_api_laravel/esp32` sebagai
-workspace PlatformIO. Siapkan PHP, Composer, MySQL, dan dependency
+workspace PlatformIO. Siapkan PHP, Composer, MySQL, Python 3.10 atau lebih baru, dan dependency
 sebelum kelas. Setiap proyek berdiri sendiri; server ESP32 tidak mengirim
 ke ThingSpeak.
 
@@ -34,7 +36,9 @@ mendefinisikan `setup()` dan `loop()` sendiri.
 
 Kotak berlabel **cuplikan** hanya membahas bagian program. Baca bagian itu
 pada berkas utuh; jangan mengganti seluruh `main.cpp` dengan cuplikan.
-Perintah PowerShell diketik di terminal pada folder yang disebutkan.
+Perintah penyalinan PowerShell khusus Windows; pada sistem lain gunakan
+Explorer VS Code untuk menyalin berkas ke tujuan yang sama.
+Uji HTTP memakai skrip Python yang dijalankan dari folder yang disebutkan.
 SQL dijalankan pada klien MySQL. PHP/Blade/JavaScript dashboard berada
 pada backend Laravel di laptop.
 
@@ -90,15 +94,23 @@ Selama simulator tahap 4 berjalan, buka http://localhost:8180.
 `wokwi.toml` meneruskan port localhost 8180 ke port 80 ESP32 simulasi.
 Jangan langsung membuka IP virtual yang dicetak ESP32.
 
-```powershell
-Invoke-RestMethod http://localhost:8180/sensor
-Invoke-WebRequest http://localhost:8180/led -Method Post -Body @{state='on'} -UseBasicParsing
-Invoke-WebRequest http://localhost:8180/led -Method Post -Body @{state='off'} -UseBasicParsing
+Di terminal dari folder `04_server`, jalankan:
+
+```text
+python uji_http.py
 ```
+
+Gunakan `python3` pada Linux/macOS atau `py -3` pada Windows jika itu nama
+Python 3 yang tersedia. Pustaka standar sudah cukup; tidak perlu pip install.
+Skrip membaca `/sensor`, kemudian mengirim form `state` ke `/led`.
+Jalankan dengan `NILAI_LED = "on"`, cocokkan LED virtual, lalu ubah nilai
+menjadi `"off"`, simpan, dan jalankan ulang.
 
 `GET /sensor` mengembalikan JSON; `POST /led` mengubah LED lalu membalas
 303 (browser diarahkan ke halaman utama; klien biasanya mengikuti menjadi
-200). Coba `state='salah'`: respons 400 dan LED tidak berubah. Saat sensor
+200). Ubah `NILAI_LED` menjadi `"salah"`, simpan, lalu jalankan ulang:
+skrip menampilkan HTTP 400 dan LED tidak berubah. Pulihkan menjadi `"off"`.
+Saat sensor
 belum siap, respons sensor 503. Rute yang tidak tersedia membalas 404.
 
 Server HTTP lokal ini untuk latihan. Ia belum memiliki autentikasi; gunakan
