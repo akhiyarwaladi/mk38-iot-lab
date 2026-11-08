@@ -20,6 +20,16 @@ for filename in ('live_dashboard_result.json', 'laravel_dashboard_tests.json'):
     assert report['status'] == 'PASS', filename
     for name, expected in report['source_hashes'].items():
         assert sha((LAB / name).read_bytes()) == expected, name
+
+actuator = json.loads((LAB / 'bukti/aktuator_verifikasi.json').read_text(encoding='utf-8'))
+assert actuator['status'] == 'PASS' and actuator['runtime_commands'] == 7 and actuator['firmware_versions'] == 3
+for name, expected in actuator['source_hashes'].items():
+    assert sha((LAB / name).read_bytes()) == expected, name
+assert sha((LAB / 'bukti/actuators_live.json').read_bytes()) == actuator['runtime_report_sha256']
+assert sha((LAB / 'bukti/actuators_ui.json').read_bytes()) == actuator['ui_report_sha256']
+assert sha((LAB / 'bukti/actuator_firmware_builds.json').read_bytes()) == actuator['firmware_report_sha256']
+for name, expected in actuator['screenshots'].items():
+    assert sha((LAB / 'bukti' / name).read_bytes()) == expected, name
 tests = json.loads((LAB / 'bukti/laravel_dashboard_tests.json').read_text(encoding='utf-8'))
 assert tests['suite']['tests'] == '12' and tests['suite']['assertions'] == '105'
 assert all(tests['suite'][key] == '0' for key in ('errors', 'failures', 'skipped'))

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Praktikum MK38 Universitas Jambi",
+  "editor": "wokwi",
+  "parts": [
+    {"type":"wokwi-esp32-devkit-v1","id":"esp","top":0,"left":0,"attrs":{}},
+    {"type":"wokwi-led","id":"led","top":150,"left":220,"attrs":{"color":"red"}},
+    {"type":"wokwi-resistor","id":"r","top":110,"left":180,"attrs":{"value":"220"}},
+    {"type":"wokwi-servo","id":"servo","top":-30,"left":230,"attrs":{}}
+  ],
+  "connections": [
+    ["esp:TX0","$serialMonitor:RX","",[]],
+    ["esp:RX0","$serialMonitor:TX","",[]],
+    ["esp:D23","r:1","blue",[]],
+    ["r:2","led:A","blue",[]],
+    ["led:C","esp:GND.1","black",[]],
+    ["esp:D18","servo:PWM","green",[]],
+    ["esp:VIN","servo:V+","red",[]],
+    ["esp:GND.2","servo:GND","black",[]]
+  ],
+  "dependencies": {}
+}

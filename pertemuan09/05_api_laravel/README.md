@@ -6,6 +6,13 @@ Setelah alur dasar lulus, ikuti [dashboard dan kendali secara bertahap](DASHBOAR
 
 Alur praktik: **DHT22 → ESP32 di Wokwi → API Laravel → MySQL**.
 
+Untuk variasi output, lanjutkan ke [praktik aktuator LED dan servo](AKTUATOR_BERTAHAP.md).
+Halaman `/aktuator` membedakan target operator dan laporan firmware,
+serta menampilkan riwayat yang disimpan pada tiga tabel MySQL tambahan.
+Proyek PlatformIO-nya berada pada `esp32_aktuator`, dengan tiga versi
+program dari uji GPIO sampai kendali REST. Jalur ini dapat dijalankan
+tanpa mengirim data sensor terlebih dahulu.
+
 Pada edisi terbaru modul 9, Laravel dan MySQL menjadi jalur praktik utama setelah Wi-Fi dan DHT22. ThingSpeak tetap tersedia sebagai pengayaan cloud. PHP, Composer, MySQL, serta pemasangan dependency disiapkan sebelum sesi 150 menit. Sumber pengajar berada di folder `api_sensor`; paket praktik dan GitHub menempatkan salinan kode yang sama pada `pertemuan09/05_api_laravel`. Semua perintah berikut dijalankan dari akar folder lab tersebut.
 
 ## Persiapan sebelum kelas

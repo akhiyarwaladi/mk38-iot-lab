@@ -1,0 +1,501 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-11-08T02:53:58.849747+00:00",
+  "path": "Browser -> Laravel HTTP local -> MySQL -> ESP32 firmware in VS Code Wokwi -> Laravel acknowledgment -> MySQL",
+  "database": {
+    "version": "8.4.13",
+    "db": "mk38_sensor"
+  },
+  "checks": [
+    "LED 0/1 and servo 0/90/180 sent by browser; ack observed independently through SQL and REST",
+    "360/768/1280 px, light and dark themes: no document overflow",
+    "native controls support focus and keyboard activation",
+    "invalid values return HTTP422 and create no command rows"
+  ],
+  "commands": [
+    {
+      "actuator": "lampu",
+      "value": 1,
+      "id": 16,
+      "status": "applied",
+      "created_at": "2026-11-08T02:53:13.807000Z",
+      "acknowledged_at": "2026-11-08T02:53:15.347000Z"
+    },
+    {
+      "actuator": "lampu",
+      "value": 0,
+      "id": 17,
+      "status": "applied",
+      "created_at": "2026-11-08T02:53:18.256000Z",
+      "acknowledged_at": "2026-11-08T02:53:19.705000Z"
+    },
+    {
+      "actuator": "pintu",
+      "value": 0,
+      "id": 18,
+      "status": "applied",
+      "created_at": "2026-11-08T02:53:23.849000Z",
+      "acknowledged_at": "2026-11-08T02:53:26.484000Z"
+    },
+    {
+      "actuator": "pintu",
+      "value": 90,
+      "id": 19,
+      "status": "applied",
+      "created_at": "2026-11-08T02:53:29.463000Z",
+      "acknowledged_at": "2026-11-08T02:53:30.970000Z"
+    },
+    {
+      "actuator": "pintu",
+      "value": 180,
+      "id": 20,
+      "status": "applied",
+      "created_at": "2026-11-08T02:53:34.428000Z",
+      "acknowledged_at": "2026-11-08T02:53:38.117000Z"
+    },
+    {
+      "actuator": "lampu",
+      "value": 1,
+      "id": 21,
+      "status": "applied",
+      "created_at": "2026-11-08T02:53:42.271000Z",
+      "acknowledged_at": "2026-11-08T02:53:44.822000Z"
+    },
+    {
+      "actuator": "pintu",
+      "value": 90,
+      "id": 22,
+      "status": "applied",
+      "created_at": "2026-11-08T02:53:49.059000Z",
+      "acknowledged_at": "2026-11-08T02:53:51.576000Z"
+    }
+  ],
+  "before_restart": {
+    "lampu": {
+      "id": 3,
+      "device_id": "esp32-aktuator-01",
+      "name": "lampu",
+      "kind": "led",
+      "requested_value": 1,
+      "reported_value": 1,
+      "boot_id": "b15859dcae18c546",
+      "report_sequence": 20,
+      "reported_at": "2026-11-08T02:53:47.898000Z",
+      "created_at": "2026-11-08T02:51:00.112000Z",
+      "updated_at": "2026-11-08T02:53:47.898000Z"
+    },
+    "pintu": {
+      "id": 4,
+      "device_id": "esp32-aktuator-01",
+      "name": "pintu",
+      "kind": "servo",
+      "requested_value": 90,
+      "reported_value": 90,
+      "boot_id": "b15859dcae18c546",
+      "report_sequence": 22,
+      "reported_at": "2026-11-08T02:53:51.582000Z",
+      "created_at": "2026-11-08T02:51:01.659000Z",
+      "updated_at": "2026-11-08T02:53:51.582000Z"
+    }
+  },
+  "browser_errors": [],
+  "limits": "Wokwi simulation; servo value is firmware PWM setting, not mechanical position feedback; no physical hardware test.",
+  "firmware_restart": {
+    "status": "PASS",
+    "outputs": {
+      "lampu": 0,
+      "pintu": 0
+    },
+    "targets_preserved": true,
+    "new_boot_ids": {
+      "lampu": "0ec054470727ae65",
+      "pintu": "0ec054470727ae65"
+    },
+    "workflow": "Developer: Reload Window, then Wokwi: Start Simulator; new boot IDs and safe output reports observed. Restart button lost the VS Code UART/network session and required this recovery."
+  },
+  "paused_expiry": {
+    "status": "PASS",
+    "command": {
+      "id": 23,
+      "value": 1,
+      "status": "expired",
+      "acknowledged_at": null
+    },
+    "reported_value": 0,
+    "requested_value": 1,
+    "elapsed_seconds": 32.85,
+    "sql_status_matches": true,
+    "resume_keeps_outputs_zero": true
+  },
+  "laravel_restart": {
+    "status": "PASS",
+    "command_and_event_rows_unchanged": true,
+    "commands_retained": 15,
+    "events_retained": 18
+  },
+  "sql_snapshot": {
+    "version": "8.4.13",
+    "actuators": [
+      {
+        "id": 3,
+        "device_id": "esp32-aktuator-01",
+        "name": "lampu",
+        "kind": "led",
+        "requested_value": 1,
+        "reported_value": 0,
+        "boot_id": "0ec054470727ae65",
+        "report_sequence": 2,
+        "reported_at": "2026-11-08 02:58:50.980000",
+        "created_at": "2026-11-08 02:51:00.112000",
+        "updated_at": "2026-11-08 02:58:50.980000"
+      },
+      {
+        "id": 4,
+        "device_id": "esp32-aktuator-01",
+        "name": "pintu",
+        "kind": "servo",
+        "requested_value": 90,
+        "reported_value": 0,
+        "boot_id": "0ec054470727ae65",
+        "report_sequence": 2,
+        "reported_at": "2026-11-08 02:58:51.703000",
+        "created_at": "2026-11-08 02:51:01.659000",
+        "updated_at": "2026-11-08 02:58:51.703000"
+      }
+    ],
+    "commands": [
+      {
+        "id": 9,
+        "actuator_id": 3,
+        "value": 1,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:51:59.417000",
+        "acknowledged_at": "2026-11-08 02:51:31.303000",
+        "created_at": "2026-11-08 02:51:29.418000",
+        "updated_at": "2026-11-08 02:51:31.304000"
+      },
+      {
+        "id": 10,
+        "actuator_id": 3,
+        "value": 0,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:52:04.330000",
+        "acknowledged_at": "2026-11-08 02:51:39.379000",
+        "created_at": "2026-11-08 02:51:34.331000",
+        "updated_at": "2026-11-08 02:51:39.379000"
+      },
+      {
+        "id": 11,
+        "actuator_id": 4,
+        "value": 0,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:52:14.954000",
+        "acknowledged_at": "2026-11-08 02:51:47.900000",
+        "created_at": "2026-11-08 02:51:44.955000",
+        "updated_at": "2026-11-08 02:51:47.900000"
+      },
+      {
+        "id": 12,
+        "actuator_id": 4,
+        "value": 90,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:52:20.211000",
+        "acknowledged_at": "2026-11-08 02:51:54.019000",
+        "created_at": "2026-11-08 02:51:50.212000",
+        "updated_at": "2026-11-08 02:51:54.019000"
+      },
+      {
+        "id": 13,
+        "actuator_id": 4,
+        "value": 180,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:52:28.170000",
+        "acknowledged_at": "2026-11-08 02:51:59.704000",
+        "created_at": "2026-11-08 02:51:58.171000",
+        "updated_at": "2026-11-08 02:51:59.704000"
+      },
+      {
+        "id": 14,
+        "actuator_id": 3,
+        "value": 1,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:52:33.981000",
+        "acknowledged_at": "2026-11-08 02:52:06.745000",
+        "created_at": "2026-11-08 02:52:03.982000",
+        "updated_at": "2026-11-08 02:52:06.746000"
+      },
+      {
+        "id": 15,
+        "actuator_id": 4,
+        "value": 90,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:52:40.925000",
+        "acknowledged_at": "2026-11-08 02:52:13.519000",
+        "created_at": "2026-11-08 02:52:10.926000",
+        "updated_at": "2026-11-08 02:52:13.520000"
+      },
+      {
+        "id": 16,
+        "actuator_id": 3,
+        "value": 1,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:53:43.805000",
+        "acknowledged_at": "2026-11-08 02:53:15.347000",
+        "created_at": "2026-11-08 02:53:13.807000",
+        "updated_at": "2026-11-08 02:53:15.347000"
+      },
+      {
+        "id": 17,
+        "actuator_id": 3,
+        "value": 0,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:53:48.255000",
+        "acknowledged_at": "2026-11-08 02:53:19.705000",
+        "created_at": "2026-11-08 02:53:18.256000",
+        "updated_at": "2026-11-08 02:53:19.705000"
+      },
+      {
+        "id": 18,
+        "actuator_id": 4,
+        "value": 0,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:53:53.848000",
+        "acknowledged_at": "2026-11-08 02:53:26.484000",
+        "created_at": "2026-11-08 02:53:23.849000",
+        "updated_at": "2026-11-08 02:53:26.484000"
+      },
+      {
+        "id": 19,
+        "actuator_id": 4,
+        "value": 90,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:53:59.461000",
+        "acknowledged_at": "2026-11-08 02:53:30.970000",
+        "created_at": "2026-11-08 02:53:29.463000",
+        "updated_at": "2026-11-08 02:53:30.970000"
+      },
+      {
+        "id": 20,
+        "actuator_id": 4,
+        "value": 180,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:54:04.427000",
+        "acknowledged_at": "2026-11-08 02:53:38.117000",
+        "created_at": "2026-11-08 02:53:34.428000",
+        "updated_at": "2026-11-08 02:53:38.117000"
+      },
+      {
+        "id": 21,
+        "actuator_id": 3,
+        "value": 1,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:54:12.270000",
+        "acknowledged_at": "2026-11-08 02:53:44.822000",
+        "created_at": "2026-11-08 02:53:42.271000",
+        "updated_at": "2026-11-08 02:53:44.822000"
+      },
+      {
+        "id": 22,
+        "actuator_id": 4,
+        "value": 90,
+        "status": "applied",
+        "expires_at": "2026-11-08 02:54:19.058000",
+        "acknowledged_at": "2026-11-08 02:53:51.576000",
+        "created_at": "2026-11-08 02:53:49.059000",
+        "updated_at": "2026-11-08 02:53:51.576000"
+      },
+      {
+        "id": 23,
+        "actuator_id": 3,
+        "value": 1,
+        "status": "expired",
+        "expires_at": "2026-11-08 03:00:33.425000",
+        "acknowledged_at": null,
+        "created_at": "2026-11-08 03:00:03.426000",
+        "updated_at": "2026-11-08 03:00:35.872000"
+      }
+    ],
+    "events": [
+      {
+        "id": 12,
+        "actuator_id": 3,
+        "command_id": null,
+        "value": 0,
+        "reason": "boot",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 1,
+        "created_at": "2026-11-08 02:51:00.923000"
+      },
+      {
+        "id": 13,
+        "actuator_id": 4,
+        "command_id": null,
+        "value": 0,
+        "reason": "boot",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 1,
+        "created_at": "2026-11-08 02:51:02.434000"
+      },
+      {
+        "id": 14,
+        "actuator_id": 3,
+        "command_id": 9,
+        "value": 1,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 4,
+        "created_at": "2026-11-08 02:51:31.312000"
+      },
+      {
+        "id": 15,
+        "actuator_id": 3,
+        "command_id": 10,
+        "value": 0,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 6,
+        "created_at": "2026-11-08 02:51:39.388000"
+      },
+      {
+        "id": 16,
+        "actuator_id": 4,
+        "command_id": 11,
+        "value": 0,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 5,
+        "created_at": "2026-11-08 02:51:47.909000"
+      },
+      {
+        "id": 17,
+        "actuator_id": 4,
+        "command_id": 12,
+        "value": 90,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 7,
+        "created_at": "2026-11-08 02:51:54.027000"
+      },
+      {
+        "id": 18,
+        "actuator_id": 4,
+        "command_id": 13,
+        "value": 180,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 8,
+        "created_at": "2026-11-08 02:51:59.712000"
+      },
+      {
+        "id": 19,
+        "actuator_id": 3,
+        "command_id": 14,
+        "value": 1,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 9,
+        "created_at": "2026-11-08 02:52:06.755000"
+      },
+      {
+        "id": 20,
+        "actuator_id": 4,
+        "command_id": 15,
+        "value": 90,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 10,
+        "created_at": "2026-11-08 02:52:13.529000"
+      },
+      {
+        "id": 21,
+        "actuator_id": 3,
+        "command_id": 16,
+        "value": 1,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 15,
+        "created_at": "2026-11-08 02:53:15.356000"
+      },
+      {
+        "id": 22,
+        "actuator_id": 3,
+        "command_id": 17,
+        "value": 0,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 16,
+        "created_at": "2026-11-08 02:53:19.714000"
+      },
+      {
+        "id": 23,
+        "actuator_id": 4,
+        "command_id": 18,
+        "value": 0,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 17,
+        "created_at": "2026-11-08 02:53:26.493000"
+      },
+      {
+        "id": 24,
+        "actuator_id": 4,
+        "command_id": 19,
+        "value": 90,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 18,
+        "created_at": "2026-11-08 02:53:30.977000"
+      },
+      {
+        "id": 25,
+        "actuator_id": 4,
+        "command_id": 20,
+        "value": 180,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 20,
+        "created_at": "2026-11-08 02:53:38.126000"
+      },
+      {
+        "id": 26,
+        "actuator_id": 3,
+        "command_id": 21,
+        "value": 1,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 19,
+        "created_at": "2026-11-08 02:53:44.830000"
+      },
+      {
+        "id": 27,
+        "actuator_id": 4,
+        "command_id": 22,
+        "value": 90,
+        "reason": "command",
+        "boot_id": "b15859dcae18c546",
+        "sequence": 22,
+        "created_at": "2026-11-08 02:53:51.585000"
+      },
+      {
+        "id": 28,
+        "actuator_id": 3,
+        "command_id": null,
+        "value": 0,
+        "reason": "boot",
+        "boot_id": "0ec054470727ae65",
+        "sequence": 1,
+        "created_at": "2026-11-08 02:58:40.655000"
+      },
+      {
+        "id": 29,
+        "actuator_id": 4,
+        "command_id": null,
+        "value": 0,
+        "reason": "boot",
+        "boot_id": "0ec054470727ae65",
+        "sequence": 1,
+        "created_at": "2026-11-08 02:58:42.111000"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+Invoke-RestMethod "$api/$ledId/perintah" | ConvertTo-Json
+Invoke-RestMethod "$api/$ledId/riwayat" | ConvertTo-Json -Depth 6

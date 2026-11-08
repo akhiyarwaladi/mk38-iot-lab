@@ -15,3 +15,9 @@ ENERGY 1 / RHYTHM 2 / MOTION 1. Tiga bagian mengikuti keputusan pengguna: pilih 
 | Tanpa logo baru, ilustrasi, ikon, kartu pemasaran, dan data pengisi | Isi berasal dari database praktikum; elemen tambahan tersebut tidak membantu keputusan pemantauan. |
 
 Warna, kontras, fokus keyboard, lebar ponsel, kondisi kosong, loading, error, dan tiap kontrol diperiksa sebelum penyerahan. Angka yang ditampilkan berasal dari MySQL. Ambang suhu 30 °C adalah aturan latihan yang dapat diganti, bukan acuan keselamatan ruangan.
+
+## Lanjutan aktuator
+
+Halaman `/aktuator` mengikuti ENERGY 1 / RHYTHM 2 / MOTION 1 dan token tampilan di atas. Dua nilai utama adalah target operator dan laporan firmware. Bidang kendali di sebelahnya mengikuti jenis output: tombol untuk LED, bilangan sudut untuk servo. Riwayat perintah dan event disajikan pada tabel terpisah agar mahasiswa dapat membandingkan ID-nya dengan MySQL.
+
+Status kedaluwarsa atau laporan yang lama memakai teks penjelasan, bukan warna saja. Pilihan aktuator dikunci singkat selama pembaruan untuk mencegah respons bagi pilihan sebelumnya mengisi panel baru. Konfirmasi servo diberi batas sebagai laporan nilai PWM, tanpa pengukuran posisi mekanis. Tidak ada identitas visual baru; screenshot merekam kegiatan praktikum yang diminta.

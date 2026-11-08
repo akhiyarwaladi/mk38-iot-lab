@@ -1,0 +1,10 @@
+# Native Wokwi terminal capture; extracted from accessibility text. Full raw UI state retained in the ignored build folder.
+ACK pintu nilai=90 -> 200
+PWM servo=180 pul
+APPLY pintu command=20 nilai=180
+ACK pintu nilai=180 -> 200
+ACK lampu nilai=1 -> 200
+PWM servo=90 pulsa_us=1500
+APPLY pintu command=22 nilai=90
+ACK pintu nilai=90 -> 200
+=4915 APPLY pintu command=19 nilai=90 ACK pintu nilai=90 -> 200 PWM servo=180 pulsa_us=2500 duty=8192 APPLY pintu command=20 nilai=180 ACK pintu nilai=180 -> 200 APPLY lampu command=21 nilai=1 ACK lampu nilai=1 -> 200 PWM servo=90 pulsa_us=1500 duty=4915 APPLY pintu command=22 nilai=90 ACK pintu nilai=90 -> 200

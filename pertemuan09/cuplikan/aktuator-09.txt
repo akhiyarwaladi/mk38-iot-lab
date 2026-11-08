@@ -1,0 +1,3 @@
+$perintah = Invoke-RestMethod -Method Post -Uri "$api/$ledId/perintah" -ContentType 'application/json' -Body '{"value":1}'
+$perintah | Format-List
+Invoke-RestMethod "$api/$ledId/riwayat" | ConvertTo-Json -Depth 6

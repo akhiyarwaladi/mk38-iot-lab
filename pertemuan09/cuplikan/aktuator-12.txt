@@ -1,0 +1,4 @@
+pinMode(23, OUTPUT);
+digitalWrite(23, LOW);
+ledcSetup(0, 50, 16);
+ledcAttachPin(18, 0);

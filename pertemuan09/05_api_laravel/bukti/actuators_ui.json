@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Automatic refresh pauses and resumes HTTP reads",
+    "Native servo form rejects 181 before POST",
+    "Network error labels retained data and disables command controls",
+    "Manual retry recovers command controls",
+    "Both navigation destinations return 200",
+    "Empty state explains registration and hides unavailable controls"
+  ],
+  "page_errors": [],
+  "scope": "Local browser UI; injected empty/network states are separate from real Wokwi control proof."
+}

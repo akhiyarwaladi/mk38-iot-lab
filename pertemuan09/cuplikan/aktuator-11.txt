@@ -1,0 +1,2 @@
+Copy-Item versi/01_gpio.cpp src/main.cpp -Force
+pio run

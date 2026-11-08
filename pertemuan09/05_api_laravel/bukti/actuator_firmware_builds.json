@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Compilation of all three teaching versions; simulator proof recorded separately.",
+  "versions": [
+    {
+      "version": "01_gpio.cpp",
+      "status": "PASS",
+      "source_sha256": "09f08d306e64f73078b3e5d6d9fae6dddb74402f8d689eecea94d62b84ca4197",
+      "firmware_sha256": "beda91eba2025883d383c019e31c682929726104fd70ad6c7e08ce01ab79ecd8"
+    },
+    {
+      "version": "02_led_rest.cpp",
+      "status": "PASS",
+      "source_sha256": "acddedfbf9a8fa5f3dabb1314aecf2e28d13d51e922525130d6c9c9873666a30",
+      "firmware_sha256": "39a4d68b8e511041f8cbaeb1ff13c56486645c5aa6c493137786d8bfb484b9e9"
+    },
+    {
+      "version": "03_led_servo_rest.cpp",
+      "status": "PASS",
+      "source_sha256": "adfc4620a7b3dcb93286cc41cf501f6f643295d5616f17b5331d94405de0f3ac",
+      "firmware_sha256": "3c32f2ed5189e4700bebbd4c83708627d24aa9761ab911af792f97c5e90aec72"
+    }
+  ]
+}

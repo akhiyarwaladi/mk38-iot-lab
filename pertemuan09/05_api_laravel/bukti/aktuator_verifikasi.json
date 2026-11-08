@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "recorded_utc": "2026-11-08T03:02:53.436889+00:00",
+  "source_hashes": {
+    "AKTUATOR_BERTAHAP.md": "3a8791a9703ab648b9d1e5300249c543faceaf34f906069b306346902f21a7b2",
+    "backend/app/Http/Controllers/ActuatorController.php": "8dc7776b97c7c445a03d839f5578246860af8a724b2ec1109398774c3185b925",
+    "backend/app/Models/Actuator.php": "ed9e19794a87af9858380902a3138d56e051b1a72742ae19faf1a52d5bd9a56d",
+    "backend/app/Models/ActuatorCommand.php": "b013c283a08b3248a5630b6694ef50d96be91644b91cdb961381579f901bbacb",
+    "backend/app/Models/ActuatorStateEvent.php": "3429d0a22565e011f8e690774f43ef544a9a5116906f69b03addc210987d3854",
+    "backend/app/Providers/ActuatorServiceProvider.php": "2b74c6bb45946b76db02c4278e3598a326518c3a99be217fc1cd1354473874ac",
+    "backend/bootstrap/providers.php": "7f9009260b38ccf5070632ec1b8a6ec66712201956916556a15b0b68c73c6ab6",
+    "backend/database/migrations/2026_11_08_000003_create_actuator_tables.php": "139e314ffdb1f0eeb3147a5387fd5123222a193334fd79e09af021bb4fe3fc5d",
+    "backend/public/actuators.css": "f7f464ee157a0d416652fe92e7d0c72c82a95f668941f5611d8615bd51767c4a",
+    "backend/public/actuators.js": "c6dc0abb108a9ab10ee5286946f235b26737a77321a73a9b63f8a9b6ee2e6540",
+    "backend/resources/views/actuators.blade.php": "b9aade641dc22abc8975c5891cf5535f929c1394eda0e81e364cf466a0271218",
+    "backend/routes/actuators.php": "f7d4b03fdacc73cef12594556c3abf9ec05b11d866ced04c930c54f7693fb79b",
+    "backend/tests/Actuators/ActuatorTest.php": "b14574dc8817265b72f58f3edaba91343f5933a9d194ba1d1282b7a85a6fa49e",
+    "esp32_aktuator/diagram.json": "909a175f23a89108d494a5f81545e73f6569d84f5ee7b7dcbaf807e33af33085",
+    "esp32_aktuator/include/actuator_client.h": "6779fd76949c6fb4864d47efe24ed38d2179848103722fe954029dca2721d2f1",
+    "esp32_aktuator/include/config.h": "7e16076d1a7646ca066cb79fd33841f186d6ddcd25186d44d3f7fbf361d51628",
+    "esp32_aktuator/platformio.ini": "b89189d7a1db9e228b59216b1acb595c699c19bdf8e5035a8f823f74e6e45f26",
+    "esp32_aktuator/src/main.cpp": "adfc4620a7b3dcb93286cc41cf501f6f643295d5616f17b5331d94405de0f3ac",
+    "esp32_aktuator/versi/01_gpio.cpp": "09f08d306e64f73078b3e5d6d9fae6dddb74402f8d689eecea94d62b84ca4197",
+    "esp32_aktuator/versi/02_led_rest.cpp": "acddedfbf9a8fa5f3dabb1314aecf2e28d13d51e922525130d6c9c9873666a30",
+    "esp32_aktuator/versi/03_led_servo_rest.cpp": "adfc4620a7b3dcb93286cc41cf501f6f643295d5616f17b5331d94405de0f3ac",
+    "esp32_aktuator/wokwi.toml": "b7226059de37049512b3a7c6cb42b042084b8fd2698aaed6731a2041a24dd75a",
+    "README.md": "e46af9cc497bea40da1bde9a1150b2ce56ec1496e9e34c2aa6b8f747639935cd",
+    "tests/build_actuator_versions.py": "7940265b5b60cb8ebd182330cd4578f448841127d11b128df749d81d34a1f4f0",
+    "tests/inspect_actuators.sql": "39fb9786cbaeb2b97e6727bea10399d086fa5d606f907925421cd1c4332996c3",
+    "tests/verify_actuators_live.py": "63a373e44bfe07cdbb1a6cb1094f7b3fdbcc1e3e1abef523844d31033d666eeb",
+    "tests/verify_actuators_ui.py": "e4412e33d70b41f07c6c7df790044a65a2bfec9021d7a68886a5f58cc3f25592"
+  },
+  "suites": [
+    {
+      "tests": 12,
+      "assertions": 116,
+      "junit": "actuator-tests.xml",
+      "sha256": "f6a76da059aa14f40baa75b5df14e617ec235357c9ad20af5b71e61ade9ec5e7"
+    },
+    {
+      "tests": 12,
+      "assertions": 105,
+      "junit": "actuator-regression.xml",
+      "sha256": "23daf944579dba9d6c3d4dfeb63d2505b52420dd1e22d65e3fa7dfd4787d8cb9"
+    }
+  ],
+  "firmware_versions": 3,
+  "runtime_commands": 7,
+  "runtime_report": "actuators_live.json",
+  "runtime_report_sha256": "3a72a95b6a8316a915106b854bfd7e3a478626eaca73dbf83a9ca20110b1d530",
+  "ui_report_sha256": "8c2c9aad14cd1374a891e959a81f732b4196d88fbe08952e6b9bda4304466787",
+  "firmware_report_sha256": "8a88d8f67fe9a037c9d47dddd621bd3ba928dfef43073054589a1106af0d29b4",
+  "screenshots": {
+    "aktuator_lampu_1.png": "7b72ab715c5f716346e7aa79f8388f14b708eae3209b235c5f0417821641da53",
+    "aktuator_pintu_180.png": "fe7ca7bd51877a577a205d797e801d0a013063c4997b1784b2009921ae71e49d",
+    "aktuator_pintu_90.png": "f4593444f1fc97189cd6c02d563bad9d1aa8c5b36db89c873b46390ec21c46bf",
+    "aktuator_setelah_restart.png": "cad6fc466b1da6227d89a45567457f597b379fac74f9157d5c3391716ab62fed",
+    "aktuator_ui_1280_dark.png": "048d59dd15898907d46d04c19a026284a6af43191861804a4ec2ddd54f71e048",
+    "aktuator_ui_1280_light.png": "c5f3d87654e5a22b88ccba8fac927edacc4f7ae89eb6e516107210927fa7fa1f",
+    "aktuator_ui_360_dark.png": "8cc950a0eea525c99cdd7666b39de752d2509bb8428e2172679227a17cc6543f",
+    "aktuator_ui_360_light.png": "61612817533e0e48fef9c7dd2156ef42c23c54595e74f32fcdf0ddc50c8ad209",
+    "aktuator_ui_768_dark.png": "d351159ebbf8c24ff973ee6cc4e6c7816ab19471bf4e536a1d38b4310df94e0f",
+    "aktuator_ui_768_light.png": "4363a1f54141fc6bf44b473a50665c4b706bbcbc7e83469a0c3db5e5b729138c",
+    "aktuator_wokwi_90.png": "28134ac2994d6364c35145a184c3d3107b74a378fd12afbd090a8006bcefa132",
+    "aktuator_wokwi_restart.png": "6e906435d5a568c14614ddd1c9a8053ab077fed3b6172f4222c331d93543f054"
+  },
+  "coverage": [
+    "LED 0/1",
+    "servo 0/90/180",
+    "strict JSON range validation",
+    "requested/reported separation",
+    "duplicate and old ack",
+    "supersession",
+    "expiry while real firmware paused",
+    "boot reset",
+    "MySQL command/state history",
+    "Laravel restart persistence",
+    "UTC event/ack consistency",
+    "responsive light/dark UI and empty/network recovery"
+  ],
+  "limits": [
+    "Wokwi simulation, no physical actuator or mechanical position feedback.",
+    "Local Laravel without authentication; no public deployment.",
+    "No student comprehension or learning-outcome study."
+  ]
+}

@@ -1,0 +1,7 @@
+[hidden]{display:none!important}
+.actuator-workspace{grid-template-columns:minmax(0,1.4fr) minmax(280px,1fr)}
+.actuator-meta{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.4rem 1rem;font-size:.85rem}
+.actuator-meta dt{color:var(--muted)}.actuator-meta dd{margin:0;overflow-wrap:anywhere}
+.measurements dd{font-size:clamp(1.3rem,3vw,2.1rem)}
+@media(max-width:800px){.actuator-workspace{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:400px){.actuator-meta{grid-template-columns:1fr}.actuator-meta dd{margin-bottom:.5rem}}

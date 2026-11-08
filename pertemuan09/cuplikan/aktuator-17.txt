@@ -1,0 +1,2 @@
+Copy-Item versi/02_led_rest.cpp src/main.cpp -Force
+pio run

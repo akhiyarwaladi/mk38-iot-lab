@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\phpunit.xml" tests="12" assertions="105" errors="0" failures="0" skipped="0" time="3.275390">
+    <testsuite name="Feature" tests="12" assertions="105" errors="0" failures="0" skipped="0" time="3.275390">
+      <testsuite name="Tests\Feature\DashboardApiTest" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\DashboardApiTest.php" tests="6" assertions="58" errors="0" failures="0" skipped="0" time="2.846764">
+        <testcase name="test_empty_dashboard_and_unknown_device_are_truthful" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\DashboardApiTest.php" line="19" class="Tests\Feature\DashboardApiTest" classname="Tests.Feature.DashboardApiTest" assertions="8" time="2.322428"/>
+        <testcase name="test_threshold_warning_staleness_and_device_filter" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\DashboardApiTest.php" line="28" class="Tests\Feature\DashboardApiTest" classname="Tests.Feature.DashboardApiTest" assertions="12" time="0.123545"/>
+        <testcase name="test_csv_matches_the_selected_device_and_limit" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\DashboardApiTest.php" line="44" class="Tests\Feature\DashboardApiTest" classname="Tests.Feature.DashboardApiTest" assertions="12" time="0.087418"/>
+        <testcase name="test_command_waits_for_matching_device_confirmation" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\DashboardApiTest.php" line="61" class="Tests\Feature\DashboardApiTest" classname="Tests.Feature.DashboardApiTest" assertions="12" time="0.111681"/>
+        <testcase name="test_superseded_expired_and_foreign_commands_cannot_be_acknowledged" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\DashboardApiTest.php" line="79" class="Tests\Feature\DashboardApiTest" classname="Tests.Feature.DashboardApiTest" assertions="9" time="0.116976"/>
+        <testcase name="test_old_ack_retry_does_not_overwrite_newer_reported_state" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\DashboardApiTest.php" line="95" class="Tests\Feature\DashboardApiTest" classname="Tests.Feature.DashboardApiTest" assertions="5" time="0.084715"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\SensorApiTest" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\SensorApiTest.php" tests="6" assertions="47" errors="0" failures="0" skipped="0" time="0.428626">
+        <testcase name="test_post_commits_the_values_returned_to_the_client" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\SensorApiTest.php" line="12" class="Tests\Feature\SensorApiTest" classname="Tests.Feature.SensorApiTest" assertions="7" time="0.059055"/>
+        <testcase name="test_invalid_payloads_are_rejected_without_creating_rows" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\SensorApiTest.php" line="26" class="Tests\Feature\SensorApiTest" classname="Tests.Feature.SensorApiTest" assertions="9" time="0.057062"/>
+        <testcase name="test_list_supports_device_filter_latest_first_and_limit" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\SensorApiTest.php" line="38" class="Tests\Feature\SensorApiTest" classname="Tests.Feature.SensorApiTest" assertions="12" time="0.099859"/>
+        <testcase name="test_unknown_fields_cannot_set_the_database_id" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\SensorApiTest.php" line="54" class="Tests\Feature\SensorApiTest" classname="Tests.Feature.SensorApiTest" assertions="2" time="0.097509"/>
+        <testcase name="test_health_and_api_errors_do_not_require_browser_headers" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\SensorApiTest.php" line="62" class="Tests\Feature\SensorApiTest" classname="Tests.Feature.SensorApiTest" assertions="7" time="0.067898"/>
+        <testcase name="test_progressive_routes_receive_data_before_database_writes" file="C:\Users\MyPC PRO\Documents\akreditasi\modul_mk38\api_sensor\backend\tests\Feature\SensorApiTest.php" line="69" class="Tests\Feature\SensorApiTest" classname="Tests.Feature.SensorApiTest" assertions="10" time="0.047243"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
