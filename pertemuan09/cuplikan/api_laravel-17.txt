@@ -1,2 +1,5 @@
-$pilihan = '?device_id=esp32-kelompok-01&limit=5'
-Invoke-RestMethod ($url + $pilihan)
+Copy-Item tahapan/04_api_dashboard.php backend/routes/api.php
+cd backend
+php artisan migrate
+php artisan route:list --path=api
+cd ..

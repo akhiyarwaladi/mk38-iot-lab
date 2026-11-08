@@ -1,5 +1,2 @@
-$api = 'http://127.0.0.1:8000/api/v1/aktuator'
-$body = @{device_id='esp32-aktuator-01'; name='lampu'; kind='led'} | ConvertTo-Json
-$led = Invoke-RestMethod -Method Post -Uri $api -ContentType 'application/json' -Body $body
-$led | Format-List
-$ledId = $led.id
+Copy-Item versi/01_gpio.cpp src/main.cpp -Force
+pio run

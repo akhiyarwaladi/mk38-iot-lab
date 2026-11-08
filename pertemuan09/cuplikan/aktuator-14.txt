@@ -1,1 +1,2 @@
-Aktuator lampu{"lampu", "led"};
+Copy-Item versi/03_led_servo_rest.cpp src/main.cpp -Force
+pio run

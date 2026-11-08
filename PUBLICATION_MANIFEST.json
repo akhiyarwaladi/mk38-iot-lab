@@ -8,7 +8,7 @@
     "source": "generated course navigation"
   },
   "README.md": {
-    "sha256": "53e41a45538486ffad05aeb5d2eaa3eba34f0d19b7d542b22be29be249266737",
+    "sha256": "14aca1e3cf52b07820b0639d9459bc144353187c875899a61aaa952d999d0329",
     "source": "generated course navigation"
   },
   "pertemuan09/01_wifi/.gitignore": {
@@ -111,6 +111,10 @@
     "sha256": "21941101ee1662743d7f7044ce87209786b8a0408c0c9ba292accdbe9368a778",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/src/main.cpp"
   },
+  "pertemuan09/04_server/uji_http.py": {
+    "sha256": "f94ff3c55f630bcb920c39a89e2d96b876a975f08672cf1fdd66c3171a1bbd88",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/uji_http.py"
+  },
   "pertemuan09/04_server/versi/01_teks.cpp": {
     "sha256": "21dff6c75a8bb2c87f0649b7521e52e3458d75fc5da30fae3fad0a5bf0e716be",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/04_server/versi/01_teks.cpp"
@@ -132,7 +136,7 @@
     "source": "modul_mk38/api_sensor/.gitignore"
   },
   "pertemuan09/05_api_laravel/AKTUATOR_BERTAHAP.md": {
-    "sha256": "3a8791a9703ab648b9d1e5300249c543faceaf34f906069b306346902f21a7b2",
+    "sha256": "7d7947ec5d2c66d0ac9bd788e97e01bbf2f6bb2156e939d0edcabfd827d04d7f",
     "source": "modul_mk38/api_sensor/AKTUATOR_BERTAHAP.md"
   },
   "pertemuan09/05_api_laravel/AUDIT_AKTUATOR.md": {
@@ -144,7 +148,7 @@
     "source": "modul_mk38/api_sensor/AUDIT_DASHBOARD.md"
   },
   "pertemuan09/05_api_laravel/DASHBOARD_BERTAHAP.md": {
-    "sha256": "74a7aa8b04e653af7ec7889c186ea2822c6fed0bde0f4eba29762796d55a6b88",
+    "sha256": "3f501b5d33fa956ddfa460b32cb34c5d5e9b868b144eb0a6a29c8ac1e2653f7f",
     "source": "modul_mk38/api_sensor/DASHBOARD_BERTAHAP.md"
   },
   "pertemuan09/05_api_laravel/DESIGN.md": {
@@ -156,7 +160,7 @@
     "source": "modul_mk38/api_sensor/PENGEMBANGAN_PROYEK.md"
   },
   "pertemuan09/05_api_laravel/README.md": {
-    "sha256": "e46af9cc497bea40da1bde9a1150b2ce56ec1496e9e34c2aa6b8f747639935cd",
+    "sha256": "13aae97e4db110b57bf4d9017c46ff3174ce2b58fa85983f89323dcc23a4b61e",
     "source": "modul_mk38/api_sensor/README.md"
   },
   "pertemuan09/05_api_laravel/VERIFIKASI.md": {
@@ -544,7 +548,7 @@
     "source": "modul_mk38/api_sensor/bukti/aktuator_ui_768_light.png"
   },
   "pertemuan09/05_api_laravel/bukti/aktuator_verifikasi.json": {
-    "sha256": "2345269a8d9888d66c786a1aa6fe2255bcabf7bdd767a3f6ea7e36f517a7eb2a",
+    "sha256": "d862b0cc78673cec05ff41847cb76dc175b55de9fc57f224404bbc859d820e66",
     "source": "modul_mk38/api_sensor/bukti/aktuator_verifikasi.json"
   },
   "pertemuan09/05_api_laravel/bukti/aktuator_wokwi_90.png": {
@@ -631,6 +635,18 @@
     "sha256": "110f9c691bc3c24ea7bd5a8544b8c8c1cda74bd6141f7b348e2ce93d18bfb5ce",
     "source": "modul_mk38/api_sensor/bukti/live_result.json"
   },
+  "pertemuan09/05_api_laravel/bukti/python_http_invalid_response.json": {
+    "sha256": "f4c3535f168f9d357917a842e11cd6964cf29599650c1d74256f74ce6e4b52b0",
+    "source": "modul_mk38/api_sensor/bukti/python_http_invalid_response.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/python_http_live.json": {
+    "sha256": "b1c528b0e6c39f4bfee2a5914da79593c5e8ca02d75debf85fadaf21a47ea1c5",
+    "source": "modul_mk38/api_sensor/bukti/python_http_live.json"
+  },
+  "pertemuan09/05_api_laravel/bukti/python_http_staged.json": {
+    "sha256": "f7e56a4b917ba9cdc6328ceb0dd01fe23683d98eb269d8c16845713d30e4ee0d",
+    "source": "modul_mk38/api_sensor/bukti/python_http_staged.json"
+  },
   "pertemuan09/05_api_laravel/bukti/wokwi_32_70.png": {
     "sha256": "573e45d7d5df6bacfcbcf9aa732057a2c7fa9813f885f2e92d5924045546863d",
     "source": "modul_mk38/api_sensor/bukti/wokwi_32_70.png"
@@ -650,6 +666,62 @@
   "pertemuan09/05_api_laravel/bukti/wokwi_ui_excerpt.txt": {
     "sha256": "6a936cc1bb41f6a859213ab837ca3ebc3a7c50bb703621e160a84f069f09d57e",
     "source": "modul_mk38/api_sensor/bukti/wokwi_ui_excerpt.txt"
+  },
+  "pertemuan09/05_api_laravel/client_python/01_health.py": {
+    "sha256": "55096226cd609aa091f39f256e3ed41a3d24c1d387a6922626118abcda6e256f",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/01_health.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/02_kirim_sensor.py": {
+    "sha256": "8bb3919c35a2f01a5c779ac702351345b9ca1f331edf983b30e94b3534667578",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/02_kirim_sensor.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/03_simpan_baca.py": {
+    "sha256": "e57a69b0633f5a3557ec03e2bee1dd755c2870f158afe132b3e1ccd87c5f50fc",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/03_simpan_baca.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/04_baca_sensor.py": {
+    "sha256": "884e6ca9fdabf6a93060e42d8c7e3feba5728070bc17f239e1091006dac41708",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/04_baca_sensor.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/05_perintah_led.py": {
+    "sha256": "5b97f02d136f67da38ef4ae78476e575a38ce854291680ec5eb54b60735519a7",
+    "source": "modul_mk38/api_sensor/client_python/05_perintah_led.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/06_daftar_led.py": {
+    "sha256": "49bec21c6969fa7db9826ebff7e127493ef3e4f26055612a21bf573bbc8e9de2",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/06_daftar_led.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/07_daftar_servo.py": {
+    "sha256": "8dd67f1a6ac50944528262dd5402e82c1556c3f91a1da451ef0dd866a45a479e",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/07_daftar_servo.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/08_target_led.py": {
+    "sha256": "a147bd190ff2eb6f6bec0583ac256b20e8ec8dea2dc54541af14947597223070",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/08_target_led.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/09_baca_aktuator.py": {
+    "sha256": "0654271120e9afba9985dcd292c042f0ef1def10200fd5172b53916ca6d21e44",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/09_baca_aktuator.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/10_servo.py": {
+    "sha256": "1b89cd210dc92e550661124afc730ab53238e12abdb4ac615e3f3d5886ca768c",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/10_servo.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/11_uji_servo_salah.py": {
+    "sha256": "b91976cb031e4cce0b6127cf70eaac41f5c398f97e5ade83382918f60daeae69",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/11_uji_servo_salah.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/aktuator.py": {
+    "sha256": "7b38e8f877ee7b5e0b6d7a10b45de4a103ba1d6400c7470553beb8a8dfb2a83d",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/aktuator.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/http_json.py": {
+    "sha256": "b18c42cf1ff2716d306371bb02a2c4e1674821f66dcb2449bc517513ee7a1417",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/http_json.py"
+  },
+  "pertemuan09/05_api_laravel/client_python/konfigurasi.py": {
+    "sha256": "23bed5356555ecef45f7d2c1acdf38c44bf63f7446056b6ecb73acb8ffa53e27",
+    "source": "modul_mk38/source/weekly_modules/pertemuan09/praktik/05_api_laravel/client_python/konfigurasi.py"
   },
   "pertemuan09/05_api_laravel/esp32/.gitignore": {
     "sha256": "d952abf002d5e1ec80c8ab1bfc9f38eb5b62fc310667d501cb2ce9f21c3effb2",
@@ -772,8 +844,12 @@
     "source": "modul_mk38/api_sensor/tests/inspect_actuators.sql"
   },
   "pertemuan09/05_api_laravel/tests/package_lab.py": {
-    "sha256": "b7cb7a769fa2f6b0113e6b21c0c874c9d4f7253a6804952ccc634a8bd61a73a0",
+    "sha256": "5aed040212e5a20fcbb44c4b36a41eaa7537066fde2dc61d745f0db3c026ec17",
     "source": "modul_mk38/api_sensor/tests/package_lab.py"
+  },
+  "pertemuan09/05_api_laravel/tests/test_python_http.py": {
+    "sha256": "8cf88f31f46ac89810a54352568545a8e72274c0c4690b75e2557fd808488447",
+    "source": "modul_mk38/api_sensor/tests/test_python_http.py"
   },
   "pertemuan09/05_api_laravel/tests/verify_actuators_live.py": {
     "sha256": "63a373e44bfe07cdbb1a6cb1094f7b3fdbcc1e3e1abef523844d31033d666eeb",
@@ -824,66 +900,46 @@
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
   "pertemuan09/cuplikan/aktuator-07.txt": {
-    "sha256": "65df3e70b039c4cc184322e249ab5a9f0ab3e32da7723e56a54b07a1fd6378ba",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
-  },
-  "pertemuan09/cuplikan/aktuator-08.txt": {
-    "sha256": "cb9cca165f9ce8ba9a8943ba95d3e5a9d89726ea5fdaf068813bdc0b3bb7e1bd",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
-  },
-  "pertemuan09/cuplikan/aktuator-09.txt": {
-    "sha256": "b746f37812b458a49b0dad6a1a5e6471f0633b6d763441b18b0c0192f27749ee",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
-  },
-  "pertemuan09/cuplikan/aktuator-10.txt": {
-    "sha256": "bd282faffec882dd4ff9d231d67aa47744596b3be7e7e6b4eae4fbaae023cb2f",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
-  },
-  "pertemuan09/cuplikan/aktuator-11.txt": {
     "sha256": "de6db9aad9f8eeba56a659edcbe0ad2f9d715fb15c2227c0f253e1ea8670100f",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-12.txt": {
+  "pertemuan09/cuplikan/aktuator-08.txt": {
     "sha256": "15891240b856d4ca68a01eacd4ff5b0170312248744e39c88decfa111d6a15fc",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-13.txt": {
+  "pertemuan09/cuplikan/aktuator-09.txt": {
     "sha256": "86c06d77c046aa0597f7bb9b03f0d51e37285789d287d053d15ba095a5daee3f",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-14.txt": {
+  "pertemuan09/cuplikan/aktuator-10.txt": {
     "sha256": "7cb14f77ca0455c76fc6a3f21840b57cd2e249186ceaf3bd47f915f526788efe",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-15.txt": {
+  "pertemuan09/cuplikan/aktuator-11.txt": {
     "sha256": "198a8c5bd216cf08944248c357225987b1b54a79b3c383512cf8285dd0490f62",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-16.txt": {
+  "pertemuan09/cuplikan/aktuator-12.txt": {
     "sha256": "9af57aada68ffcec2d2417e3a2bd7529848ac1e199b47c32ccdebc8875d5befa",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-17.txt": {
+  "pertemuan09/cuplikan/aktuator-13.txt": {
     "sha256": "2e66da165f3b7bbc0f677f014c7e4d2b12fcf3f65c6c78cd4f238ea8a6de8935",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-18.txt": {
+  "pertemuan09/cuplikan/aktuator-14.txt": {
     "sha256": "916ec49d4e27d34b8acd15d047ee3c3b5bfe25c6fa6a19fee2e4ed4faf1a677a",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-19.txt": {
-    "sha256": "25bef997f7c9e1a0602585bbc14d875f2aacc624aa322d7e5ab8a94f6e6f72e7",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
-  },
-  "pertemuan09/cuplikan/aktuator-20.sql": {
+  "pertemuan09/cuplikan/aktuator-15.sql": {
     "sha256": "d89f777ccf44cb184343878a9c899df25e304bc4efe9fa0d86caabd665aa0924",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-21.sql": {
+  "pertemuan09/cuplikan/aktuator-16.sql": {
     "sha256": "8917723008b19263623a0e8e31d350496550a3ecfb8f8f70d0cf89ee16eb6896",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
-  "pertemuan09/cuplikan/aktuator-22.sql": {
+  "pertemuan09/cuplikan/aktuator-17.sql": {
     "sha256": "750412e2518224e05f533f4570ea1fbbbe4f031ff2f6674cbb963719afe88c1c",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/aktuator.tex"
   },
@@ -904,78 +960,62 @@
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
   "pertemuan09/cuplikan/api_laravel-05.txt": {
-    "sha256": "0c12ead9a1dfb63fefb138ae7cb19849cc03c84bce7c9566392f833742df7807",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
-  },
-  "pertemuan09/cuplikan/api_laravel-06.txt": {
     "sha256": "b5c4ceb95ce3dea38281c5e0d05c1a89688ec3b3e9024ee8b526854c9ed8fb33",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-07.txt": {
-    "sha256": "d32cee6e3d182c54b366c60cc5bf57966f5f95205fccf745ea4d42af5c17c8f0",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
-  },
-  "pertemuan09/cuplikan/api_laravel-08.sql": {
+  "pertemuan09/cuplikan/api_laravel-06.sql": {
     "sha256": "a6071883b6e6b9d4d8c28438d693de5f71138565d8fa5f27fd5bb9d3d24e0cd3",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-09.txt": {
+  "pertemuan09/cuplikan/api_laravel-07.txt": {
     "sha256": "0ceb09cd59311574746ecd145a1b65686c5d05e607a35c6d469cb8d25fda060e",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-10.txt": {
+  "pertemuan09/cuplikan/api_laravel-08.txt": {
     "sha256": "df1b7c47f20690dcd6ae9fe4d29e4c5f2da607b568c3e261b737a870826ae07e",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-11.txt": {
+  "pertemuan09/cuplikan/api_laravel-09.txt": {
     "sha256": "325ac089e5db63eb3ba093d55d4d15bb6a031c404a6b4aec8ad7b8d554f39795",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-12.txt": {
-    "sha256": "b0fd694ce076b55b6a3dceb5f06f951cc3e021ce8a644818283ad98177f6abf2",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
-  },
-  "pertemuan09/cuplikan/api_laravel-13.sql": {
+  "pertemuan09/cuplikan/api_laravel-10.sql": {
     "sha256": "53b3eac8fcf774b4615d7868640536d05ef39ebb1762c85e744102336bad694e",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-14.txt": {
+  "pertemuan09/cuplikan/api_laravel-11.txt": {
     "sha256": "886d747f2e52f04d29cb60ec2f40287512341b4d36e305b16b155fe2c96370e7",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-15.txt": {
+  "pertemuan09/cuplikan/api_laravel-12.txt": {
     "sha256": "6ccb1e5b8db0277205ec7e2f0190f960d2568af5b249f6c6fbcc56b9d19a1f0d",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-16.txt": {
+  "pertemuan09/cuplikan/api_laravel-13.txt": {
     "sha256": "c67b22aaa26ecb1de7e936fbb2068f81ba4cd7d6183ab0084ac9a1f7edffdc2e",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-17.txt": {
-    "sha256": "de06a55940033b0796cffb47b40faf438a52549bf888f1e6b31741c19f5bbd20",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
-  },
-  "pertemuan09/cuplikan/api_laravel-18.php": {
+  "pertemuan09/cuplikan/api_laravel-14.php": {
     "sha256": "5a4966bff74bb62eb6cc702512bcaf9be6f44b2191720d73d0b433412ba017db",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-19.txt": {
+  "pertemuan09/cuplikan/api_laravel-15.txt": {
     "sha256": "80adffa7733542db565d50f078da83133b5fd49d778508efc43d3999819e3898",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-20.txt": {
+  "pertemuan09/cuplikan/api_laravel-16.txt": {
     "sha256": "ddbb772edcd78c6077c1d0fe6159e2bbf9568a3807bff68d127106b08a9a5d49",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-21.txt": {
+  "pertemuan09/cuplikan/api_laravel-17.txt": {
     "sha256": "ea84bc8a0f885c1e6f242cfbfc1dde875e1ef8187483b3479cc04dad30d914a2",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-22.txt": {
+  "pertemuan09/cuplikan/api_laravel-18.txt": {
     "sha256": "1166369dbd0f3bf27a1c6821eabe7075afaab89f69ae985c2ce2e5d675a7b8ed",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
-  "pertemuan09/cuplikan/api_laravel-23.txt": {
+  "pertemuan09/cuplikan/api_laravel-19.txt": {
     "sha256": "eb66a4d7d826715348516e7cb640eb8171f39d0907968b23eb37c9156b4f96fc",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/api_laravel.tex"
   },
@@ -997,10 +1037,6 @@
   },
   "pertemuan09/cuplikan/contents-04.txt": {
     "sha256": "97e46e72507d8d9450d4ac31423c8b4669ab1434ab15b4c458d45d725af15406",
-    "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/contents.tex"
-  },
-  "pertemuan09/cuplikan/contents-05.txt": {
-    "sha256": "ec31ac3f5001f83f107d68537a44baa485db3eb089e91e1382a7eb70fd04c257",
     "source": "modul_mk38/source/weekly_modules/pertemuan09/latex/contents.tex"
   },
   "pertemuan09/cuplikan/tahapan-01.txt": {
@@ -1132,14 +1168,10 @@
     "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
   },
   "pertemuan10/cuplikan/contents-07.txt": {
-    "sha256": "02a5f8d000e903dc1e4701bed88948e7ccdba10731c4caae010f1a822b90ec4f",
-    "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
-  },
-  "pertemuan10/cuplikan/contents-08.txt": {
     "sha256": "8f44f4bd56f8e9c2069770b0108c66b9f1494de15a0095a88aeae8de87dbe394",
     "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
   },
-  "pertemuan10/cuplikan/contents-09.txt": {
+  "pertemuan10/cuplikan/contents-08.txt": {
     "sha256": "9603244d3e385e6b2250f323bbfd61689bd6ff75ddf57c42b569a69a5c1b6e27",
     "source": "modul_mk38/source/weekly_modules/pertemuan10/latex/contents.tex"
   },
@@ -1158,6 +1190,10 @@
   "pertemuan10/node_red/.gitignore": {
     "sha256": "29f6d7e150d0a806feab0fca58e648e2852567b01a2aca4b78d6fd4da4521589",
     "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/.gitignore"
+  },
+  "pertemuan10/node_red/baca_riwayat.py": {
+    "sha256": "dc76351b4ed22c42ce4e439c90e3b309b1b531e5f5d165b0673063c770a7b042",
+    "source": "modul_mk38/source/weekly_modules/pertemuan10/praktik/node_red/baca_riwayat.py"
   },
   "pertemuan10/node_red/config.json": {
     "sha256": "0e177b2c0256b2a730b2886b0b7e6f60cd59b13a5cc620ff7a74dac797b96abc",
@@ -1233,10 +1269,6 @@
   },
   "pertemuan11/cuplikan/contents-04.txt": {
     "sha256": "ebad308cf8fc1098f9ceb66c8a0832bdb6f6f11283ed3128504af707467824f3",
-    "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/contents.tex"
-  },
-  "pertemuan11/cuplikan/contents-05.txt": {
-    "sha256": "02a5f8d000e903dc1e4701bed88948e7ccdba10731c4caae010f1a822b90ec4f",
     "source": "modul_mk38/source/weekly_modules/pertemuan11/latex/contents.tex"
   },
   "pertemuan11/cuplikan/tahapan-01.txt": {
@@ -1334,6 +1366,10 @@
   "pertemuan11/node_red/.gitignore": {
     "sha256": "29f6d7e150d0a806feab0fca58e648e2852567b01a2aca4b78d6fd4da4521589",
     "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/.gitignore"
+  },
+  "pertemuan11/node_red/baca_riwayat.py": {
+    "sha256": "dc76351b4ed22c42ce4e439c90e3b309b1b531e5f5d165b0673063c770a7b042",
+    "source": "modul_mk38/source/weekly_modules/pertemuan11/praktik/node_red/baca_riwayat.py"
   },
   "pertemuan11/node_red/config.json": {
     "sha256": "fd7fac6659c5200860662e14b6fe4baed035994ca5f27d43d69259a059163f33",

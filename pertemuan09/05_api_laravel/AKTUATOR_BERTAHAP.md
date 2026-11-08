@@ -8,7 +8,7 @@ Hasil akhir: LED dapat dinyalakan/dimatikan dan servo dapat diberi sudut 0 sampa
 
 Gunakan PHP/Composer/MySQL yang sudah dipasang sesuai README. Tetap jalankan MySQL. Tidak perlu membuat akun atau API key untuk Laravel lokal. API latihan ini belum memakai autentikasi; server hanya dibuka pada `127.0.0.1`.
 
-Terminal A menjalankan server. Terminal B mengirim permintaan PowerShell. Keduanya dibuka dari akar lab, yaitu folder yang memuat `backend`, `esp32`, dan `esp32_aktuator`. Di paket GitHub, akar tersebut bernama `pertemuan09/05_api_laravel`. Perintah shell diketik pada terminal; kode PHP/C++ disunting pada berkas yang disebutkan.
+Terminal A menjalankan server. Terminal B menjalankan klien Python yang sudah tersedia pada `client_python`. Gunakan Python 3.10 atau lebih baru; semua modul yang diimpor berasal dari pustaka standar, sehingga tidak perlu pip install. Dari akar lab, periksa `python --version`; gunakan `python3` pada Linux/macOS atau `py -3` pada Windows bila itu nama perintah yang tersedia. Ganti awalan `python` secara konsisten pada contoh berikut. Keduanya dibuka dari akar lab, yaitu folder yang memuat `backend`, `esp32`, dan `esp32_aktuator`. Di paket GitHub, akar tersebut bernama `pertemuan09/05_api_laravel`. Perintah shell diketik pada terminal; kode PHP/C++/Python disunting pada berkas yang disebutkan. Kotak `Copy-Item` khusus PowerShell Windows. Pada Linux/macOS, salin versi yang disebutkan melalui Explorer VS Code ke `src/main.cpp`, mengganti versi lama, lalu jalankan `pio run`. Jangan menyimpan beberapa versi yang mempunyai `setup()`/`loop()` di folder `src`.
 
 | Berkas/folder | Kegunaan |
 |---|---|
@@ -53,7 +53,7 @@ cd backend
 php artisan serve --host=127.0.0.1 --port=8000
 ```
 
-Di terminal B, yang berada di akar lab, periksa `Invoke-RestMethod http://127.0.0.1:8000/api/v1/health`. Lanjut setelah `status` bernilai `ok`.
+Di terminal B dari akar lab, jalankan `python client_python/01_health.py`. Hasilnya harus HTTP 200 dan `status` bernilai `ok`. Pada `client_python/konfigurasi.py`, samakan `API_DASAR` dengan alamat Laravel laptop dan `ID_AKTUATOR` dengan `esp32-aktuator-01`. ID ini berbeda dari `ID_SENSOR` pada latihan DHT22.
 
 Sebelum POST pertama, telusuri backend yang sudah disediakan. Baca migration: tabel `actuators` menunjuk `devices` melalui `device_id`; dua tabel riwayat menunjuk ID numerik aktuator. Buka tiga model pada `backend/app/Models`. `casts()` mengembalikan nilai sebagai bilangan bulat dan timestamp sebagai tanggal; model event hanya mempunyai `created_at`, sehingga `UPDATED_AT` dinonaktifkan. Laravel mengisi waktu event dalam UTC agar sesuai waktu konfirmasi.
 
@@ -92,37 +92,79 @@ Panggilan `ActuatorStateEvent::create()` pada baris berikutnya menambah riwayat.
 
 ## 3. Daftarkan satu LED dahulu
 
-Pastikan simulator belum berjalan. Ketik di terminal B:
+Pastikan simulator belum berjalan. Baca kembali `client_python/http_json.py` yang dipakai pada latihan MySQL. Fungsi `minta(metode, path, payload=None)` membentuk Request, menangani HTTPError/koneksi, menampilkan status dan JSON, lalu mengembalikan pasangan status/data. Pada skrip pendaftaran berikut, dictionary adalah payload yang akan diubah menjadi JSON oleh fungsi itu. Dari akar lab di terminal B, jalankan `python client_python/06_daftar_led.py`:
 
-```powershell
-$api = 'http://127.0.0.1:8000/api/v1/aktuator'
-$body = @{device_id='esp32-aktuator-01'; name='lampu'; kind='led'} | ConvertTo-Json
-$led = Invoke-RestMethod -Method Post -Uri $api -ContentType 'application/json' -Body $body
-$led | Format-List
-$ledId = $led.id
+```python
+from http_json import minta
+from konfigurasi import ID_AKTUATOR
+
+status, data = minta("POST", "/api/v1/aktuator",
+    {"device_id": ID_AKTUATOR, "name": "lampu", "kind": "led"})
+if status not in (200, 201):
+    raise SystemExit(1)
 ```
 
-Respons pertama berstatus HTTP201 dan memuat ID numerik. Pada PowerShell, isi JSON ditampilkan sebagai objek; baris status HTTP tidak selalu ditampilkan. Ulangi POST yang sama: respons HTTP200 memakai ID yang sama, sehingga tidak membuat output rangkap. Pendaftaran tidak memerlukan satu pun pembacaan sensor. Laravel membuat baris `devices` jika nama perangkat belum ada.
+Skrip menampilkan HTTP 201 beserta JSON yang memuat ID numerik. Jalankan skrip yang sama sekali lagi: respons HTTP200 memakai ID yang sama, sehingga tidak membuat output rangkap. Pendaftaran tidak memerlukan satu pun pembacaan sensor. Laravel membuat baris `devices` jika nama perangkat belum ada.
 
 Pertahankan tiga identitas: `device_id` menunjuk ESP32, `name` menunjuk satu output pada ESP32 itu, dan `id` numerik dipakai pada URL API aktuator. Mengganti jenis pada identitas yang sama ditolak HTTP409.
 
 ## 4. Tambahkan servo sebagai output kedua
 
-```powershell
-$body = @{device_id='esp32-aktuator-01'; name='pintu'; kind='servo'} | ConvertTo-Json
-$servo = Invoke-RestMethod -Method Post -Uri $api -ContentType 'application/json' -Body $body
-$servoId = $servo.id
-Invoke-RestMethod "$api`?device_id=esp32-aktuator-01" | Format-Table id,name,kind,requested_value,reported_value
+Dari akar lab, jalankan `python client_python/07_daftar_servo.py`. Perubahannya hanya nama/jenis output pada POST, lalu GET daftar. `urlencode` membentuk parameter `device_id` dari konfigurasi.
+
+```python
+from urllib.parse import urlencode
+from http_json import minta
+from konfigurasi import ID_AKTUATOR
+
+status, data = minta("POST", "/api/v1/aktuator",
+    {"device_id": ID_AKTUATOR, "name": "pintu", "kind": "servo"})
+if status not in (200, 201):
+    raise SystemExit(1)
+parameter = urlencode({"device_id": ID_AKTUATOR})
+status, daftar = minta("GET", "/api/v1/aktuator?" + parameter)
+if status != 200:
+    raise SystemExit(1)
 ```
 
 Ada dua baris dengan nama `lampu` dan `pintu`, masing-masing mempunyai ID berbeda. Nilai target/laporan masih kosong jika baru pertama kali didaftarkan. Buka `/aktuator` dan pilih kedua output secara bergantian. Jangan menyalin ID angka dari screenshot; gunakan hasil pendaftaran Anda.
 
 ## 5. Simpan target saat ESP32 belum berjalan
 
-```powershell
-$perintah = Invoke-RestMethod -Method Post -Uri "$api/$ledId/perintah" -ContentType 'application/json' -Body '{"value":1}'
-$perintah | Format-List
-Invoke-RestMethod "$api/$ledId/riwayat" | ConvertTo-Json -Depth 6
+Baca `client_python/aktuator.py` terlebih dahulu. Fungsi `cari_id(nama)` meminta daftar milik `ID_AKTUATOR`, menelusuri setiap baris, lalu mengembalikan ID output yang namanya cocok. Jika belum terdaftar, skrip berhenti dengan petunjuk pendaftaran; ID tidak ditebak dan tidak disimpan dalam variabel sesi terminal.
+
+```python
+from urllib.parse import urlencode
+from http_json import minta
+from konfigurasi import ID_AKTUATOR
+
+
+def cari_id(nama):
+    parameter = urlencode({"device_id": ID_AKTUATOR})
+    status, daftar = minta("GET", "/api/v1/aktuator?" + parameter)
+    if status != 200:
+        raise SystemExit("Daftar gagal dibaca; periksa route aktuator.")
+    for baris in daftar:
+        if baris["name"] == nama:
+            return baris["id"]
+    raise SystemExit("Daftarkan " + nama + " dahulu dengan skrip 06 atau 07.")
+```
+
+Skrip berikut memanggil fungsi itu untuk `lampu`. Jalankan `python client_python/08_target_led.py` dari akar lab; `NILAI = 1` berarti nyala, sedangkan `0` berarti mati.
+
+```python
+from aktuator import cari_id
+from http_json import minta
+
+NILAI = 1
+id_led = cari_id("lampu")
+path = "/api/v1/aktuator/" + str(id_led)
+status, perintah = minta("POST", path + "/perintah", {"value": NILAI})
+if status != 202:
+    raise SystemExit(1)
+status, riwayat = minta("GET", path + "/riwayat")
+if status != 200:
+    raise SystemExit(1)
 ```
 
 Respons HTTP202 berarti permintaan diterima dan disimpan, dengan status `pending`. Target LED menjadi 1. Laporan firmware tetap belum ada jika ESP32 belum pernah melapor. Halaman `/aktuator` memperlihatkan perbedaan ini. Mengirim target bukan bukti LED telah menyala.
@@ -131,11 +173,18 @@ Kontrak baru memakai `value` bilangan bulat: LED hanya 0 atau 1; servo 0 sampai 
 
 ## 6. Buktikan masa berlaku 30 detik
 
-Biarkan ESP32 berhenti. Tunggu lebih dari 30 detik sejak perintah dibuat, kemudian:
+Biarkan ESP32 berhenti. Tunggu lebih dari 30 detik sejak perintah dibuat, kemudian jalankan `python client_python/09_baca_aktuator.py` dari akar lab. Perulangan luar memilih lampu/pintu; perulangan dalam meminta perintah dan riwayat masing-masing:
 
-```powershell
-Invoke-RestMethod "$api/$ledId/perintah" | ConvertTo-Json
-Invoke-RestMethod "$api/$ledId/riwayat" | ConvertTo-Json -Depth 6
+```python
+from aktuator import cari_id
+from http_json import minta
+
+for nama in ("lampu", "pintu"):
+    path = "/api/v1/aktuator/" + str(cari_id(nama))
+    for akhir in ("/perintah", "/riwayat"):
+        status, data = minta("GET", path + akhir)
+        if status != 200:
+            raise SystemExit(1)
 ```
 
 `command` bernilai `null` dan perintah lama berstatus `expired`. Target terakhir tetap 1, tetapi tidak otomatis dijalankan kembali. Pada API aktuator, GET perintah/riwayat juga memperbarui status perintah yang kedaluwarsa. Karena tidak ada penjadwal latar pada lab, jalankan GET ini dahulu sebelum membandingkan kolom `status` melalui SQL. GET sensor pada latihan sebelumnya hanya membaca data sensor.
@@ -254,21 +303,41 @@ Jalankan simulator dan tunggu dua laporan BOOT. Pilih `pintu` pada `/aktuator`. 
 
 Jangan menyebut angka dashboard sebagai posisi mekanis yang diukur. Firmware mengonfirmasi nilai yang sudah diberikan kepada PWM. Pada perangkat fisik, motor dapat macet atau kehilangan suplai meskipun firmware telah mengirim PWM; pembuktian posisi memerlukan umpan balik tambahan.
 
-## 12. Periksa validasi dan laporan berkala
+Untuk mengirim servo melalui Python, baca `client_python/10_servo.py`. Fungsi pencarian ID dan fungsi HTTP sudah dipakai pada langkah LED; tambahan di sini hanya `SUDUT`. Dari akar lab, jalankan `python client_python/10_servo.py`, tunggu `applied`, lalu ubah 90 menjadi 0 atau 180, simpan, dan jalankan ulang satu nilai pada satu waktu.
 
-Di terminal B, coba satu nilai salah:
+```python
+from aktuator import cari_id
+from http_json import minta
 
-```powershell
-Invoke-RestMethod -Method Post -Uri "$api/$servoId/perintah" -ContentType 'application/json' -Body '{"value":181}'
+SUDUT = 90
+path = "/api/v1/aktuator/" + str(cari_id("pintu")) + "/perintah"
+status, perintah = minta("POST", path, {"value": SUDUT})
+if status != 202:
+    raise SystemExit(1)
 ```
 
-PowerShell menampilkan kesalahan HTTP422 dengan pesan rentang yang valid. Jumlah baris perintah tidak bertambah. LED dengan nilai 2 juga ditolak. Angka harus berupa bilangan bulat JSON: gunakan `90`, bukan `"90"`, `90.5`, atau `true`.
+## 12. Periksa validasi dan laporan berkala
+
+Sebelum uji, jalankan `python client_python/09_baca_aktuator.py` dari akar lab. Catat ID perintah terakhir dan daftar ID pada `commands` milik pintu. Selama percobaan ini, jangan mengirim perintah lain dari dashboard. Lalu jalankan `python client_python/11_uji_servo_salah.py`. Skrip sengaja mengirim nilai 181, lalu memeriksa bahwa statusnya 422:
+
+```python
+from aktuator import cari_id
+from http_json import minta
+
+path = "/api/v1/aktuator/" + str(cari_id("pintu")) + "/perintah"
+status, hasil = minta("POST", path, {"value": 181})
+if status != 422:
+    raise SystemExit("Gagal: nilai 181 seharusnya ditolak HTTP 422.")
+print("Sesuai: nilai di luar rentang ditolak.")
+```
+
+Skrip menampilkan HTTP 422 dengan pesan rentang yang valid, lalu pesan bahwa penolakan sesuai harapan. Kode keluar 0 berarti pengujian penolakan lulus; itu tidak berarti perintah 181 diterapkan. Jalankan kembali skrip 09 dan cocokkan daftar ID: tidak boleh ada ID perintah baru akibat nilai 181. Pemeriksaan jumlah baris melalui SQL tersedia pada langkah 13. LED dengan nilai 2 juga ditolak. Angka harus berupa bilangan bulat JSON: gunakan `90`, bukan `"90"`, `90.5`, atau `true`.
 
 Biarkan simulator berjalan tanpa perintah baru selama lebih dari sepuluh detik. `reported_at` diperbarui oleh heartbeat, yaitu laporan berkala. Jika nilai tetap sama, jumlah event tidak bertambah. Waktu event terakhir dapat lebih lama daripada waktu laporan terakhir. Halaman menandai laporan yang berumur lebih dari 20 detik; waktu ini merupakan indikator latihan, bukan jaminan perangkat sehat.
 
 ## 13. Cocokkan tiga tabel lewat SQL
 
-Jalankan kueri berikut melalui klien MySQL pada database lab yang sama dengan `.env`. Jangan menempelkan SQL ke C++ atau terminal PowerShell biasa. Salinan siap pakai tersedia pada `tests/inspect_actuators.sql`.
+Jalankan kueri berikut melalui klien MySQL pada database lab yang sama dengan `.env`. Jangan menempelkan SQL ke C++ atau terminal shell biasa. Salinan siap pakai tersedia pada `tests/inspect_actuators.sql`.
 
 ```sql
 SELECT id, device_id, name, kind,

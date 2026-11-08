@@ -1,3 +1,2 @@
-$perintah = Invoke-RestMethod -Method Post -Uri "$api/$ledId/perintah" -ContentType 'application/json' -Body '{"value":1}'
-$perintah | Format-List
-Invoke-RestMethod "$api/$ledId/riwayat" | ConvertTo-Json -Depth 6
+uint32_t pulsaUs = map(sudut, 0, 180, 500, 2500);
+ledcWrite(0, (pulsaUs * 65535UL + 10000UL) / 20000UL);

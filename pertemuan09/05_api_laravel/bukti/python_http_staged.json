@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "phase": "staged",
+  "recorded_utc": "2026-11-08T08:20:05.846867+00:00",
+  "python": "3.13.5",
+  "platform": "win32",
+  "source_hashes": {
+    "client_python/01_health.py": "55096226cd609aa091f39f256e3ed41a3d24c1d387a6922626118abcda6e256f",
+    "client_python/02_kirim_sensor.py": "8bb3919c35a2f01a5c779ac702351345b9ca1f331edf983b30e94b3534667578",
+    "client_python/03_simpan_baca.py": "e57a69b0633f5a3557ec03e2bee1dd755c2870f158afe132b3e1ccd87c5f50fc",
+    "client_python/04_baca_sensor.py": "884e6ca9fdabf6a93060e42d8c7e3feba5728070bc17f239e1091006dac41708",
+    "client_python/05_perintah_led.py": "5b97f02d136f67da38ef4ae78476e575a38ce854291680ec5eb54b60735519a7",
+    "client_python/06_daftar_led.py": "49bec21c6969fa7db9826ebff7e127493ef3e4f26055612a21bf573bbc8e9de2",
+    "client_python/07_daftar_servo.py": "8dd67f1a6ac50944528262dd5402e82c1556c3f91a1da451ef0dd866a45a479e",
+    "client_python/08_target_led.py": "a147bd190ff2eb6f6bec0583ac256b20e8ec8dea2dc54541af14947597223070",
+    "client_python/09_baca_aktuator.py": "0654271120e9afba9985dcd292c042f0ef1def10200fd5172b53916ca6d21e44",
+    "client_python/10_servo.py": "1b89cd210dc92e550661124afc730ab53238e12abdb4ac615e3f3d5886ca768c",
+    "client_python/11_uji_servo_salah.py": "b91976cb031e4cce0b6127cf70eaac41f5c398f97e5ade83382918f60daeae69",
+    "client_python/aktuator.py": "7b38e8f877ee7b5e0b6d7a10b45de4a103ba1d6400c7470553beb8a8dfb2a83d",
+    "client_python/http_json.py": "b18c42cf1ff2716d306371bb02a2c4e1674821f66dcb2449bc517513ee7a1417",
+    "client_python/konfigurasi.py": "23bed5356555ecef45f7d2c1acdf38c44bf63f7446056b6ecb73acb8ffa53e27"
+  },
+  "cases": [
+    {
+      "script": "01_health.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "HTTP 200\n{'status': 'ok'}\n",
+      "stderr": ""
+    },
+    {
+      "script": "02_kirim_sensor.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "HTTP 200\n{\n  \"diterima\": {\n    \"device_id\": \"python-http-sensor-09501664\",\n    \"suhu\": 28,\n    \"kelembapan\": 65\n  },\n  \"tersimpan\": false\n}\n",
+      "stderr": "",
+      "mysql_sensor_rows": 0
+    },
+    {
+      "script": "02_kirim_sensor.py",
+      "change": [
+        "\"kelembapan\": 65.0",
+        "\"kelembapan\": 101.0"
+      ],
+      "exit_code": 1,
+      "stdout": "HTTP 422\n{\n  \"message\": \"The kelembapan field must be between 0 and 100.\",\n  \"errors\": {\n    \"kelembapan\": [\n      \"The kelembapan field must be between 0 and 100.\"\n    ]\n  }\n}\n",
+      "stderr": "",
+      "mysql_sensor_rows": 0
+    },
+    {
+      "script": "02_kirim_sensor.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "HTTP 200\n{\n  \"diterima\": {\n    \"device_id\": \"python-http-sensor-09501664\",\n    \"suhu\": 28,\n    \"kelembapan\": 65\n  },\n  \"tersimpan\": false\n}\n",
+      "stderr": "",
+      "mysql_sensor_rows": 0
+    },
+    {
+      "script": "03_simpan_baca.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "POST /api/v1/sensor -> HTTP 201\n{\n  \"id\": 1,\n  \"device_id\": \"python-http-sensor-09501664\",\n  \"suhu\": 28,\n  \"kelembapan\": 65,\n  \"created_at\": \"2026-11-08T08:19:09.000000Z\"\n}\nGET /api/v1/sensor/1 -> HTTP 200\n{\n  \"id\": 1,\n  \"device_id\": \"python-http-sensor-09501664\",\n  \"suhu\": 28,\n  \"kelembapan\": 65,\n  \"created_at\": \"2026-11-08T08:19:09.000000Z\"\n}\nCocok: POST 201 dan GET 200 membaca catatan yang sama.\n",
+      "stderr": "",
+      "sql_record": {
+        "id": "1",
+        "device_id": "python-http-sensor-09501664",
+        "suhu": "28.0",
+        "kelembapan": "65.0"
+      }
+    },
+    {
+      "script": "04_baca_sensor.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "GET /api/v1/sensor?device_id=python-http-sensor-09501664&limit=5 -> HTTP 200\n[\n  {\n    \"id\": 1,\n    \"device_id\": \"python-http-sensor-09501664\",\n    \"suhu\": 28,\n    \"kelembapan\": 65,\n    \"created_at\": \"2026-11-08T08:19:09.000000Z\"\n  }\n]\n",
+      "stderr": ""
+    },
+    {
+      "script": "05_perintah_led.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "POST /api/v1/perangkat/python-http-sensor-09501664/perintah -> HTTP 202\n{\n  \"id\": 1,\n  \"device_id\": \"python-http-sensor-09501664\",\n  \"led\": true,\n  \"status\": \"pending\",\n  \"expires_at\": \"2026-11-08T08:19:41.226000Z\",\n  \"acknowledged_at\": null,\n  \"created_at\": \"2026-11-08T08:19:11.250000Z\",\n  \"updated_at\": \"2026-11-08T08:19:11.250000Z\"\n}\nGET /api/v1/perangkat/python-http-sensor-09501664/perintah -> HTTP 200\n{\n  \"command\": {\n    \"id\": 1,\n    \"device_id\": \"python-http-sensor-09501664\",\n    \"led\": true,\n    \"status\": \"pending\",\n    \"expires_at\": \"2026-11-08T08:19:41.226000Z\",\n    \"acknowledged_at\": null,\n    \"created_at\": \"2026-11-08T08:19:11.250000Z\",\n    \"updated_at\": \"2026-11-08T08:19:11.250000Z\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "05_perintah_led.py",
+      "change": [
+        "NILAI_LED = True",
+        "NILAI_LED = False"
+      ],
+      "exit_code": 0,
+      "stdout": "POST /api/v1/perangkat/python-http-sensor-09501664/perintah -> HTTP 202\n{\n  \"id\": 2,\n  \"device_id\": \"python-http-sensor-09501664\",\n  \"led\": false,\n  \"status\": \"pending\",\n  \"expires_at\": \"2026-11-08T08:19:42.370000Z\",\n  \"acknowledged_at\": null,\n  \"created_at\": \"2026-11-08T08:19:12.372000Z\",\n  \"updated_at\": \"2026-11-08T08:19:12.372000Z\"\n}\nGET /api/v1/perangkat/python-http-sensor-09501664/perintah -> HTTP 200\n{\n  \"command\": {\n    \"id\": 2,\n    \"device_id\": \"python-http-sensor-09501664\",\n    \"led\": false,\n    \"status\": \"pending\",\n    \"expires_at\": \"2026-11-08T08:19:42.370000Z\",\n    \"acknowledged_at\": null,\n    \"created_at\": \"2026-11-08T08:19:12.372000Z\",\n    \"updated_at\": \"2026-11-08T08:19:12.372000Z\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "06_daftar_led.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "POST /api/v1/aktuator -> HTTP 201\n{\n  \"id\": 14,\n  \"device_id\": \"python-http-actuator-09501664\",\n  \"name\": \"lampu\",\n  \"kind\": \"led\",\n  \"requested_value\": null,\n  \"reported_value\": null,\n  \"boot_id\": null,\n  \"report_sequence\": 0,\n  \"reported_at\": null,\n  \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n  \"updated_at\": \"2026-11-08T08:19:13.505000Z\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "06_daftar_led.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "POST /api/v1/aktuator -> HTTP 200\n{\n  \"id\": 14,\n  \"device_id\": \"python-http-actuator-09501664\",\n  \"name\": \"lampu\",\n  \"kind\": \"led\",\n  \"requested_value\": null,\n  \"reported_value\": null,\n  \"boot_id\": null,\n  \"report_sequence\": 0,\n  \"reported_at\": null,\n  \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n  \"updated_at\": \"2026-11-08T08:19:13.505000Z\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "07_daftar_servo.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "POST /api/v1/aktuator -> HTTP 201\n{\n  \"id\": 15,\n  \"device_id\": \"python-http-actuator-09501664\",\n  \"name\": \"pintu\",\n  \"kind\": \"servo\",\n  \"requested_value\": null,\n  \"reported_value\": null,\n  \"boot_id\": null,\n  \"report_sequence\": 0,\n  \"reported_at\": null,\n  \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n  \"updated_at\": \"2026-11-08T08:19:15.017000Z\"\n}\nGET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:13.505000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:15.017000Z\"\n  }\n]\n",
+      "stderr": ""
+    },
+    {
+      "script": "08_target_led.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "GET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:13.505000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:15.017000Z\"\n  }\n]\nPOST /api/v1/aktuator/14/perintah -> HTTP 202\n{\n  \"id\": 14,\n  \"actuator_id\": 14,\n  \"value\": 1,\n  \"status\": \"pending\",\n  \"expires_at\": \"2026-11-08T08:19:46.591000Z\",\n  \"acknowledged_at\": null,\n  \"created_at\": \"2026-11-08T08:19:16.592000Z\",\n  \"updated_at\": \"2026-11-08T08:19:16.592000Z\"\n}\nGET /api/v1/aktuator/14/riwayat -> HTTP 200\n{\n  \"actuator\": {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  \"commands\": [\n    {\n      \"id\": 14,\n      \"actuator_id\": 14,\n      \"value\": 1,\n      \"status\": \"pending\",\n      \"expires_at\": \"2026-11-08T08:19:46.591000Z\",\n      \"acknowledged_at\": null,\n      \"created_at\": \"2026-11-08T08:19:16.592000Z\",\n      \"updated_at\": \"2026-11-08T08:19:16.592000Z\"\n    }\n  ],\n  \"events\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "09_baca_aktuator.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "GET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:15.017000Z\"\n  }\n]\nGET /api/v1/aktuator/14/perintah -> HTTP 200\n{\n  \"command\": {\n    \"id\": 14,\n    \"actuator_id\": 14,\n    \"value\": 1,\n    \"status\": \"pending\",\n    \"expires_at\": \"2026-11-08T08:19:46.591000Z\",\n    \"acknowledged_at\": null,\n    \"created_at\": \"2026-11-08T08:19:16.592000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.592000Z\"\n  }\n}\nGET /api/v1/aktuator/14/riwayat -> HTTP 200\n{\n  \"actuator\": {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  \"commands\": [\n    {\n      \"id\": 14,\n      \"actuator_id\": 14,\n      \"value\": 1,\n      \"status\": \"pending\",\n      \"expires_at\": \"2026-11-08T08:19:46.591000Z\",\n      \"acknowledged_at\": null,\n      \"created_at\": \"2026-11-08T08:19:16.592000Z\",\n      \"updated_at\": \"2026-11-08T08:19:16.592000Z\"\n    }\n  ],\n  \"events\": []\n}\nGET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:15.017000Z\"\n  }\n]\nGET /api/v1/aktuator/15/perintah -> HTTP 200\n{\n  \"command\": null\n}\nGET /api/v1/aktuator/15/riwayat -> HTTP 200\n{\n  \"actuator\": {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:15.017000Z\"\n  },\n  \"commands\": [],\n  \"events\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "10_servo.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "GET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": null,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:15.017000Z\"\n  }\n]\nPOST /api/v1/aktuator/15/perintah -> HTTP 202\n{\n  \"id\": 15,\n  \"actuator_id\": 15,\n  \"value\": 90,\n  \"status\": \"pending\",\n  \"expires_at\": \"2026-11-08T08:19:50.719000Z\",\n  \"acknowledged_at\": null,\n  \"created_at\": \"2026-11-08T08:19:20.721000Z\",\n  \"updated_at\": \"2026-11-08T08:19:20.721000Z\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "10_servo.py",
+      "change": [
+        "SUDUT = 90",
+        "SUDUT = 0"
+      ],
+      "exit_code": 0,
+      "stdout": "GET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": 90,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:20.715000Z\"\n  }\n]\nPOST /api/v1/aktuator/15/perintah -> HTTP 202\n{\n  \"id\": 16,\n  \"actuator_id\": 15,\n  \"value\": 0,\n  \"status\": \"pending\",\n  \"expires_at\": \"2026-11-08T08:19:51.838000Z\",\n  \"acknowledged_at\": null,\n  \"created_at\": \"2026-11-08T08:19:21.839000Z\",\n  \"updated_at\": \"2026-11-08T08:19:21.839000Z\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "10_servo.py",
+      "change": [
+        "SUDUT = 90",
+        "SUDUT = 180"
+      ],
+      "exit_code": 0,
+      "stdout": "GET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": 0,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:21.833000Z\"\n  }\n]\nPOST /api/v1/aktuator/15/perintah -> HTTP 202\n{\n  \"id\": 17,\n  \"actuator_id\": 15,\n  \"value\": 180,\n  \"status\": \"pending\",\n  \"expires_at\": \"2026-11-08T08:19:52.984000Z\",\n  \"acknowledged_at\": null,\n  \"created_at\": \"2026-11-08T08:19:22.985000Z\",\n  \"updated_at\": \"2026-11-08T08:19:22.985000Z\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "11_uji_servo_salah.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "GET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": 180,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:22.979000Z\"\n  }\n]\nPOST /api/v1/aktuator/15/perintah -> HTTP 422\n{\n  \"message\": \"Gunakan bilangan bulat JSON dari 0 sampai 180.\",\n  \"errors\": {\n    \"value\": [\n      \"Gunakan bilangan bulat JSON dari 0 sampai 180.\"\n    ]\n  }\n}\nSesuai: nilai di luar rentang ditolak.\n",
+      "stderr": ""
+    },
+    {
+      "script": "09_baca_aktuator.py",
+      "change": null,
+      "exit_code": 0,
+      "stdout": "GET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": 180,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:22.979000Z\"\n  }\n]\nGET /api/v1/aktuator/14/perintah -> HTTP 200\n{\n  \"command\": null\n}\nGET /api/v1/aktuator/14/riwayat -> HTTP 200\n{\n  \"actuator\": {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  \"commands\": [\n    {\n      \"id\": 14,\n      \"actuator_id\": 14,\n      \"value\": 1,\n      \"status\": \"expired\",\n      \"expires_at\": \"2026-11-08T08:19:46.591000Z\",\n      \"acknowledged_at\": null,\n      \"created_at\": \"2026-11-08T08:19:16.592000Z\",\n      \"updated_at\": \"2026-11-08T08:19:56.247000Z\"\n    }\n  ],\n  \"events\": []\n}\nGET /api/v1/aktuator?device_id=python-http-actuator-09501664 -> HTTP 200\n[\n  {\n    \"id\": 14,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"lampu\",\n    \"kind\": \"led\",\n    \"requested_value\": 1,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:13.505000Z\",\n    \"updated_at\": \"2026-11-08T08:19:16.585000Z\"\n  },\n  {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": 180,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:22.979000Z\"\n  }\n]\nGET /api/v1/aktuator/15/perintah -> HTTP 200\n{\n  \"command\": null\n}\nGET /api/v1/aktuator/15/riwayat -> HTTP 200\n{\n  \"actuator\": {\n    \"id\": 15,\n    \"device_id\": \"python-http-actuator-09501664\",\n    \"name\": \"pintu\",\n    \"kind\": \"servo\",\n    \"requested_value\": 180,\n    \"reported_value\": null,\n    \"boot_id\": null,\n    \"report_sequence\": 0,\n    \"reported_at\": null,\n    \"created_at\": \"2026-11-08T08:19:15.017000Z\",\n    \"updated_at\": \"2026-11-08T08:19:22.979000Z\"\n  },\n  \"commands\": [\n    {\n      \"id\": 17,\n      \"actuator_id\": 15,\n      \"value\": 180,\n      \"status\": \"expired\",\n      \"expires_at\": \"2026-11-08T08:19:52.984000Z\",\n      \"acknowledged_at\": null,\n      \"created_at\": \"2026-11-08T08:19:22.985000Z\",\n      \"updated_at\": \"2026-11-08T08:19:57.329000Z\"\n    },\n    {\n      \"id\": 16,\n      \"actuator_id\": 15,\n      \"value\": 0,\n      \"status\": \"superseded\",\n      \"expires_at\": \"2026-11-08T08:19:51.838000Z\",\n      \"acknowledged_at\": null,\n      \"created_at\": \"2026-11-08T08:19:21.839000Z\",\n      \"updated_at\": \"2026-11-08T08:19:22.978000Z\"\n    },\n    {\n      \"id\": 15,\n      \"actuator_id\": 15,\n      \"value\": 90,\n      \"status\": \"superseded\",\n      \"expires_at\": \"2026-11-08T08:19:50.719000Z\",\n      \"acknowledged_at\": null,\n      \"created_at\": \"2026-11-08T08:19:20.721000Z\",\n      \"updated_at\": \"2026-11-08T08:19:21.832000Z\"\n    }\n  ],\n  \"events\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "http_json.py",
+      "case": "Laravel 404",
+      "stdout": "GET /api/v1/tidak-ada -> HTTP 404\n{\n  \"message\": \"The route api/v1/tidak-ada could not be found.\"\n}\n"
+    },
+    {
+      "script": "01_health.py",
+      "change": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Health gagal; periksa server dan URL: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>\n"
+    },
+    {
+      "script": "02_kirim_sensor.py",
+      "change": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Koneksi gagal: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>\n"
+    },
+    {
+      "script": "04_baca_sensor.py",
+      "change": null,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Koneksi gagal: <urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>\n"
+    }
+  ],
+  "scope": "Real Laravel and MySQL; HTTP-only synthetic sensor input",
+  "limits": [
+    "Windows runtime tested; Linux/macOS not executed.",
+    "Servo reports PWM setting; no mechanical position sensor or physical hardware."
+  ]
+}

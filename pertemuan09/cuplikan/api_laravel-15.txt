@@ -1,2 +1,5 @@
-Copy-Item versi/02_kirim_contoh.cpp src/main.cpp
-pio run
+@forelse ($rows as $row)
+  <tr><td>{{ $row->id }}</td><td>{{ $row->device_id }}</td></tr>
+@empty
+  <tr><td colspan="2">Belum ada kiriman.</td></tr>
+@endforelse

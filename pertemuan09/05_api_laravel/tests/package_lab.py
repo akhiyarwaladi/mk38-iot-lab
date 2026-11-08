@@ -28,6 +28,8 @@ for name, expected in actuator['source_hashes'].items():
 assert sha((LAB / 'bukti/actuators_live.json').read_bytes()) == actuator['runtime_report_sha256']
 assert sha((LAB / 'bukti/actuators_ui.json').read_bytes()) == actuator['ui_report_sha256']
 assert sha((LAB / 'bukti/actuator_firmware_builds.json').read_bytes()) == actuator['firmware_report_sha256']
+for name, expected in actuator['python_http_reports'].items():
+    assert sha((LAB / 'bukti' / name).read_bytes()) == expected, name
 for name, expected in actuator['screenshots'].items():
     assert sha((LAB / 'bukti' / name).read_bytes()) == expected, name
 tests = json.loads((LAB / 'bukti/laravel_dashboard_tests.json').read_text(encoding='utf-8'))

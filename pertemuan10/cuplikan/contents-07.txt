@@ -1,1 +1,2 @@
-Invoke-RestMethod http://localhost:1880/api/riwayat
+{"suhu":"panas","kelembapan":65}
+{"suhu":28,"kelembapan":150}

@@ -1,2 +1,0 @@
-Copy-Item versi/01_health.cpp src/main.cpp
-pio run

@@ -1,2 +1,2 @@
-uint32_t pulsaUs = map(sudut, 0, 180, 500, 2500);
-ledcWrite(0, (pulsaUs * 65535UL + 10000UL) / 20000UL);
+Copy-Item versi/02_led_rest.cpp src/main.cpp -Force
+pio run

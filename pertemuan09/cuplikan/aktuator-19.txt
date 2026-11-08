@@ -1,1 +1,0 @@
-Invoke-RestMethod -Method Post -Uri "$api/$servoId/perintah" -ContentType 'application/json' -Body '{"value":181}'

@@ -1,5 +1,2 @@
-$hasil = Invoke-WebRequest $url -Method Post `
-  -ContentType 'application/json' -Body $data -UseBasicParsing
-$hasil.StatusCode
-$catatan = $hasil.Content | ConvertFrom-Json
-Invoke-RestMethod "$url/$($catatan.id)"
+Copy-Item versi/02_kirim_contoh.cpp src/main.cpp
+pio run

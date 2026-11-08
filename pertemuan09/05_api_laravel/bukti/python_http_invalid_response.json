@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "case": "Actual Laravel HTML rejected by JSON client",
+  "exit_code": 1,
+  "stdout": "GET /dashboard -> HTTP 200\n",
+  "stderr": "Respons bukan JSON; periksa URL dan log Laravel.\n",
+  "source_sha256": "b18c42cf1ff2716d306371bb02a2c4e1674821f66dcb2449bc517513ee7a1417"
+}

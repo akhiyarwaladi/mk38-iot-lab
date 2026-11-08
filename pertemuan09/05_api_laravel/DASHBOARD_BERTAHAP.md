@@ -2,7 +2,9 @@
 
 Lanjutkan setelah langkah 1 sampai 8 pada [panduan API](README.md) lulus dan bukti pada langkah 9 terkumpul. Berkas `.env` yang sudah diisi tetap dipakai. Laravel dan MySQL harus berjalan. Pada ESP32, kembali ke `versi/03_sensor.cpp` jika ingin mempelajari tampilan data sebelum kendali.
 
-Siapkan browser untuk melihat hasil, terminal Laravel yang tetap berjalan, serta terminal PowerShell kedua untuk mencoba endpoint. Setiap langkah di bawah menambah satu bagian alur. Berkas lengkap sudah disertakan agar hasil dapat dibandingkan; baca cuplikan dan lakukan pemeriksaan tiap langkah sebelum berpindah ke berkas lengkap.
+Siapkan browser untuk melihat hasil, terminal A yang tetap menjalankan Laravel, serta terminal B untuk client Python. Jalankan skrip Python dari akar lab, yaitu folder yang memuat `backend`, `client_python`, dan `esp32`. Gunakan Python 3.10 atau lebih baru dengan pustaka standar; tidak ada paket pip tambahan. Contoh memakai `python`; ganti dengan `python3` pada Linux/macOS atau `py -3` pada Windows bila itu perintah yang tersedia.
+
+Baca konfigurasi dan seluruh fungsi `minta()` pada `client_python/http_json.py` mengikuti README sebelum memakai skrip lanjutan. Setiap langkah di bawah menambah satu bagian alur. Berkas lengkap sudah disertakan agar hasil dapat dibandingkan; baca cuplikan dan lakukan pemeriksaan tiap langkah sebelum berpindah ke berkas lengkap.
 
 ## 10. Tampilkan tabel dari MySQL dengan Blade
 
@@ -30,17 +32,20 @@ Cuplikan ini hanya menunjukkan dua kolom; berkas lengkap juga menampilkan suhu d
 
 ## 11. Ambil JSON untuk mengisi tampilan
 
-Dari folder `api_sensor/backend`, jalankan migration tambahan:
+Dari folder `backend`, jalankan migration dan aktifkan route dashboard. Blok penyalinan berikut memakai PowerShell Windows:
 
 ```powershell
 php artisan migrate
 Copy-Item ../tahapan/04_api_dashboard.php routes/api.php
 php artisan route:list --path=api
+cd ..
 ```
+
+Terminal B kini kembali ke akar lab agar perintah Python berikut dapat dijalankan. Pada Linux/macOS, salin `tahapan/04_api_dashboard.php` melalui Explorer VS Code untuk menggantikan `backend/routes/api.php`, lalu jalankan perintah PHP dari `backend` dan kembali ke akar lab. Perintah `Copy-Item` khusus PowerShell Windows.
 
 Migration baru membuat `devices` dan `commands`; kiriman sensor lama tetap tersedia. Perangkat yang pernah mengirim sensor didaftarkan saat migration. Kiriman perangkat baru mendaftarkan `device_id` secara otomatis. Penyalinan route diperlukan jika sebelumnya memakai `03_api_mysql.php`, yang hanya memuat empat endpoint pengantar.
 
-Coba `GET /api/v1/pemantauan?device_id=esp32-kelompok-01&limit=20`. Baca `latest`, `readings`, `age_seconds`, dan `online`. `online` berarti ada kiriman sensor dalam 30 detik terakhir, bukan hasil pemeriksaan ping atau jaminan seluruh fungsi perangkat normal.
+Buka `http://127.0.0.1:8000/api/v1/pemantauan?device_id=esp32-kelompok-01&limit=20` pada browser; sesuaikan ID dengan firmware. Baca `latest`, `readings`, `age_seconds`, dan `online`. `online` berarti ada kiriman sensor dalam 30 detik terakhir, bukan hasil pemeriksaan ping atau jaminan seluruh fungsi perangkat normal. Jika koneksi gagal, periksa terminal A; jika 404, periksa penyalinan route dashboard. Pulihkan sampai respons JSON dapat dibaca sebelum melanjutkan.
 
 Buka `http://127.0.0.1:8000/dashboard`. Pilih perangkat dan jumlah kiriman. Untuk mengamati alurnya, matikan pembaruan otomatis lalu pilih **Perbarui data** sendiri.
 
@@ -93,20 +98,19 @@ Tabel `commands` menyimpan waktu dibuat, waktu berlaku, dan waktu konfirmasi. Pe
 
 Untuk melihat perbedaannya, jalankan firmware `versi/03_sensor.cpp` yang belum mengambil perintah, lalu pilih **Nyalakan LED**. Dashboard harus menunjukkan menunggu, kemudian kedaluwarsa; LED tidak boleh diklaim nyala. Sesudah uji ini, lanjutkan tahap berikut.
 
-Untuk menelusuri request tanpa tombol, gunakan terminal kedua dari folder mana pun:
+Untuk menelusuri permintaan tanpa tombol, buka `client_python/05_perintah_led.py`. Skrip ini memakai `minta()` yang sudah dibaca pada README. Pastikan `ID_SENSOR` pada `client_python/konfigurasi.py` sama dengan `DEVICE_ID` firmware dan sudah memiliki kiriman sensor. Pertahankan `NILAI_LED = True` untuk permintaan nyala. Jalankan di terminal B dari akar lab:
 
-```powershell
-$url = 'http://127.0.0.1:8000/api/v1/perangkat/esp32-kelompok-01/perintah'
-$perintah = Invoke-RestMethod $url -Method Post -ContentType 'application/json' -Body '{"led":true}'
-$perintah
-Invoke-RestMethod $url
+```sh
+python client_python/05_perintah_led.py
 ```
 
-Ganti ID perangkat pada URL jika konfigurasi kelompok berbeda. Catat `id`, `status`, dan `expires_at`; respons kedua membungkus perintah pada field `command`. Belum ada perubahan GPIO pada firmware sensor. Jangan mengirim konfirmasi sendiri lalu menyebutnya bukti ESP32: konfirmasi pada langkah berikut berasal dari firmware.
+Hasil normal menampilkan POST HTTP 202 beserta `id`, `status`, dan `expires_at`, lalu GET HTTP 200 yang membungkus perintah pada field `command`. Pada firmware `03_sensor.cpp`, status masih pending dan GPIO belum diubah oleh permintaan ini. Ubah `NILAI_LED` menjadi `False` hanya saat ingin membuat permintaan mati baru; Python mengubah `True`/`False` menjadi boolean JSON. Setiap menjalankan skrip membuat ID perintah baru, sehingga jangan memakainya hanya untuk menyegarkan tampilan. Gunakan **Perbarui data** pada dashboard untuk membaca status perintah yang sama sesudah 30 detik.
+
+Jika muncul `Perintah ditolak`, baca HTTP dan JSON sebelumnya: 404 dapat berarti ID belum terdaftar melalui kiriman sensor atau route dashboard belum aktif; pulihkan keduanya sebelum mengulang. Jika koneksi gagal, jalankan `client_python/01_health.py` dari akar lab setelah memeriksa server. Kembalikan `NILAI_LED = True` setelah percobaan mati bila ingin mengulang contoh awal. Jangan mengirim konfirmasi sendiri lalu menyebutnya bukti ESP32: konfirmasi pada langkah berikut berasal dari firmware.
 
 ## 14. Tambahkan pengambilan dan konfirmasi pada ESP32
 
-Hentikan simulator. Dari folder `esp32`:
+Hentikan simulator. Buka terminal PlatformIO pada folder `esp32`. Blok penyalinan berikut memakai PowerShell Windows; pada Linux/macOS, salin `versi/04_kendali.cpp` melalui Explorer VS Code untuk menggantikan `src/main.cpp`, lalu jalankan Build:
 
 ```powershell
 Copy-Item versi/04_kendali.cpp src/main.cpp

@@ -1,4 +1,4 @@
-$body = @{device_id='esp32-aktuator-01'; name='pintu'; kind='servo'} | ConvertTo-Json
-$servo = Invoke-RestMethod -Method Post -Uri $api -ContentType 'application/json' -Body $body
-$servoId = $servo.id
-Invoke-RestMethod "$api`?device_id=esp32-aktuator-01" | Format-Table id,name,kind,requested_value,reported_value
+pinMode(23, OUTPUT);
+digitalWrite(23, LOW);
+ledcSetup(0, 50, 16);
+ledcAttachPin(18, 0);
